@@ -20,7 +20,7 @@
 #####                    Integrantes :
 * Christian Adrian Corvalan
 
- .... 
+No tengo demasiada experiencia en el ambito de el desarrollo, conozco otros lenguajes pero los utilizo para automatizar tareas que realizo como administrador de sistemas, me interesa empezar a prestar servicios en este mundo tan interesante. Actualmente mi area de trabajo es Telecomunicaciones e Infraestrctura. 
 
 * Alvaro Francisco Sosa Barra
 
