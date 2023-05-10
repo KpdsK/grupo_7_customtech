@@ -9,8 +9,7 @@
 <!-- imagen logo(imagen de prueba)-->
 
 
-![](monitor.jpg)
-
+<img src=".\Disenio\Logo\logoTextoBlancoConBorde.png" alt="logo customtech">
 
 
 <!-- breve descripción de los integrantes del equipo.-->
@@ -70,7 +69,7 @@ El segmento de mercado que se interesa en computadoras y componentes puede ser a
 
 [www.asus.com](https://www.asus.com/ar/)
 
-[preview.colorlib.com/#ogani](https://preview.colorlib.com/#ogani)
+[www.maximus.com/#maximus](https://www.maximus.com.ar/#maximus)
 
 [www.aorus.com](https://www.aorus.com/es-ar)
 
