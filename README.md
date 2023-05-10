@@ -16,6 +16,9 @@
 
 
 ---
+
+[![Tecnologias](https://skills.thijs.gg/icons?i=html,css,js,nodejs,figma,MD&theme=light)](https://skills.thijs.gg)
+
 #####                    Integrantes :
 * Christian Adrian Corvalan
 
