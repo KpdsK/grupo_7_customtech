@@ -78,7 +78,7 @@ El segmento de mercado que se interesa en computadoras y componentes puede ser a
 
 ---
 
-
+[Tablero de Trabajo](https://trello.com/b/D0UGTq0m/customtech)
 
 
 

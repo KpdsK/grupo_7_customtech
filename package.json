@@ -1,0 +1,22 @@
+{
+  "name": "grupo_7_customtech",
+  "version": "1.0.0",
+  "description": "TP Integral",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KpdsK/grupo_7_customtech.git"
+  },
+  "author": "grupo 7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KpdsK/grupo_7_customtech/issues"
+  },
+  "homepage": "https://github.com/KpdsK/grupo_7_customtech#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
