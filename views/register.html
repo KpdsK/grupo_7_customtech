@@ -6,7 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Soy el Register</h1>
+    <main id="formulario-registro">
+        <form class="formularios" action="/" method="GET">
+
+            <div>
+                <input class="text-field" type="text" name="nombre" placeholder="Nombre">
+            </div>
+
+            <div>
+                <input class="text-field" type="text" name="apellido" placeholder="Apellido">
+            </div>
+
+            <div>
+                <input class="text-field" type="email" name="email" placeholder="E-mail">
+            </div>
+
+            <div>
+                <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+            </div>
+
+            <div>
+                <input class="text-field" type="password" name="contraseniaConfirmar" placeholder="Confirmar contraseña">
+            </div>
+
+            <div>
+                <label for="fotoPerfil">Foto de usuario</label>
+                <input type="file" name="fotoPerfil" id="fotoPerfil">
+            </div>
+
+            <div>
+                <button class="botonForm botonSubmit" type="submit">Enviar</button>
+                <button class="botonForm botonReset" type="reset">Cancelar</button>
+            </div>
+
+
+        </form>
+
+    </main>
+
     <script src='/js/javascript.js'></script>
 </body>
 </html>
