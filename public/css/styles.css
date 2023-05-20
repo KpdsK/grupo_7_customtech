@@ -66,7 +66,25 @@ nav ul {
     font-size: 10px;
 }
 
+.registro {
+    background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+.formularios {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
+form div {
+    margin-bottom: 10px;
+    border-radius: 5%;
+}
 
-
+.text-field {
+    padding: 5px;
+    border-radius: 5%;
+}
