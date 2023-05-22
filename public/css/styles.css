@@ -13,6 +13,7 @@ header {
     width: 100vw;
     height: 15vh;
     margin-top: 10px;
+    background-color: #fff;
 }
 
 header section {
@@ -43,6 +44,11 @@ nav ul {
 }
 
 
+.header-img-container a {
+    display: flex;
+    align-items: center;
+}
+
 .header-img {
     width: 35px;
 }
@@ -64,6 +70,66 @@ nav ul {
 
 .header-categories i {
     font-size: 10px;
+}
+
+
+
+
+.registro {
+    background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+}
+
+.form-registro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form div {
+    margin-bottom: 10px;
+    border-radius: 5%;
+}
+
+.text-field {
+    padding: 5px;
+    border-radius: 5%;
+}
+
+
+
+
+.ingreso {
+    background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+}
+
+.form-ingreso{
+    margin-top: 20px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.campo {
+    padding: 5px;
+
+}
+
+.ingreso main {
+    background-color: #70012B;
+    opacity: 0.5;
+    padding: 5%;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 10%;
+    margin-top: 25px;
 }
 
 
