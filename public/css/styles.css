@@ -44,6 +44,11 @@ nav ul {
 }
 
 
+.header-img-container a {
+    display: flex;
+    align-items: center;
+}
+
 .header-img {
     width: 35px;
 }
