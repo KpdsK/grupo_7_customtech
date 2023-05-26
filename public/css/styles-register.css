@@ -1,16 +1,30 @@
-
-
-
-.registro {
-    background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
-    background-size: cover;
+main {
+    background-color: #70012B;
 }
 
-.form-registro{
+.form-register{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    opacity: 0.8;
+    height: 100vh;
+    text-align: center;
+}
+
+.icon-register i {
+    font-size: 100px;
+}
+
+.register-or {
+    border-radius: 10%;
+    background-color:aliceblue;
+    text-align: center;
+    position: relative;
+}
+
+.label-or {
+    padding: 10px;
 }
 
 form div {
@@ -20,7 +34,30 @@ form div {
 
 .text-field {
     padding: 5px;
-    border-radius: 5%;
+    border-radius: 5px;
 }
 
 
+
+
+@media (min-width: 361px) {
+
+    .top-header {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 5%;
+        width: 90%;
+        height: 100%;
+        align-items: center;
+    }
+
+    header nav {
+        justify-content: space-between;
+    }
+
+}
+
+
+@media (min-width: 769px) {
+
+}
