@@ -103,9 +103,6 @@ header section a {
         width: 30vw;
     }
 
-    header {
-        height: 12vh;
-    }
 
 
    .header-img {
@@ -151,6 +148,9 @@ header section a {
         width: 50px;
     }
 
+    header {
+        height: 12vh;
+    }
    
 }
 
