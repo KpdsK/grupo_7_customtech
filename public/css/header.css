@@ -1,8 +1,11 @@
 header {
     width: 100vw;
     height: 15vh;
-    margin-top: 10px;
-    background-color: #fff;
+    padding: 10px;
+    /* background-color: #380116; */
+    background-color: #4B011D;
+    color: #fff;
+    
 }
 
 header section {
