@@ -10,28 +10,36 @@
     <link rel="stylesheet" href="css/styles-register.css">
 </head>
 
-<header>
-    <section>
-        <div class="header-img-container">
-            <img class="header-img" src="images/favicon.ico" alt="Custom tech">
-            <h3>CustomTech</h3>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
-                <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </section>
-    <section class="header-categories">
-        <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
-    </section>
-</header>
-
 <body class="registro">
+    <header>
+        <section>
+              <a href="/">
+                <img class="header-img" src="images/logoTextoBlancoConBorde.png" alt="Custom tech">
+              </a>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar..." class="header-search-input"  >
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+        <section class="header-categories">
+            <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+        </section>
+    </header>
     <main>
         <form class="form-register" action="/" method="GET">
+            <div class="icon-register">
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
 
             <div>
                 <input class="text-field" type="text" name="nombre" placeholder="Nombre">
@@ -53,6 +61,15 @@
                 <input class="text-field" type="password" name="contraseniaConfirmar" placeholder="Confirmar contraseña">
             </div>
 
+            <div class="register-or">
+                <label for="label-or">OR</label>
+            </div>
+
+            <div class="">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+
             <div>
                 <label for="fotoPerfil">Foto de usuario</label>
                 <input type="file" name="fotoPerfil" id="fotoPerfil">
@@ -62,7 +79,6 @@
                 <button type="submit">Sign Up</button>
                 <h4>Already have an account?</h4>
                 <button> <a href="/login" type="reset">Login</a> </button>
-                
             </div>
 
 

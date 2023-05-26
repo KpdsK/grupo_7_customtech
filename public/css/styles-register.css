@@ -12,6 +12,21 @@ main {
     text-align: center;
 }
 
+.icon-register i {
+    font-size: 100px;
+}
+
+.register-or {
+    border-radius: 10%;
+    background-color:aliceblue;
+    text-align: center;
+    position: relative;
+}
+
+.label-or {
+    padding: 10px;
+}
+
 form div {
     margin-bottom: 10px;
     border-radius: 5%;
@@ -21,6 +36,7 @@ form div {
     padding: 5px;
     border-radius: 5px;
 }
+
 
 @media (min-width: 361px) {
 
