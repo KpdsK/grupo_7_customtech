@@ -1,0 +1,137 @@
+* {
+    font-family: 'Play', sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.section {
+    margin: auto;
+    position: relative;
+}
+
+.tarjetas-productos {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.tarjeta-producto {
+    display: flex;
+    border-radius: 5%;
+    flex-direction: column;
+    background-color: white;
+    margin: 15px auto;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 10px #C21556;
+}
+
+.tarjeta-producto-cabecera {
+    display: flex;
+    flex-direction: row;
+    max-width: 350px;
+    margin: 0px 5px;
+}
+
+.tarjeta-producto-cabecera img {
+    width: 80%;
+}
+
+.tarjeta-producto-titulo-descripcion {
+    width: 90%;
+    margin: 10px 0px 0px 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-producto-titulo-descripcion legend {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.tarjeta-producto-titulo-descripcion p {
+    font-size: small;
+}
+
+.tarjeta-producto-detalle {
+    display: flex;
+    column-gap: 30px;
+    position: relative;
+}
+
+.tarjeta-producto-cabecera-imagen {
+    width: 90%;
+}
+
+.tarjeta-producto-detalle-item {
+    margin: 5px 0px;
+}
+
+.fa-trash {
+    position: absolute;
+    margin: 0px;
+    left: -40%;
+    top: 58%;
+    color: #C21556;
+}
+
+.contador-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#contador-cantidad-menos,
+#contador-cantidad-mas {
+    display: block;
+    width: 22px;
+    height: 23px;
+    margin: 0;
+    background: #C21556;
+    text-decoration: none;
+    text-align: center;
+    line-height: 23px;
+}
+
+#contador-cantidad-menos:hover,
+#contador-cantidad-mas:hover {
+    background: #575b71;
+    color: #fff;
+}
+
+#contador-cantidad-menos {
+    border-radius: 13px 0 0 13px;
+}
+
+#contador-cantidad-mas {
+    border-radius: 0 13px 13px 0;
+}
+
+#contador-cantidad-input {
+    width: 32px;
+    height: 19px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: #fff;
+    color: #C21556;
+}
+
+#contador-cantidad-menos:link,
+#contador-cantidad-mas:link {
+    color: #fff;
+}
+
+#contador-cantidad-menos:visited,
+#contador-cantidad-mas:visited {
+    color: #fff;
+}
