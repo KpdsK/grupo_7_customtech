@@ -5,7 +5,8 @@ header {
     /* background-color: #380116; */
     background-color: #4B011D;
     color: #fff;
-    box-shadow: 0px -34px 3px 40px rgba(0,0,0,0.38)
+    box-shadow: 0px -34px 3px 40px rgba(0,0,0,0.38);
+    top: 0;
 }
 
 header section {
@@ -44,6 +45,7 @@ nav ul {
 header section a {
     display: flex;
     align-items: center;
+    color: #fff;
 }
 
 .header-img {
