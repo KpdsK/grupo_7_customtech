@@ -5,6 +5,7 @@ main {
     align-items: center;
     text-align: center;
     margin-top: 80px;
+    box-shadow: #130007;
 }
 
 .bloqueLogin{
