@@ -6,53 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-login.css">
 </head>
 
-<header>
-    <section>
-        <div class="header-img-container">
-            <img class="header-img" src="images/favicon.ico" alt="Custom tech">
-            <h3>CustomTech</h3>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
-                <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </section>
-    <section class="header-categories">
-        <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
-    </section>
-</header>
+<body>
 
-<body class="ingreso">
+    <header>
+        <section>
+              <a class="header-image-container" href="/">
+                <img class="header-img" src="images/favicon.ico" alt="Custom tech">
+                <p>CUSTOMTECH</p>
+              </a>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar..." class="header-search-input"  >
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+        <section class="header-categories">
+            <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+        </section>
+    </header>
+
+    
+
     <main>
         
-        <i class="fa-solid fa-user"></i>
 
-        <form class="form-ingreso" action="/" method="GET">
+        <div class="bloqueLogin">
 
-            <div>
-                <input class="campo" type="email" name="email" placeholder="E-mail">
-            </div>
-
-            <div>
-                <input class="campo" type="password" name="contrasenia" placeholder="Contraseña">
-            </div>
-
-            <div>
-                <button type="submit">Login</button>
-                <h4>Don't have an account?</h4>
-                <button> <a href="/register" type="reset">Sign Up</a> </button>
-                
-            </div>
-
-
-        </form>
-
+            <form class="form-login" action="/" method="GET">
+    
+                <div class="icon-register">       
+                        <i class="fa-solid fa-circle-user"></i>
+                </div>
+            
+                <div>
+                    <input class="text-field" type="email" name="email" placeholder="E-mail">
+                </div>
+            
+                <div>
+                     <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                </div>
+    
+                    
+                <div class="register-or">
+                    <label for="label-or">OR</label>
+                </div>
+        
+                <div class="redes">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            
+                <div>
+                    <button class="botonSubmit" type="submit">Login</button>
+    
+    
+                <div class="bloqueSignup">
+                    <h4>Don't have an account?</h4>
+    
+                    <button class="botonSignup"> <a href="/register" type="reset">Sign Up</a> </button>   
+                 </div>
+    
+                 </div>
+            
+            
+            </form>
+    
+        </div>
+    
+       
     </main>
+
 
 </body>
 </html>
