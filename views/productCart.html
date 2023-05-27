@@ -8,16 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles-carrito.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
-    <h1>Soy el Carrito</h1>
-    <script src='/js/javascript.js'></script>
+    <script src="js/javascript.js"></script>
+    <header>
+        <section>
+            <a class="header-image-container" href="/">
+                <img class="header-img" src="images/favicon.ico" alt="Custom tech">
+                <p>CUSTOMTECH</p>
+            </a>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar..." class="header-search-input">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+        <section class="header-categories">
+            <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+        </section>
+    </header>
     <main>
         <section class="tarjetas-productos">
             <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -29,42 +55,45 @@
                 </div>
                 <div class="tarjeta-producto-detalle">
                     <i class="fa fa-trash" aria-hidden="true"></i>
-                    <div class="tarjeta-producto-detalle-titulos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <label>Color:</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="cantidad">Cantidad</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">Precio</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">SubTotal</label>
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto-detalle-datos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <label>Negro</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <div class="contador-cantidad">
-                                <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="cantidad">Cantidad</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
                             </div>
                         </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
+                        <div class="tarjeta-producto-detalle-datos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <label>Negro</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
             <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -76,42 +105,45 @@
                 </div>
                 <div class="tarjeta-producto-detalle">
                     <i class="fa fa-trash" aria-hidden="true"></i>
-                    <div class="tarjeta-producto-detalle-titulos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <label>Color:</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="cantidad">Cantidad</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">Precio</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">SubTotal</label>
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto-detalle-datos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <label>Negro</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <div class="contador-cantidad">
-                                <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="cantidad">Cantidad</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
                             </div>
                         </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
+                        <div class="tarjeta-producto-detalle-datos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <label>Negro</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
             <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -123,37 +155,39 @@
                 </div>
                 <div class="tarjeta-producto-detalle">
                     <i class="fa fa-trash" aria-hidden="true"></i>
-                    <div class="tarjeta-producto-detalle-titulos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <label>Color:</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="cantidad">Cantidad</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">Precio</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label for="precio">SubTotal</label>
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto-detalle-datos">
-                        <div class="tarjeta-producto-detalle-item">
-                            <i class="fa fa-circle" aria-hidden="true"></i>
-                            <label>Negro</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <div class="contador-cantidad">
-                                <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="cantidad">Cantidad</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
                             </div>
                         </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
-                        </div>
-                        <div class="tarjeta-producto-detalle-item">
-                            <label id="precio">$1000</label>
+                        <div class="tarjeta-producto-detalle-datos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <label>Negro</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label id="precio">$1000</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,14 +206,14 @@
                 if (value > 1) {
                     value--;
                 }
-                input.value=value;
+                input.value = value;
             });
 
             mas.addEventListener("click", function (e) {
                 e.preventDefault();
                 var value = input.value;
                 value++;
-                input.value=value;
+                input.value = value;
             })
         });
     </script>

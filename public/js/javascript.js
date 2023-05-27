@@ -27,4 +27,4 @@ function crearEnlaces() {
 }
 
 agregarFavIcon();
-crearEnlaces();
+// crearEnlaces();
