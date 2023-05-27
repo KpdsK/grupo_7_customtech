@@ -15,9 +15,10 @@ main {
     height: 100vh;
     width: 70vw;
     text-align: center;
-    background-color: rgba(112, 1, 43, 0.8);
+    background-color: rgba(75,1,29,0.6);
     border-radius: 40px;
     margin-top: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(32,32,32,0.3)
 }
 
 
@@ -26,17 +27,19 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0.8;
     text-align: center;
 }
 
 .icon-register i {
     font-size: 100px;
+    color: #4B011D;
 }
 
 .register-or {
     border-radius: 10%;
-    background-color:aliceblue;
+    padding: 1.5%;
+    background-color:#4B011D;
+    color: aliceblue;
     text-align: center;
     position: relative;
 }
@@ -44,6 +47,11 @@ main {
 .label-or {
     padding: 10px;
     border-radius:5px ;
+}
+
+.redes i{
+    font-size: 20px;
+    justify-content: space-around;
 }
 
 form div {
@@ -61,7 +69,7 @@ form div {
 }
 
 .botonSubmit{
-background-color: #25000E;
+background-color: #4B011D;
 color: aliceblue;
 padding: 5%;
 border: 0;
@@ -73,7 +81,7 @@ border-radius: 5px;
 }
 
 .botonSignup{
-background-color: #25000E;
+background-color: #4B011D;
 color: aliceblue;
 padding: 5%;
 border: 0;
@@ -94,7 +102,7 @@ align-items: center;
 }
 
 header nav {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .text-field {
@@ -106,14 +114,8 @@ header nav {
 }
 
 .bloqueLogin{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     width: 80vw;
-    text-align: center;
-    background-color: rgba(112, 1, 43, 0.8);
-    border-radius: 40px;
 }
 
 
