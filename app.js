@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require('express')
 const path = require('path')
 const app = express()
 
@@ -26,6 +26,10 @@ app.get('/productCart', function (req, res) {
 
 app.get('/productWhisList', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/productWhisList.html'));
+});
+
+app.get('/home', function (req, res) {
+    res.sendFile(path.join(__dirname, '/views/home.html'));
 });
 
 app.get('/404', (req, res)=>{

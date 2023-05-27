@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 16px;
+    background-color: #e9dadac0;
+}
+    
+section{
+    width: 100%;
+}
+
+.columnaUno{
+    width: 25%;
+}
+.columnaUno a{
+    text-decoration: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.columnaUno li{
+    list-style-type: none;
+}
+
+.buscador{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+.buscador div{
+    width: 95%;
+}
+.buscadorImput{
+    text-align: right;
+}
+
+
+footer section div .buscador .imput{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    text-align: right;
+}
+
+
+.novedades{
+    color: #1259c3;
+    font-size: 14px;
+    padding-top: 2%;
+    margin: 0;
+    padding: 0;
+    padding-left: 2px;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+footer section div h4{
+    color: #666;
+    font-size: 14px;
+    padding-top: 2px;
+    padding-bottom: 10px;   
+}
+footer section div p{
+    color: #070707;
+    font-size: 14px;
+    padding-top: 2%;
+   padding-bottom: 2px;
+    width: 100%;
+}
+
+
+
+footer section div i{
+    color: #1259c3;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+
+
+.columnaDos{
+    width: 17%;
+}
+
+
+
+.columnaCuatro{
+    width: 23%;
+}
+.columnaCuatro a{
+    text-decoration: none;
+    
+}
+.columnaCuatro ul{
+    list-style-type: none;
+    
+}
+.columnaCuatro li{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+footer div{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+    
+@media(min-width: 361px){
+   
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+@media(min-width: 769px){  
+    footer section{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+}
+
+
+
+
+

@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-login.css">
 </head>
-<body>
-    <h1>Soy el Login</h1>
-    <script src='/js/javascript.js'></script>
+
+<header>
+    <section>
+        <div class="header-img-container">
+            <img class="header-img" src="images/favicon.ico" alt="Custom tech">
+            <h3>CustomTech</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="header-categories">
+        <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+    </section>
+</header>
+
+<body class="ingreso">
+
+    <div class="login-container">
+
+        <main>
+            
+            <div >
+                <i class="fa-solid fa-user"></i>
+    
+                <form class="form-ingreso" action="/" method="GET">
+        
+                    <div>
+                        <input class="campo" type="email" name="email" placeholder="E-mail">
+                    </div>
+        
+                    <div>
+                        <input class="campo" type="password" name="contrasenia" placeholder="Contraseña">
+                    </div>
+        
+                    <div>
+                        <button type="submit">Login</button>
+                        <h4>Don't have an account?</h4>
+                        <button> <a href="/register" type="reset">Sign Up</a> </button>
+                        
+                    </div>
+        
+        
+                </form>
+            </div>
+    
+        </main>
+    </div>
+
 </body>
 </html>

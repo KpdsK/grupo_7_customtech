@@ -1,0 +1,111 @@
+/* producto */
+
+.producto-inicio {
+    display: flex;
+    position: relative;
+    border-top: 1px dashed whitesmoke;
+    border-bottom: 1px dashed whitesmoke;
+    
+  }
+  
+  .producto-imagenes img {
+    max-width: 600px;
+    height: auto;
+   
+   
+  }
+
+  
+  
+  .producto-imagenes,.producto-iconos{
+    display: inline-block;
+    
+  
+  }
+  .producto-imagenes i{
+  text-align: start;
+  font-size: 40px;
+  color:black;
+ 
+  }
+  
+  .producto-iconos {
+    position: absolute;
+    padding: 100px;
+  }
+   
+  .producto-iconos button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+  
+  }
+    .producto-iconos p {
+      text-align: left;
+      font-size: x-large;
+      border-left: 2px solid gray;
+    }
+
+   .producto-linea{
+    text-align: center;
+    font-size:x-large;
+    text-align: center;
+    border-bottom: 1px dashed grey;
+   }
+  
+  /*producto especificaciones-caracteristicas*/
+  
+  .producto-especificaciones{
+    display:flex;
+    flex-wrap: wrap;
+  
+  }
+  .producto-caracteristica{
+    display: inline-block;
+    width: 30%; 
+    box-sizing: border-box;
+    padding: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px
+  }
+  .producto-caracteristica h6{
+    border-bottom: 1px solid black;
+  }
+  .recomendado {
+    display: flex;
+  }
+  
+  .producto-recomendado-titulo{
+    text-align: center;
+    border-bottom: 1px dashed grey;
+    font-size:x-large
+    
+  }
+  
+    
+   
+    
+  
+  
+  
+  
+  .productos-item img{
+    max-width: 200px ;
+    height: auto;
+  }
+  
+  .productos-item {
+    display: inline-block;
+    width: 24.5%; 
+    box-sizing: border-box;
+    padding: 10px;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 10px 5px 5px whitesmoke;
+  }
+  
+  
