@@ -8,9 +8,10 @@ main {
     margin: 150px 0px 40px 0px;
 }
 
-article>.fa-trash {
+/* article>.fa-trash, */
+/* article>.fa-shopping {
     visibility: hidden;
-}
+} */
 
 .tarjetas-productos {
     display: flex;
@@ -21,6 +22,7 @@ article>.fa-trash {
 }
 
 .tarjeta-producto {
+    position: relative;
     display: flex;
     border-radius: 5%;
     flex-direction: column;
@@ -90,12 +92,28 @@ label[class="cantidad"] {
     column-gap: 10px;
 }
 
-.fa-trash {
+.fa-trash,
+.carrito-whislist {
     position: absolute;
     margin: 0px;
-    left: 10%;
-    bottom: 18%;
+    bottom: 10%;
     color: #C21556;
+}
+
+.corazon-whislist {
+    position: absolute;
+    margin: 0px;
+    right: 10%;
+    top: 3%;
+    color: #C21556;
+}
+
+.fa-trash {
+    left: 10%;
+}
+
+.carrito-whislist {
+    right: 10%;
 }
 
 .contador-cantidad {
@@ -158,7 +176,7 @@ label[class="cantidad"] {
         flex-direction: row;
     }
 
-    article>.fa-trash {
+    /* article>.fa-trash {
         visibility: visible;
         left: 50%;
         top: 5%;
@@ -166,7 +184,7 @@ label[class="cantidad"] {
 
     .tarjeta-producto-detalle .fa-trash {
         visibility: hidden;
-    }
+    } */
 
     .tarjeta-producto-detalles {
         flex-direction: column;
@@ -193,5 +211,14 @@ label[class="cantidad"] {
         justify-content: space-around;
         row-gap: 10px;
         align-items: center;
+    }
+    .corazon-whislist,
+    .carrito-whislist {
+        right: 5%;
+    }
+
+    .fa-trash {
+        top: 5%;
+        left: 50%;
     }
 }
