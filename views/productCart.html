@@ -1,12 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/stylesFooter.css">
+    <link rel="stylesheet" href="css/styles-carrito.css">
 </head>
+
 <body>
-    <h1>Soy el Carrito</h1>
-    <script src='/js/javascript.js'></script>
+    <script src="js/javascript.js"></script>
+    <header>
+        <section>
+            <a class="header-image-container" href="/">
+                <img class="header-img" src="images/favicon.ico" alt="Custom tech">
+                <p>CUSTOMTECH</p>
+            </a>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar..." class="header-search-input">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
+                    <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </section>
+        <section class="header-categories">
+            <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+        </section>
+    </header>
+    <main>
+        <section class="tarjetas-productos">
+            <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <div class="tarjeta-producto-cabecera">
+                    <div class="tarjeta-producto-cabecera-imagen">
+                        <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
+                    </div>
+                    <div class="tarjeta-producto-titulo-descripcion">
+                        <legend>MacBook Pro blabla</legend>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
+                    </div>
+                </div>
+                <div class="tarjeta-producto-detalle">
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                                <div>
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <label>Negro</label>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label class="cantidad">Cantidad</label>
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <div class="tarjeta-producto-cabecera">
+                    <div class="tarjeta-producto-cabecera-imagen">
+                        <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
+                    </div>
+                    <div class="tarjeta-producto-titulo-descripcion">
+                        <legend>MacBook Pro blabla</legend>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
+                    </div>
+                </div>
+                <div class="tarjeta-producto-detalle">
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                                <div>
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <label>Negro</label>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label class="cantidad">Cantidad</label>
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="tarjeta-producto">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <div class="tarjeta-producto-cabecera">
+                    <div class="tarjeta-producto-cabecera-imagen">
+                        <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
+                    </div>
+                    <div class="tarjeta-producto-titulo-descripcion">
+                        <legend>MacBook Pro blabla</legend>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
+                    </div>
+                </div>
+                <div class="tarjeta-producto-detalle">
+                    <div class="tarjeta-producto-detalles">
+                        <div class="tarjeta-producto-detalle-titulos">
+                            <div class="tarjeta-producto-detalle-item">
+                                <label>Color:</label>
+                                <div>
+                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                    <label>Negro</label>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label class="cantidad">Cantidad</label>
+                                <div class="contador-cantidad">
+                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
+                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
+                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                </div>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">Precio</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                            <div class="tarjeta-producto-detalle-item">
+                                <label for="precio">SubTotal</label>
+                                <label id="precio">$1000</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="carrito-total-section">
+            <div  class="contenedor-total">
+                <div class="carrito-seguir-comprar">
+                    <input type="button" class="seguir-comprando" value="Seguir Comprando">
+                </div>
+                <div class="carrito-total-boton">
+                    <div class="carrito-total">
+                        <label>Total</label>
+                        <label>$1000</label>
+                    </div>
+                    <div class="carrito-comprar">
+                        <input type="button" class="comprar" value="Comprar">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="columnaUno">
+                <a class="header-image-container" href="/">
+                    <img class="header-img" src="images/favicon.ico" alt="Custom tech">
+                    <h4>CUSTOMTECH</h4>
+                </a>
+
+                <p>Av.San Martín 1234 Caballito</p>
+                <li>
+                    <a
+                        href="">info@customtech.com.ar</a><!--la idea podria ser utilizarlo como hipervinculo para redirigir a el mail-->
+                </li>
+
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>+54-1234-5678</p><i></i>
+                    <i class="fa-brands fa-square-instagram"></i><i class="fa-brands fa-facebook"></i><i
+                        class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+
+            <div class="columnaDos">
+                <h4>HORARIOS</h4>
+                <p>Lunes a Viernes</p>
+                <P>09:00 - 17.00hs</P>
+                <P>Sabados</P>
+                <p>10:00 - 14:00hs</P>
+            </div>
+
+
+            <div class="buscador">
+                <div class="buscadorImput">
+                    <input class="imput" type="text" name="Ingresa tu email" placeholder="Ingresa tu email"><i
+                        class="fa fa-search"></i>
+                </div>
+                <div>
+                    <p class="novedades">RECIBIR NOVEDADES</p>
+                </div>
+
+            </div>
+
+
+            <div class="columnaCuatro">
+                <ul>
+                    <li>
+                        <a href="">
+                            <h4>AYUDA</h4>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">Preguntas frecuentes</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">Garantía</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">Defensa y derechos del consumidor</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div>
+            <p>© 2023 CUSTOMTECH. Todos los derechos reservados. Imprimir PáginaPrivacidad Mapa del Sitio Términos de
+                uso</p>
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menos = document.getElementById('contador-cantidad-menos');
+            const mas = document.getElementById('contador-cantidad-mas');
+            const input = document.getElementById('contador-cantidad-input');
+            menos.addEventListener("click", function (e) {
+                e.preventDefault();
+                var value = input.value;
+                if (value > 1) {
+                    value--;
+                }
+                input.value = value;
+            });
+
+            mas.addEventListener("click", function (e) {
+                e.preventDefault();
+                var value = input.value;
+                value++;
+                input.value = value;
+            })
+        });
+    </script>
 </body>
+
 </html>
