@@ -1,16 +1,21 @@
 header {
     position: fixed;
     width: 100%;
-    height: 80px;
+    height: 100px;
     /* background-color: #380116; */
     background-color: #4B011D;
     color: #fff;
     box-shadow: 0px -34px 3px 40px rgba(0,0,0,0.38);
     top: 0;
     left: 0;
+    margin-bottom: 10px;
 }
 
-header section {
+header a {
+    text-decoration: none;
+}
+
+header .header-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -18,13 +23,13 @@ header section {
     padding: 5px 0;
 }
 
-header section .header-image-container {
+header  .header-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header section p {
+header .header-container p {
     font-size: 15px;
 }
 
@@ -43,7 +48,7 @@ nav ul {
 
 
 
-header section a {
+header .header-container a {
     display: flex;
     align-items: center;
     color: #fff;
@@ -88,11 +93,12 @@ header section a {
     display: flex;
     justify-content: start;
     border-top: 1px solid #fff;
-    padding: 5px;
+    padding: 10px 5px;
 }
 
-.header-categories h3 {
-    font-size: 12px;
+.header-categories h4 {
+    font-size: 15px;
+    margin: 0;
 }
 
 
@@ -109,7 +115,7 @@ header section a {
 
 
    .header-img {
-        width: 25px;
+        width: 35px;
         padding-left: 5px;
    }
 
@@ -127,6 +133,9 @@ header section a {
     padding: 10px;
    }
 
+   .header-categories h4 {
+    margin: 0;
+   }
 
    .burger-menu {
     display: none;
@@ -152,7 +161,7 @@ header section a {
     }
 
     header {
-        height: 12vh;
+        height: 100px;
     }
    
 }
