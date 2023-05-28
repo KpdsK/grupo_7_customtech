@@ -8,6 +8,7 @@ img {vertical-align: middle;}
   max-width: 100%;
   position: relative;
   margin: auto;
+  margin-top: 118px;
 }
 
 /* Next & previous buttons */
@@ -65,7 +66,7 @@ img {vertical-align: middle;}
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: none /* inline-block; */
+  display: none; /* inline-block; */
   transition: background-color 0.6s ease;
 }
 
@@ -146,7 +147,6 @@ img {vertical-align: middle;}
     transition: all 450ms;
 }
 .destacado {
-    font-family: roboto;
     font-size: 12px;
     font-weight: 400;
     text-align: center;
@@ -188,7 +188,7 @@ img {vertical-align: middle;}
         width: 23%;
     }
     .sub-main:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px #C21556;
     }
     .sub-main:hover .descripciones{
         display: block;
