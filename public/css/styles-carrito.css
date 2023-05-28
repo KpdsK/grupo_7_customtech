@@ -8,11 +8,6 @@ main {
     margin: 150px 0px 40px 0px;
 }
 
-/* article>.fa-trash, */
-/* article>.fa-shopping {
-    visibility: hidden;
-} */
-
 .tarjetas-productos {
     display: flex;
     justify-content: space-around;
@@ -123,6 +118,92 @@ label[class="cantidad"] {
     /* padding: calc(); */
 }
 
+.carrito-total-section {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    padding-top: 3px;
+}
+
+.contenedor-total {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 188px;
+    height: 48px;
+    border-radius: 11px;
+    background: rgba(193, 193, 193, 0.37);
+}
+
+.carrito-comprar input[type="button"],
+.carrito-seguir-comprar input[type="button"],
+.agregar-todo {
+    border: none;
+    margin: 0;
+    padding: 7px 8px;
+    margin-bottom: 10px;
+    background-color: #C21556;
+    color: white;
+    border-radius: 20px;
+    height: 48px;
+    font-size: 18px;
+}
+
+.whislist-agregar-section {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-top: 1%;
+}
+
+.carrito-seguir-comprar {
+    display: flex;
+    align-items: end;
+}
+
+.carrito-total-boton {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: flex-end;
+}
+
+.comprar {
+    width: 136px;
+}
+
+.agregar-todo {
+    width: 180px;
+    text-align: start;
+    padding-left: 15%;
+}
+
+.contenedor-agregar-todo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    position: absolute;
+    padding: 10px;
+    right: 5%;
+    bottom: 15px;
+    min-width: 40px;
+    color: white;
+}
+
 #contador-cantidad-menos,
 #contador-cantidad-mas {
     display: block;
@@ -186,6 +267,29 @@ label[class="cantidad"] {
         visibility: hidden;
     } */
 
+    .contenedor-total {
+        width: 710px;
+        flex-direction: row;
+        align-items: flex-end;
+        column-gap: 15px;
+        justify-content: flex-end;
+    }
+
+    .carrito-comprar input[type="button"],
+    .carrito-total,
+    .agregar-todo {
+        width: 313px;
+    }
+
+    .agregar-todo {
+        padding-left: 26%;
+    }
+
+    .icon {
+        right: 25%;
+    }
+
+
     .tarjeta-producto-detalles {
         flex-direction: column;
         row-gap: 10px;
@@ -212,6 +316,7 @@ label[class="cantidad"] {
         row-gap: 10px;
         align-items: center;
     }
+
     .corazon-whislist,
     .carrito-whislist {
         right: 5%;
