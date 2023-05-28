@@ -5,7 +5,6 @@ main {
     align-items: center;
     text-align: center;
     margin-top: 80px;
-    box-shadow: #130007;
 }
 
 .bloqueLogin{
@@ -15,10 +14,11 @@ main {
     height: 100vh;
     width: 70vw;
     text-align: center;
-    background-color: rgba(75,1,29,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 40px;
     margin-top: 20px;
-    box-shadow: 5px 5px 5px 5px rgba(32,32,32,0.3)
+    margin-bottom: 10%;
+    box-shadow: 0px 0px 15px rgb(194, 21, 86 , 0.9);
 }
 
 
@@ -32,26 +32,14 @@ main {
 
 .icon-register i {
     font-size: 100px;
-    color: #4B011D;
-}
-
-.register-or {
-    border-radius: 10%;
-    padding: 1.5%;
-    background-color:#4B011D;
-    color: aliceblue;
-    text-align: center;
-    position: relative;
-}
-
-.label-or {
-    padding: 10px;
-    border-radius:5px ;
+    color: #c21556;
+    margin-top: 30%;
 }
 
 .redes i{
     font-size: 20px;
     justify-content: space-around;
+    color: #c21556;
 }
 
 form div {
@@ -61,33 +49,60 @@ form div {
 }
 
 .text-field {
-    padding: 5px;
+    padding: 10%;
     border-radius: 5px;
-    border: 0;
     padding: 5%;
     width: 60vw;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(121, 121, 121, 0.38);
+    border: 0;
+}
+
+.remembforgot{
+    flex-direction: row;
+}
+
+.register-or {
+    border-radius: 10px;
+    padding: 1%;
+    background-color:#c21556;
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+}
+
+.label-or {
+    padding: 2%;
+    border-radius:5px ;
 }
 
 .botonSubmit{
-background-color: #4B011D;
+background-color: #c21556;
 color: aliceblue;
-padding: 5%;
+padding: 8%;
 border: 0;
-border-radius: 5px;
+border-radius: 10px;
+font-size: 15px;
 }
 
 .bloqueSignup{
-    margin-top: 20%;
+    margin-top: 18%;
+}
+
+.bloqueLogin h4{
+color: #c21556;
 }
 
 .botonSignup{
-background-color: #4B011D;
+background-color: #c21556;
 color: aliceblue;
-padding: 5%;
+padding: 8%;
 border: 0;
-border-radius: 5px;
+margin-bottom: 10%;
+border-radius: 10px;
 text-decoration: none;
 }
+
 
 
 @media (min-width: 361px) {
@@ -106,7 +121,7 @@ header nav {
 }
 
 .text-field {
-    padding: 5px;
+    padding: 10%;
     border-radius: 5px;
     border: 0;
     padding: 2.5%;
@@ -114,9 +129,8 @@ header nav {
 }
 
 .bloqueLogin{
-    height: 100vh;
+    height: 120vh;
     width: 80vw;
 }
-
 
 }
