@@ -1,48 +1,121 @@
 
-
-.ingreso {
-    /* background-image: url('../images/wallpaperflare.com_wallpaper.jpg'); */
-    /* background-size: cover; */
-   
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
 }
 
-.form-ingreso{
+.bloqueLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 70vw;
+    text-align: center;
+    background-color: rgba(75,1,29,0.6);
+    border-radius: 40px;
     margin-top: 20px;
-    opacity: 1;
+    box-shadow: 5px 5px 5px 5px rgba(32,32,32,0.3)
+}
+
+
+.form-login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 5%;
-    background-color: #70012B;
-    opacity: 0.8;
+    justify-content: center;
+    text-align: center;
+}
 
+.icon-register i {
+    font-size: 100px;
+    color: #4B011D;
+}
+
+.register-or {
+    border-radius: 10%;
+    padding: 1.5%;
+    background-color:#4B011D;
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+}
+
+.label-or {
+    padding: 10px;
+    border-radius:5px ;
+}
+
+.redes i{
+    font-size: 20px;
+    justify-content: space-around;
 }
 
 form div {
     margin-bottom: 10px;
     border-radius: 5%;
+    margin-top: 2%;
 }
 
-.campo {
+.text-field {
     padding: 5px;
-}
-
-.ingreso main {
-    /* background-color: #70012B; */
-    /* opacity: 0.5; */
+    border-radius: 5px;
+    border: 0;
     padding: 5%;
-    width: 30%;
-    height: 50%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto; 
-    border-radius: 10%;
-    /* margin-top: 25px; */
+    width: 60vw;
+}
+
+.botonSubmit{
+background-color: #4B011D;
+color: aliceblue;
+padding: 5%;
+border: 0;
+border-radius: 5px;
+}
+
+.bloqueSignup{
+    margin-top: 20%;
+}
+
+.botonSignup{
+background-color: #4B011D;
+color: aliceblue;
+padding: 5%;
+border: 0;
+border-radius: 5px;
+text-decoration: none;
 }
 
 
+@media (min-width: 361px) {
 
-.login-container {
-    width: 100vw;
-   
+.top-header {
+display: flex;
+flex-wrap: nowrap;
+padding: 5%;
+width: 90%;
+height: 100%;
+align-items: center;
+}
+
+header nav {
+  justify-content: space-between;
+}
+
+.text-field {
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    padding: 2.5%;
+    width: 60vw;
+}
+
+.bloqueLogin{
+    height: 100vh;
+    width: 80vw;
+}
+
+
 }
