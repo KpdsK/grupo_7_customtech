@@ -112,6 +112,7 @@ img {vertical-align: middle;}
 .sub-main-descripcion{
     position: relative;
     padding: 0 15px 0 15px;
+    text-align: center;
 }
 .productos {
     width: 100%;
