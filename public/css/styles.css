@@ -4,6 +4,8 @@
 @import url('./header.css');
 /* footer */
 @import url('./stylesFooter.css');
+/* Carrito y Whislist */
+@import url('./styles-carrito-whislist.css');
 
 
 * {
