@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles-login.css">
 </head>
 
-<body class="registro">
+<body>
 
     <header>
         <div class="header-container">
@@ -39,18 +39,18 @@
     </header>
 
     <main>
-        <div class="bloque-register">
-            <form class="form-register" action="/" method="GET">
+
+
+        <div class="bloqueLogin">
+
+            <form class="form-login" action="/register" method="GET">
+
                 <div class="icon-register">
                     <i class="fa-solid fa-circle-user"></i>
                 </div>
 
                 <div>
-                    <input class="text-field" type="text" name="nombre" placeholder="Nombre">
-                </div>
-
-                <div>
-                    <input class="text-field" type="text" name="apellido" placeholder="Apellido">
+                    <input class="text-field" type="text" name="nombre" placeholder="Nombre completo">
                 </div>
 
                 <div>
@@ -62,16 +62,7 @@
                 </div>
 
                 <div>
-                    <input class="text-field" type="password" name="contraseniaConfirmar" placeholder="Confirmar contraseña">
-                </div>
-
-                <div class="register-or">
-                    <label for="label-or">OR</label>
-                </div>
-
-                <div class="">
-                    <i class="fa-brands fa-google"></i>
-                    <i class="fa-brands fa-facebook"></i>
+                    <input class="text-field" type="password" name="contrasenia" placeholder="Confirmar contraseña">
                 </div>
 
                 <div>
@@ -79,17 +70,38 @@
                     <input type="file" name="fotoPerfil" id="fotoPerfil">
                 </div>
 
-                <div>
-                    <button class="botonSubmit" type="submit">Sign Up</button>
-                    <h4>Already have an account?</h4>
-                    <button class="botonSubmit"> <a href="/login" type="reset">Login</a> </button>
+                <canvas></canvas>
+                <div class="register-or">
+                    <label class="label-or">OR</label>
                 </div>
+
+                <div class="redes">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+
+                <div class="buttons">
+                    <button class="botonSubmit" type="submit">Sign Up</button>
+                    <div class="bloqueSignup">
+                        <legend>
+                            Already have an account?
+                        </legend>
+
+                        <button type="submit" class="botonSignup"> 
+                            Login
+                        </button>
+                        
+                    </div>
+
+                </div>
+
+
+            </form>
+
         </div>
 
-        </form>
-
     </main>
-
+   
     <footer>
         <section class="sectionFooter">
             <div class="columnaUno">
