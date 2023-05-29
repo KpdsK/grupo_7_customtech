@@ -134,7 +134,7 @@ label[class="cantidad"] {
 .contenedor-total {
     display: flex;
     width: 90vw;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .carrito-total {
@@ -149,8 +149,7 @@ label[class="cantidad"] {
 }
 
 .carrito-comprar input[type="button"],
-.carrito-seguir-comprar input[type="button"],
-.agregar-todo {
+.carrito-seguir-comprar input[type="button"] {
     border: none;
     margin: 0;
     padding: 2vw 2vw;
@@ -188,9 +187,17 @@ label[class="cantidad"] {
 }
 
 .agregar-todo {
-    width: 180px;
-    text-align: start;
-    padding-left: 15%;
+    border: none;
+    margin: 0;
+    padding: 2vw 2vw;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 4vw;
+    text-align: end;
+    margin-bottom: 0;
+    background-color: #C21556;
+    opacity: 1;
 }
 
 .contenedor-agregar-todo {
@@ -198,15 +205,15 @@ label[class="cantidad"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0px;
+    background-color: #C21556;
+    border-radius: 20px;
 }
 
 .icon {
-    position: absolute;
-    padding: 10px;
-    right: 5%;
-    bottom: 15px;
-    min-width: 40px;
+    font-size: 4vw;
     color: white;
+    padding-right: 10%;
 }
 
 #contador-cantidad-menos,
@@ -274,7 +281,7 @@ label[class="cantidad"] {
 
     .carrito-comprar input[type="button"],
     .carrito-total,
-    .agregar-todo {
+    .contenedor-agregar-todo {
         max-width: 313px;
     }
 
@@ -291,6 +298,11 @@ label[class="cantidad"] {
 
     .tarjeta-producto-detalle-item {
         font-size: 16px;
+    }
+
+    .caracteristica {
+        display: flex;
+        column-gap: 4px;
     }
 
     .corazon-whislist,
@@ -333,6 +345,16 @@ label[class="cantidad"] {
         font-size: 16px;
     }
 
+    .contenedor-agregar-todo {
+        min-width: 180px;
+    }
+
+    .icon {
+        font-size: 16px;
+        /* right: 15%;
+        bottom: 35%;  */
+    } 
+
 }
 
 @media (min-width: 800px) {
@@ -352,16 +374,8 @@ label[class="cantidad"] {
 
     .carrito-comprar input[type="button"],
     .carrito-total,
-    .agregar-todo {
+    .contenedor-agregar-todo {
         width: 313px;
-    }
-
-    .agregar-todo {
-        padding-left: 26%;
-    }
-
-    .icon {
-        right: 25%;
     }
 
     #contador-cantidad-input {
@@ -400,7 +414,6 @@ label[class="cantidad"] {
         justify-content: space-around;
         row-gap: 10px;
         align-items: center;
-        font-size: 16px;
     }
 
     .corazon-whislist,
@@ -434,8 +447,7 @@ label[class="cantidad"] {
     }
 
     .carrito-comprar input[type="button"],
-    .carrito-seguir-comprar input[type="button"],
-    .agregar-todo {
+    .carrito-seguir-comprar input[type="button"] {
         padding: 7px 8px;
         height: 48px;
         font-size: 16px;
