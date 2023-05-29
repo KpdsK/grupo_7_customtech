@@ -7,8 +7,6 @@ img {vertical-align: middle;}
 .slideshow-container {
   max-width: 100%;
   position:relative;
-  margin: auto;
-  margin-top: 118px;
 }
 
 /* Next & previous buttons */
