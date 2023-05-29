@@ -1,6 +1,20 @@
 main {
     background-color: #70012B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
 
 .form-register{
     display: flex;
@@ -14,6 +28,8 @@ main {
 
 .icon-register i {
     font-size: 100px;
+    color: #c21556;
+    margin-top: 30%;
 }
 
 .register-or {
@@ -24,7 +40,8 @@ main {
 }
 
 .label-or {
-    padding: 10px;
+    padding: 2%;
+    border-radius:5px ;
 }
 
 form div {
@@ -37,7 +54,14 @@ form div {
     border-radius: 5px;
 }
 
-
+.botones-registro {
+    background-color: #c21556;
+    color: aliceblue;
+    padding: 8%;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px;
+}
 
 
 @media (min-width: 361px) {
@@ -61,3 +85,33 @@ form div {
 @media (min-width: 769px) {
 
 }
+
+@media (min-width: 361px) {
+
+    .top-header {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 5%;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    }
+    
+    header nav {
+      justify-content: space-between;
+    }
+    
+    .text-field {
+        padding: 10%;
+        border-radius: 5px;
+        border: 0;
+        padding: 2.5%;
+        width: 28vw;
+    }
+    
+    .form-register {
+        height: 120vh;
+        width: 80vw;
+    }
+    
+    }
