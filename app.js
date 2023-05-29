@@ -13,6 +13,7 @@ app.get('/login', function (req, res) {
 });
 
 app.get('/register', function (req, res) {
+    console.log("PASE POR REGISTRO")
     res.sendFile(path.join(__dirname, '/views/register.html'));
 });
 

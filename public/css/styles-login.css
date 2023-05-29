@@ -22,6 +22,7 @@ main {
 
 
 .form-login {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +68,7 @@ form div {
     justify-content: space-evenly;
     column-gap: 3vw;
     align-items: center;
+    margin-bottom: 4vh;
 }
 
 .remembforgot legend {
@@ -87,12 +89,15 @@ form div {
     background-color: #c21556;
     color: aliceblue;
     text-align: center;
-    position: relative;
+    position: absolute;
+    width: 9vw;
+    bottom: 41%;
 }
 
 .label-or {
     padding: 2%;
     border-radius: 5px;
+    font-size: 4vw;
 }
 
 .buttons {
@@ -137,6 +142,13 @@ form div {
     font-size: 5vw;
 }
 
+canvas {
+    position: absolute;
+    width: 79vw;
+    height: 0px;
+    bottom: 45%;
+    border: .5px solid #c21556;
+}
 
 .switch {
     position: relative;
@@ -233,6 +245,10 @@ input:checked+.slider:before {
         width: 28vw;
     }
 
+    canvas {
+        width: 49vw;
+    }
+
     .bloqueLogin {
         min-width: 320px;
         width: 50vw;
@@ -242,8 +258,38 @@ input:checked+.slider:before {
         font-size: 18px;
     }
 
+    .remembforgot {
+        margin-bottom: 6vh;
+    }
+
     .remembforgot legend {
         font-size: 14px;
     }
 
+    .register-or {
+        border-radius: 10px;
+        padding: 1%;
+        background-color: #c21556;
+        color: aliceblue;
+        text-align: center;
+        position: relative;
+        width: 40px;
+        position: absolute;
+        bottom: 43.3%;
+    }
+    
+    .label-or {
+        padding: 2%;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    canvas {
+        position: absolute;
+        width: 49vw;
+        min-width: 314px;
+        height: 0px;
+        bottom: 47.5%;
+        border: .5px solid #c21556;
+    }
 }
