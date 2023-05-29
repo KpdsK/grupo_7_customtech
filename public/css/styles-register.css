@@ -8,13 +8,14 @@ main {
 }
 
 
-.bloqueLogin {
+.bloqueSignup {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 80vw;
     text-align: center;
+    margin-top: 10%;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 40px;
     box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);
@@ -32,7 +33,7 @@ main {
 .icon-register i {
     font-size: 25vw;
     color: #c21556;
-    margin-top: 30%;
+    margin-top: 5%;
 }
 
 .redes {
@@ -81,7 +82,7 @@ form div {
     font-size: 5vw;
 }
 
-.bloqueSignup {
+.bloqueLogin {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -89,13 +90,13 @@ form div {
     row-gap: 1vh;
 }
 
-.bloqueSignup legend {
+.bloqueLogin legend {
     color: #c21556;
     font-size: 4vw;
     font-weight: bold;
 }
 
-.botonSignup {
+.botonLogin {
     background-color: #c21556;
     color: aliceblue;
     padding: 8%;
@@ -104,21 +105,21 @@ form div {
     border-radius: 25px;
     font-size: 5vw;
 }
-.register-or {
-    border-radius: 10px;
-    padding: 1%;
-    background-color: #c21556;
-    color: aliceblue;
-    text-align: center;
-    position: absolute;
-    width: 9vw;
-    bottom: 41%;
+
+.cuadrOr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.label-or {
+.register-or{
+    background-color: #c21556;
+    color: aliceblue;
     padding: 2%;
-    border-radius: 5px;
-    font-size: 4vw;
+    border: 0;
+    width: 5vw;
+    border-radius: 10px;
+    font-size: 2vw;
 }
 
 canvas {
@@ -139,7 +140,7 @@ canvas {
     }
 
     .botonSubmit,
-    .botonSignup {
+    .botonLogin {
         width: 220px;
         font-size: 18px;
     }
@@ -169,12 +170,12 @@ canvas {
         width: 49vw;
     }
 
-    .bloqueLogin {
+    .bloqueSignup {
         min-width: 320px;
         width: 50vw;
     }
 
-    .bloqueSignup legend {
+    .bloqueLogin legend {
         font-size: 18px;
     }
 
@@ -185,26 +186,11 @@ canvas {
         font-size: 14px;
     }
 
-    .register-or {
-        border-radius: 10px;
-        padding: 1%;
-        background-color: #c21556;
-        color: aliceblue;
-        text-align: center;
-        position: relative;
-        width: 40px;
-        position: absolute;
-        bottom: 43.3%;
-    }
-    
-    .label-or {
-        padding: 2%;
-        border-radius: 5px;
-        font-size: 14px;
+    .register-or{
+        max-width: 5vw;
     }
 
     canvas {
-        position: absolute;
         width: 49vw;
         min-width: 314px;
         height: 0px;
