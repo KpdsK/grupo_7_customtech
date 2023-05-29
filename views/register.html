@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles-login.css">
 </head>
 
-<body class="registro">
+<body>
 
     <header>
         <div class="header-container">
@@ -40,56 +40,68 @@
 
     <main>
 
-        <form class="form-register" action="/" method="GET">
-            <div class="icon-register">
-                <i class="fa-solid fa-circle-user"></i>
-            </div>
 
-            <div>
-                <input class="text-field" type="text" name="nombre" placeholder="Nombre">
-            </div>
+        <div class="bloqueLogin">
 
-            <div>
-                <input class="text-field" type="text" name="apellido" placeholder="Apellido">
-            </div>
+            <form class="form-login" action="/register" method="GET">
 
-            <div>
-                <input class="text-field" type="email" name="email" placeholder="E-mail">
-            </div>
+                <div class="icon-register">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
 
-            <div>
-                <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
-            </div>
+                <div>
+                    <input class="text-field" type="text" name="nombre" placeholder="Nombre completo">
+                </div>
 
-            <div>
-                <input class="text-field" type="password" name="contraseniaConfirmar" placeholder="Confirmar contraseña">
-            </div>
+                <div>
+                    <input class="text-field" type="email" name="email" placeholder="E-mail">
+                </div>
 
-            <div class="register-or">
-                <label for="label-or">OR</label>
-            </div>
+                <div>
+                    <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                </div>
 
-            <div class="">
-                <i class="fa-brands fa-google"></i>
-                <i class="fa-brands fa-facebook"></i>
-            </div>
+                <div>
+                    <input class="text-field" type="password" name="contrasenia" placeholder="Confirmar contraseña">
+                </div>
 
-            <div>
-                <label for="fotoPerfil">Foto de usuario</label>
-                <input type="file" name="fotoPerfil" id="fotoPerfil">
-            </div>
+                <div>
+                    <label for="fotoPerfil">Foto de usuario</label>
+                    <input type="file" name="fotoPerfil" id="fotoPerfil">
+                </div>
 
-            <div>
-                <button class="botones-registro" type="submit">Sign Up</button>
-                <h4>Already have an account?</h4>
-                <button class="botones-registro"> <a href="/login" type="reset">Login</a> </button>
-            </div>
+                <canvas></canvas>
+                <div class="register-or">
+                    <label class="label-or">OR</label>
+                </div>
+
+                <div class="redes">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+
+                <div class="buttons">
+                    <button class="botonSubmit" type="submit">Sign Up</button>
+                    <div class="bloqueSignup">
+                        <legend>
+                            Already have an account?
+                        </legend>
+
+                        <button type="submit" class="botonSignup"> 
+                            Login
+                        </button>
+                        
+                    </div>
+
+                </div>
 
 
-        </form>
+            </form>
+
+        </div>
 
     </main>
-
+   
     <footer>
         <section class="sectionFooter">
             <div class="columnaUno">
