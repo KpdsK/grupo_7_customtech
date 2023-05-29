@@ -1,6 +1,6 @@
-main {
+.main-carrito-whislist {
     width: 100%;
-    margin: 81px 0px 40px 0px;
+    margin: 120px 0px 40px 0px;
 }
 
 .tarjetas-productos {
@@ -13,6 +13,7 @@ main {
 
 .tarjeta-producto {
     position: relative;
+    width: 90vw;
     display: flex;
     border-radius: 5%;
     flex-direction: column;
@@ -24,8 +25,8 @@ main {
 .tarjeta-producto-cabecera {
     display: flex;
     flex-direction: row;
-    max-width: 350px;
-    margin: 0px 5px;
+    /* max-width: 350px; */
+    margin: 5px 5px 0px 5px;
 }
 
 .tarjeta-producto-cabecera img {
@@ -40,6 +41,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 4.5vw;
 }
 
 .tarjeta-producto-titulo-descripcion legend {
@@ -49,7 +51,7 @@ main {
 }
 
 .tarjeta-producto-titulo-descripcion p {
-    font-size: small;
+    font-size: 4vw;
 }
 
 .tarjeta-producto-detalle {
@@ -63,7 +65,7 @@ main {
 }
 
 .tarjeta-producto-cabecera-imagen {
-    width: 90%;
+    width: 80vw;
 }
 
 .tarjeta-producto-detalle-titulos {
@@ -80,25 +82,30 @@ label[class="cantidad"] {
     margin: 5px 0px;
     display: flex;
     column-gap: 10px;
+    font-size: 4.5vw;
 }
 
-.fa-trash,
-.carrito-whislist {
-    position: absolute;
-    margin: 0px;
-    bottom: 10%;
-    color: #C21556;
-}
-
+.tacho-basura,
+.carrito-whislist,
 .corazon-whislist {
     position: absolute;
     margin: 0px;
-    right: 10%;
-    top: 3%;
     color: #C21556;
 }
 
-.fa-trash {
+.tacho-basura,
+.carrito-whislist {
+    font-size: 5vw;
+    bottom: 10%;
+}
+
+.corazon-whislist {
+    right: 10%;
+    top: 3%;
+    font-size: 5vw;
+}
+
+.tacho-basura {
     left: 10%;
 }
 
@@ -110,12 +117,13 @@ label[class="cantidad"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: calc(); */
+    width: 24vw;
+    height: 4vw;
 }
 
 .carrito-total-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     position: sticky;
     bottom: 0;
     background-color: white;
@@ -125,16 +133,17 @@ label[class="cantidad"] {
 
 .contenedor-total {
     display: flex;
+    width: 90vw;
     justify-content: space-between;
-    width: 360px;
 }
 
 .carrito-total {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 188px;
-    height: 48px;
+    width: 50vw;
+    height: 13vw;
+    font-size: 4vw;
     border-radius: 11px;
     background: rgba(193, 193, 193, 0.37);
 }
@@ -144,13 +153,13 @@ label[class="cantidad"] {
 .agregar-todo {
     border: none;
     margin: 0;
-    padding: 7px 8px;
+    padding: 2vw 2vw;
     margin-bottom: 10px;
     background-color: #C21556;
     color: white;
     border-radius: 20px;
-    height: 48px;
-    font-size: 18px;
+    height: 13vw;
+    font-size: 4vw;
 }
 
 .whislist-agregar-section {
@@ -175,7 +184,7 @@ label[class="cantidad"] {
 }
 
 .comprar {
-    width: 136px;
+    width: 40vw;
 }
 
 .agregar-todo {
@@ -190,6 +199,7 @@ label[class="cantidad"] {
     justify-content: center;
     align-items: center;
 }
+
 .icon {
     position: absolute;
     padding: 10px;
@@ -201,13 +211,14 @@ label[class="cantidad"] {
 
 #contador-cantidad-menos,
 #contador-cantidad-mas {
-    display: block;
-    width: 22px;
-    height: 23px;
+    display: inline-flex;
+    align-items: center;
+    width: 7vw;
+    height: 5vw;
     margin: 0;
     background: #C21556;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
     line-height: 23px;
 }
 
@@ -226,8 +237,8 @@ label[class="cantidad"] {
 }
 
 #contador-cantidad-input {
-    width: 32px;
-    height: 19px;
+    width: 7vw;
+    height: 4vw;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -246,21 +257,90 @@ label[class="cantidad"] {
     color: #fff;
 }
 
+@media (min-width: 360px) {
+    .tarjeta-producto {
+        /* position: relative;
+        flex-direction: row; */
+        max-width: 711px;
+    }
+
+    .contenedor-total {
+        max-width: 710px;
+        /* flex-direction: row;
+        align-items: flex-end;
+        column-gap: 15px;
+        justify-content: flex-end; */
+    }
+
+    .carrito-comprar input[type="button"],
+    .carrito-total,
+    .agregar-todo {
+        max-width: 313px;
+    }
+
+    #contador-cantidad-input {
+        max-width: 32px;
+        max-height: 19px;
+    }
+
+    #contador-cantidad-menos,
+    #contador-cantidad-mas {
+        max-width: 32px;
+        max-height: 19px;
+    }
+
+    .tarjeta-producto-detalle-item {
+        font-size: 16px;
+    }
+
+    .corazon-whislist,
+    .carrito-whislist {
+        font-size: 16px;
+    }
+
+    .tacho-basura {
+        font-size: 14px;
+    }
+
+    .tarjeta-producto-cabecera-imagen {
+        max-width: 173px;
+        min-width: 173px;
+    }
+
+    .tarjeta-producto-titulo-descripcion legend {
+        font-size: 16px;
+    }
+
+    .tarjeta-producto-titulo-descripcion p {
+        font-size: small;
+    }
+
+    .contador-cantidad {
+        max-width: 76px;
+        max-height: 23px;
+    }
+
+    .carrito-comprar input[type="button"],
+    .carrito-seguir-comprar input[type="button"],
+    .agregar-todo {
+        padding: 7px 8px;
+        max-height: 48px;
+        font-size: 16px;
+    }
+
+    .carrito-total {
+        max-height: 48px;
+        font-size: 16px;
+    }
+
+}
+
 @media (min-width: 800px) {
     .tarjeta-producto {
         position: relative;
         flex-direction: row;
+        max-width: 711px;
     }
-
-    /* article>.fa-trash {
-        visibility: visible;
-        left: 50%;
-        top: 5%;
-    }
-
-    .tarjeta-producto-detalle .fa-trash {
-        visibility: hidden;
-    } */
 
     .contenedor-total {
         width: 710px;
@@ -284,6 +364,16 @@ label[class="cantidad"] {
         right: 25%;
     }
 
+    #contador-cantidad-input {
+        width: 32px;
+        height: 19px;
+    }
+
+    #contador-cantidad-menos,
+    #contador-cantidad-mas {
+        width: 32px;
+        height: 19px;
+    }
 
     .tarjeta-producto-detalles {
         flex-direction: column;
@@ -310,15 +400,50 @@ label[class="cantidad"] {
         justify-content: space-around;
         row-gap: 10px;
         align-items: center;
+        font-size: 16px;
     }
 
     .corazon-whislist,
     .carrito-whislist {
         right: 5%;
+        font-size: 16px;
     }
 
-    .fa-trash {
+    .tacho-basura {
         top: 5%;
         left: 50%;
+        font-size: 14px;
     }
+
+    .tarjeta-producto-cabecera-imagen {
+        max-width: 173px;
+        min-width: 173px;
+    }
+
+    .tarjeta-producto-titulo-descripcion legend {
+        font-size: 16px;
+    }
+
+    .tarjeta-producto-titulo-descripcion p {
+        font-size: small;
+    }
+
+    .contador-cantidad {
+        max-width: 76px;
+        max-height: 23px;
+    }
+
+    .carrito-comprar input[type="button"],
+    .carrito-seguir-comprar input[type="button"],
+    .agregar-todo {
+        padding: 7px 8px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .carrito-total {
+        height: 48px;
+        font-size: 16px;
+    }
+
 }
