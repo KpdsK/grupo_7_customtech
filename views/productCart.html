@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="/js/functions.js" defer></script>
 </head>
 
 <body>
@@ -37,8 +39,8 @@
     </header>
     <main class="main-carrito-whislist">
         <section class="tarjetas-productos">
-            <article class="tarjeta-producto">
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+            <article class="tarjeta-producto tar-prod-uno">
+                <div class="tacho"><i class="fa fa-trash tacho-basura" onclick="quitarProducto('tar-prod-uno')" aria-hidden="true"></i></div>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -61,25 +63,25 @@
                             <div class="tarjeta-producto-detalle-item">
                                 <label class="cantidad">Cantidad</label>
                                 <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                    <input type="button" id="contador-cantidad-menos-1" onclick="restar('contador-cantidad-input-1')" value="-">
+                                    <input name="cantidad" type="text" id="contador-cantidad-input-1" value="1">
+                                    <input type="button" id="contador-cantidad-mas-1" onclick="sumar('contador-cantidad-input-1')" value="+">
                                 </div>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">Precio</label>
+                                <label>Precio</label>
                                 <label id="precio">$1000</label>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">SubTotal</label>
+                                <label>SubTotal</label>
                                 <label id="precio">$1000</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="tarjeta-producto">
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+            <article class="tarjeta-producto tar-prod-dos">
+                <div class="tacho"><i class="fa fa-trash tacho-basura" onclick="quitarProducto('tar-prod-dos')" aria-hidden="true"></i></div>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -102,25 +104,25 @@
                             <div class="tarjeta-producto-detalle-item">
                                 <label class="cantidad">Cantidad</label>
                                 <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                    <input type="button" id="contador-cantidad-menos-1" onclick="restar('contador-cantidad-input-2')" value="-">
+                                    <input name="cantidad" type="text" id="contador-cantidad-input-2" value="1">
+                                    <input type="button" id="contador-cantidad-mas-1" onclick="sumar('contador-cantidad-input-2')" value="+">
                                 </div>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">Precio</label>
+                                <label>Precio</label>
                                 <label id="precio">$1000</label>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">SubTotal</label>
+                                <label>SubTotal</label>
                                 <label id="precio">$1000</label>
                             </div>
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="tarjeta-producto">
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+            <article class="tarjeta-producto tar-prod-tres">
+                <div class="tacho"><i class="fa fa-trash tacho-basura" onclick="quitarProducto('tar-prod-tres')" aria-hidden="true"></i></div>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -143,17 +145,17 @@
                             <div class="tarjeta-producto-detalle-item">
                                 <label class="cantidad">Cantidad</label>
                                 <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
+                                    <input type="button" id="contador-cantidad-menos-1" onclick="restar('contador-cantidad-input-3')" value="-">
+                                    <input name="cantidad" type="text" id="contador-cantidad-input-3" value="1">
+                                    <input type="button" id="contador-cantidad-mas-1" onclick="sumar('contador-cantidad-input-3')" value="+">
                                 </div>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">Precio</label>
+                                <label>Precio</label>
                                 <label id="precio">$1000</label>
                             </div>
                             <div class="tarjeta-producto-detalle-item">
-                                <label for="precio">SubTotal</label>
+                                <label>SubTotal</label>
                                 <label id="precio">$1000</label>
                             </div>
                         </div>
@@ -253,28 +255,7 @@
         </div>
 
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menos = document.getElementById('contador-cantidad-menos');
-            const mas = document.getElementById('contador-cantidad-mas');
-            const input = document.getElementById('contador-cantidad-input');
-            menos.addEventListener("click", function (e) {
-                e.preventDefault();
-                var value = input.value;
-                if (value > 1) {
-                    value--;
-                }
-                input.value = value;
-            });
-
-            mas.addEventListener("click", function (e) {
-                e.preventDefault();
-                var value = input.value;
-                value++;
-                input.value = value;
-            })
-        });
-    </script>
+   
 </body>
 
 </html>

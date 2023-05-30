@@ -8,12 +8,15 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/home.html'));
 });
 
+app.get('/prueba', function (req, res) {
+    res.sendFile(path.join(__dirname, '/views/prueba.html'));
+});
+
 app.get('/login', function (req, res) {
     res.sendFile(path.join(__dirname, '/views/login.html'));
 });
 
 app.get('/register', function (req, res) {
-    console.log("PASE POR REGISTRO")
     res.sendFile(path.join(__dirname, '/views/register.html'));
 });
 

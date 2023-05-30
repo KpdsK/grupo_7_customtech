@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="/js/functions.js" defer></script>
 </head>
 
 <body>
@@ -60,14 +62,6 @@
                                     <label>Negro</label>
                                 </div>
                             </div>
-                            <!-- <div class="tarjeta-producto-detalle-item">
-                                <label class="cantidad">Cantidad</label>
-                                <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
-                                </div>
-                            </div> -->
                             <div class="tarjeta-producto-detalle-item">
                                 <label for="precio">Precio</label>
                                 <label id="precio">$1000</label>
@@ -103,14 +97,6 @@
                                     <label>Negro</label>
                                 </div>
                             </div>
-                            <!-- <div class="tarjeta-producto-detalle-item">
-                                <label class="cantidad">Cantidad</label>
-                                <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
-                                </div>
-                            </div> -->
                             <div class="tarjeta-producto-detalle-item">
                                 <label for="precio">Precio</label>
                                 <label id="precio">$1000</label>
@@ -146,14 +132,6 @@
                                     <label>Negro</label>
                                 </div>
                             </div>
-                            <!-- <div class="tarjeta-producto-detalle-item">
-                                <label class="cantidad">Cantidad</label>
-                                <div class="contador-cantidad">
-                                    <a href="#" id="contador-cantidad-menos"><span>-</span></a>
-                                    <input name="cantidad" type="text" id="contador-cantidad-input" value="1">
-                                    <a href="#" id="contador-cantidad-mas"><span>+</span></a>
-                                </div>
-                            </div> -->
                             <div class="tarjeta-producto-detalle-item">
                                 <label for="precio">Precio</label>
                                 <label id="precio">$1000</label>
@@ -249,28 +227,6 @@
         </div>
 
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menos = document.getElementById('contador-cantidad-menos');
-            const mas = document.getElementById('contador-cantidad-mas');
-            const input = document.getElementById('contador-cantidad-input');
-            menos.addEventListener("click", function (e) {
-                e.preventDefault();
-                var value = input.value;
-                if (value > 1) {
-                    value--;
-                }
-                input.value = value;
-            });
-
-            mas.addEventListener("click", function (e) {
-                e.preventDefault();
-                var value = input.value;
-                value++;
-                input.value = value;
-            })
-        });
-    </script>
 </body>
 
 </html>
