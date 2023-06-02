@@ -1,0 +1,29 @@
+    Especificaciones del Producto
+Disco Solido SSD 240GB Gigabyte SATA III
+
+
+General
+
+Capacidad	240GB
+Dimensiones	69.85mm x 7mm x 100mm
+Conector	SATA 6Gbps
+Vida Util	2 Millones de horas
+
+
+
+
+Caracteristicas
+
+Factor de Forma	2.5"
+Consumo Max.	2610mW
+Consumo en reposo	0.94W
+Consumo Promedio	170mW
+Temperatura en Servicio	De 0ºC a 70ºC
+
+
+
+
+Lectura y Escritura
+
+Velocidad Lect. Secuencial	Hasta 545 MB/S
+Velocidad Esc. Secuencial	Hasta 545 MB/S
