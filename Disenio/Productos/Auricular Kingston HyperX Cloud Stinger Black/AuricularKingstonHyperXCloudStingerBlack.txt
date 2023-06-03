@@ -1,0 +1,37 @@
+ESPECIFICACIONES DEL PRODUCTO
+PRECIO $20.88245
+General
+Altura Del Producto 76 Mm
+Ancho Del Producto 241 Mm
+Profundidad Del Producto 273 Mm
+Peso Total 275 G
+Conectividad
+Tipo De Conexion Cableado
+Longitud Del Cable 1.3 + Alargador-Y Para PC (1.7m)
+Tipo De Conector 3.5mm
+Audio
+Tipo Stereo
+Canales 2.0
+Tamaño Del Driver 50mm
+Impedancia 30 Ohm
+Sensibilidad 102db
+Microfono Si
+Frecuencia De Respuesta 18 Hz - 23kHz
+Caracteristicas
+Accesorios No
+Caracteristicas Especiales Al Girar El Microfono Se Pone En Modo Mudo / Sus Almohadillas Giran 90º
+Auricular
+Cable / Vincha Ajustable Si
+Tipo De Copa Over-Ear
+Material De La Copa Espuma Viscoelastica
+Tipo De Iman Neodimio
+Microfono
+Tipo De Microfono Retractil
+Tipo De Captacion Unidireccional
+Cancelacion De Ruido Si
+Impedencia Sin Especificar
+Control
+Tipo De Controles Volumen, Muteo (Al Girar Microfono)
+Compatibilidad
+Tipos De Dispositivos Compatibles PC, Laptop
+Plataformas De Software Compatibles Windows, Mac
