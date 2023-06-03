@@ -14,4 +14,8 @@ basicRouter.get('/login', basicController.login);
 
 basicRouter.get('/register', basicController.register);
 
+basicRouter.get('/newProduct', basicController.newProduct);
+
+basicRouter.get('/editProduct', basicController.editProduct);
+
 module.exports = basicRouter;

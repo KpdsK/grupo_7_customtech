@@ -16,6 +16,13 @@ const basicController = {
     },
     whisList: (req, res) => {
         res.render('productWhisList');
+    },
+    newProduct: (req, res) => {
+        res.render('newProduct');
+    },
+
+    editProduct: (req, res) => {
+        res.render('editProduct');
     }
 };
 
