@@ -19,6 +19,10 @@ const basicController = {
     },
     newProduct: (req, res) => {
         res.render('newProduct');
+    },
+
+    editProduct: (req, res) => {
+        res.render('editProduct');
     }
 };
 
