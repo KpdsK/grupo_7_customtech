@@ -1,3 +1,10 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .main-carrito-whislist {
     width: 100%;
     margin: 120px 0px 40px 0px;
@@ -97,6 +104,11 @@ label[class="cantidad"] {
     position: absolute;
     margin: 0px;
     color: #C21556;
+    z-index: 1;
+}
+
+footer {
+    bottom: 0;
 }
 
 .tacho-basura,
@@ -135,6 +147,7 @@ label[class="cantidad"] {
     background-color: white;
     width: 100%;
     padding-top: 3px;
+    z-index: 2;
 }
 
 .contenedor-total {
@@ -246,7 +259,7 @@ label[class="cantidad"] {
 #contador-cantidad-menos-2:hover,
 #contador-cantidad-mas-2:hover,
 #contador-cantidad-menos-3:hover,
-#contador-cantidad-mas-3:hover  {
+#contador-cantidad-mas-3:hover {
     background: #575b71;
     color: #fff;
 }
@@ -389,7 +402,7 @@ label[class="cantidad"] {
         font-size: 16px;
         /* right: 15%;
         bottom: 35%;  */
-    } 
+    }
 
 }
 
