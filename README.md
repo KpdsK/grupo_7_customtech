@@ -9,7 +9,7 @@
 <!-- imagen logo(imagen de prueba)-->
 
 
-<img src=".\Disenio\Logo\logoTextoBlancoConBorde.png" alt="logo customtech">
+<img src=".\public\images\logoTextoBlancoConBorde.png" alt="logo customtech">
 
 
 <!-- breve descripción de los integrantes del equipo.-->

@@ -1,0 +1,55 @@
+    Especificaciones del Producto
+Motherboard Asus B450M TUF PLUS II Gaming AM4
+
+
+General
+
+Socket 		AM4
+Chipset 	B450
+Plataforma 	AMD
+
+
+
+
+Conectividad
+
+Salidas HDMI 		1
+Salidas VGA 		No
+Salidas DisplayPort 	No
+Salidas DVI-D 		1
+Puertos SATA 		6
+Slot m2 		1 (Soporta NVMe y SATA)
+Slot PCI-E 16X 		2
+Slot PCIE-E 1X 		1
+Puerto PS2 		1
+Placa de Red 		Realtek RTL8111H 1Gb Ethernet
+USB 			4 (3.2) / 2 (2.0)
+
+
+
+
+Dimensiones
+
+Factor 		Micro-ATX
+
+
+
+
+Energia
+
+Conector 24 pines 	1
+Conector CPU 8 pines 	1
+
+
+
+
+Memoria
+
+Cantidad de slot DDR4 DIMM 	4 (Max. 128GB)
+
+
+
+
+Sonido
+
+Sonido 		Audio CODEC ALC887/897

@@ -1,0 +1,30 @@
+ESPECIFICACIONES DEL PRODUCTO
+Precio $21.46250
+Conectividad
+Tipo De ConexionCableado
+Longitud De Cable150 Cm
+Audio
+TipoEstereo
+Canales2.0
+Tamaño Del Driver50 Mm
+Impedancia32 Ohm
+Sensibilidad95 DB
+MicrofonoSi
+Frecuencia De Respuesta20 - 20000 Hz
+Caracteristicas
+AccesoriosNo
+Caracteristicas EspecialesNo
+Auricular
+Cable / Vincha AjustableSi
+Tipo De CopaOn-Ear
+Material De La CopaCuero Artificial
+Tipo De ImanNeodimio
+Microfono
+Tipo De CaptacionOmnidireccional
+Cancelacion De RuidoNo
+Frecuencia De Micrófono100 - 16000 Hz
+Control
+Tipo De ControlesControladora De Sonido
+Compatibilidad
+Tipos De Dispositivos CompatiblesPC, Notebook, PS4, XBOX ONE Y Nintendo Switch
+Plataformas De Software CompatiblesWindows® 10 O Posteriores, MacOS X 10.14.

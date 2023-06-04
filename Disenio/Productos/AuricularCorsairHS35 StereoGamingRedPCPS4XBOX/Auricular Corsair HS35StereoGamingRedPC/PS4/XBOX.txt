@@ -1,0 +1,35 @@
+ESPECIFICACIONES DEL PRODUCTO
+precio $18.07348
+Dimensiones
+AlturaNo Especifica
+AnchoNo Especifica
+ProfundidadNo Especifica
+PesoNo Especifica
+Conectividad
+Tipo De ConexionCableado
+Conectividad3.5 Mm Analog
+Audio
+TipoStereo
+Canales2.0
+Tamaño Del Driver50 Mm
+Impedancia32 O
+Sensibilidad113dB (+/-3dB)
+MicrofonoSi
+Frecuencia De Respuesta20 Hz – 20 KHz
+Caracteristicas
+AccesoriosNo
+Caracteristicas EspecialesNo
+Auricular
+Cable / Vincha AjustableSi
+Tipo De CopaOver-Ear
+Material De La CopaNo Especifica
+Tipo De ImanNeodimio
+Microfono
+Tipo De CaptacionUnidireccional
+Sensibilidad Del Micrófono-38dB (+/-3dB)
+Impedancia Del Micrófono2.0k Ohms
+Control
+Tipo De ControlesNo Especifica
+Compatibilidad
+Tipos De Dispositivos CompatiblesPC, Laptop
+Plataformas De Software CompatiblesWindows
