@@ -1,0 +1,36 @@
+General
+Interruptor 	Mecanico
+Altura del Producto 	155 mm
+Ancho del Producto 	375 mm
+Profundidad Del Producto 	43 mm
+Peso Total 	1060 g
+
+Conectividad
+Tipo de Conexion 	USB
+Largo del Cable 	1.8 m
+Tipo de Conector 	USB
+
+
+Tipo de Conexion 	USB
+Largo del Cable 	1.8 m
+Tipo de Conector 	USB
+Caracteristicas
+Caracteristicas 	Estilo: Tenkeyless
+Layout 	Español Latinoamerica
+
+Iluminacion
+Retroiluminado 	Si
+Colores de la Retroiluminacion 	Rojo
+Teclas Iluminadas 	Si
+
+Compatibilidad
+Tipos de Dispositivos Compatibles 	PC, Laptop
+Plataformas De Software Compatibles 	Windows, MacOS, Chorme OS
+
+Teclas
+Vida de la Tecla 	Sin Especificar
+Anti-Ghosting 	Si
+Marca del Interruptor 	Outemu
+Distancia de Recorrido 	Sin especificar
+Tipo de Interruptor 	Blue - Clicky
+Fuerza de Activacion 	50gr
