@@ -7,10 +7,10 @@
     <%- include('partials/header'); %>
     <main class="main-carrito-whislist">
         <section class="tarjetas-productos">
-            <article class="tarjeta-producto">
+            <article class="tarjeta-producto tar-prod-uno">
                 <i class="fa-sharp fa-solid fa-heart corazon-whislist"></i>
                 <i class="fa-solid fa-cart-shopping carrito-whislist"></i>
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+                <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist('tar-prod-uno')" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -42,10 +42,10 @@
                     </div>
                 </div>
             </article>
-            <article class="tarjeta-producto">
+            <article class="tarjeta-producto tar-prod-dos">
                 <i class="fa-sharp fa-solid fa-heart corazon-whislist"></i>
                 <i class="fa-solid fa-cart-shopping carrito-whislist"></i>
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+                <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist('tar-prod-dos')" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -77,10 +77,10 @@
                     </div>
                 </div>
             </article>
-            <article class="tarjeta-producto">
+            <article class="tarjeta-producto tar-prod-tres">
                 <i class="fa-sharp fa-solid fa-heart corazon-whislist"></i>
                 <i class="fa-solid fa-cart-shopping carrito-whislist"></i>
-                <i class="fa fa-trash tacho-basura" aria-hidden="true"></i>
+                <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist('tar-prod-tres')" aria-hidden="true"></i>
                 <div class="tarjeta-producto-cabecera">
                     <div class="tarjeta-producto-cabecera-imagen">
                         <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
@@ -115,7 +115,7 @@
         </section>
         <section class="whislist-agregar-section">
             <div class="contenedor-agregar-todo">
-                <input type="button" class="agregar-todo" value="Agregar Todo">
+                <input type="button" onclick="agregarTodoAlCarrito()" class="agregar-todo" value="Agregar Todo">
                 <i class="fa-solid fa-cart-shopping icon"></i>
             </div>
         </section>

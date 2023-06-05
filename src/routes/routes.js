@@ -1,28 +1,21 @@
-const express = require('express')
+const express = require('express');
+const basicController = require('../controllers/basicController');
 const basicRouter = express.Router();
 
-basicRouter.get('/', function (req, res) {
-    res.render('home');
-});
+basicRouter.get('/', basicController.home);
 
-basicRouter.get('/productDetail', function (req, res) {
-    res.render('products/productDetail');
-});
+basicRouter.get('/productDetail', basicController.productDetail);
 
-basicRouter.get('/productCart', function (req, res) {
-    res.render('productCart');
-});
+basicRouter.get('/productCart', basicController.productCart);
 
-basicRouter.get('/productWhisList', function (req, res) {
-    res.render('productWhisList');
-});
+basicRouter.get('/productWhisList', basicController.whisList);
 
-basicRouter.get('/login', function (req, res) {
-    res.render('users/login');
-});
+basicRouter.get('/login', basicController.login);
 
-basicRouter.get('/register', function (req, res) {
-    res.render('users/register');
-});
+basicRouter.get('/register', basicController.register);
+
+basicRouter.get('/newProduct', basicController.newProduct);
+
+basicRouter.get('/editProduct', basicController.editProduct);
 
 module.exports = basicRouter;

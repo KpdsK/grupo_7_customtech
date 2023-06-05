@@ -1,0 +1,27 @@
+General
+Interruptor 	Mecanico
+Altura del Producto 	132 mm
+Ancho del Producto 	445 mm
+Profundidad Del Producto 	35.5 mm
+Peso Total 	962 g
+Conectividad
+Tipo de Conexion 	USB
+Largo del Cable 	+ 1 m
+Tipo de Conector 	USB 2.0
+Caracteristicas
+Caracteristicas 	Estilo: Teclado Completo
+Layout 	Ingles
+Iluminacion
+Retroiluminado 	Si
+Colores de la Retroiluminacion 	RGB
+Teclas Iluminadas 	Si
+Teclas
+Vida de la Tecla 	Sin especificar
+Anti-Ghosting 	Si
+Marca del Interruptor 	Romer-G
+Distancia de Recorrido 	4mm
+Tipo de Interruptor 	switch gx blue
+Fuerza de Activacion 	50g
+Compatibilidad
+Tipos de Dispositivos Compatibles 	PC, Laptop
+Plataformas De Software Compatibles 	Windows 10, 8.1, 8, 7
