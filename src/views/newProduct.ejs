@@ -11,32 +11,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <a class="header-image-container" href="/">
-                <img class="header-img" src="images/favicon.ico" alt="Custom tech">
-                <p>CUSTOMTECH</p>
-            </a>
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar..." class="header-search-input">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="login"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="productWhisList"> <i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </nav>
-            <div class="burger-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-        <section class="header-categories">
-            <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
-        </section>
-    </header>
-
+    
+    <%-include('./partials/header.ejs')  %>
 
     <main>
 
@@ -48,145 +24,74 @@
                 <h2>Nuevo producto</h2>
 
                 <div>
-                    <input class="text-field" type="text" name="" placeholder="Nombre del producto">
+                    <input class="text-field-product" type="text" name="" placeholder="Nombre del producto">
                 </div>
 
                 <div>
-                    <input class="text-field" type="text" name="" placeholder="Descripción">
+                    <input class="text-field-product" type="text" name="" placeholder="Descripción">
+                </div>
+                
+              
+
+                <div class="product-file-container">
+                    <label class="product-label-file" for="fotoProduct">Agregar imagenes</label>
+                    <input type="file"   name="fotoProduct" id="fotoProduct">
                 </div>
 
-                <div>
-                    <label for="fotoProduct">Agregar imagenes</label>
-                    <input type="file" name="fotoProduct" id="fotoProduct">
-                </div>
-
-                <div>
-                    <input class="text-field" type="text" name="categoria" placeholder="Categoria">
+                <div class="cantidad-product-container">
+                    <label for="product-cantidad">Cantidad</label>
+                    <input class="text-field-product product-cantidad" type="text" name="product-cantidad" id=""  placeholder="cantidad">
                 </div>
 
                 
-                <h4>Seleccionar color</h4>
-
-                <div class="seleccionColor">
-
-
-                    <div>
-                        <label for="negro">Negro</label>
-                        <input type="checkbox" name="negro" value="negro" id="negro">
+                <div class="product-description">
+                    
+                    <div class="categories-container">
+                        
+                        <label for="categories">Categorias</label>
+                        
+                        <select class="product-categories" name="categories" id="" >
+                            <option class="product-categories-options" value="perifericos">Perifericos</option>
+                            <option class="product-categories-options" value="componentes-pc">Componentes de PC</option>
+                        </select>
                     </div>
                     
-                    <div>
-                        <label for="blanco">Blanco</label>
-                        <input type="checkbox" name="blanco" value="blanco" id="blanco">
-                    </div>
+                    
+                </div>
 
-                    <div>
-                        <label for="gris">Gris</label>
-                        <input type="checkbox" name="gris" value="gris" id="gris">
-                    </div>
-    
-                    <div>
-                        <label for="fucsia">Fucsia</label>
-                        <input type="checkbox" name="fucsia" value="fucsia" id="fucsia">
-                    </div>
-    
-                    <div>
-                        <label for="azul">Azul</label>
-                        <input type="checkbox" name="azul" value="azul" id="azul">
-                    </div>
-    
-                    <div>
-                        <label for="rojo">Rojo</label>
-                        <input type="checkbox" name="rojo" value="rojo" id="rojo">
-                    </div>
-    
+                <h4>Descripción</h4>
+
+                <div class="general">
+                    <label for="general">General</label>
+                    <input class="text-field-product" type="text" name="general" placeholder="General" id="">
+                </div>
+
+                <div class="general">
+                    <label for="general">Caracteristicas</label>
+                    <input class="text-field-product" type="text" name="general" placeholder="Caracteristicas" id="">
+                </div>
+
+                <div class="general">
+                    <label for="general">Compatibilidad</label>
+                    <input class="text-field-product" type="text" name="general" placeholder="Compatibilidad" id="">
                 </div>
 
                 <div>
-                    <input class="text-field" type="text" name="precio" placeholder="Precio">
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio">
                 </div>
-                
+             
+                <div class="button-products">
+                    <button>Agregar</button>
+                    <button>Cancelar</button>
+                </div>
+
             </form>
 
         </div>
 
     </main>
 
-    <footer>
-        <section class="sectionFooter">
-            <div class="columnaUno">
-                <a class="header-image-container" href="/">
-                    <img class="header-img" src="images/favicon.ico" alt="Custom tech">
-                    <h4>CUSTOMTECH</h4>
-                </a>
-
-                <p>Av.San Martín 1234 Caballito</p>
-                <li>
-                    <a
-                        href="">info@customtech.com.ar</a><!--la idea podria ser utilizarlo como hipervinculo para redirigir a el mail-->
-                </li>
-
-                <div>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <p>+54-1234-5678</p>
-                    <i class="fa-brands fa-square-instagram"></i><i class="fa-brands fa-facebook"></i><i
-                        class="fa-brands fa-twitter"></i>
-                </div>
-            </div>
-
-            <div class="columnaDos">
-                <h4>HORARIOS</h4>
-                <p>Lunes a Viernes</p>
-                <P>09:00 - 17.00hs</P>
-                <P>Sabados</P>
-                <p>10:00 - 14:00hs</P>
-            </div>
-
-
-            <div class="buscador">
-                <div class="buscadorImput">
-                    <input class="imput" type="text" name="Ingresa tu email" placeholder="Ingresa tu email"><i
-                        class="fa fa-search"></i>
-                </div>
-                <div>
-                    <p class="novedades">RECIBIR NOVEDADES</p>
-                </div>
-
-            </div>
-
-
-            <div class="columnaCuatro">
-                <ul>
-                    <li>
-                        <a href="">
-                            <h4>AYUDA</h4>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">Preguntas frecuentes</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">Garantía</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">Defensa y derechos del consumidor</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <div>
-            <p>© 2023 CUSTOMTECH. Todos los derechos reservados. Imprimir PáginaPrivacidad Mapa del Sitio Términos de
-                uso</p>
-        </div>
-
-    </footer>
+    <%-include('./partials/footer.ejs')  %>
 
 </body>
 
