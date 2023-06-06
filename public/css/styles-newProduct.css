@@ -1,13 +1,13 @@
-main {
+.form-product-container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 100px;
     background-color: #eee;
 }
 
-.bloqueNewProd {
+.bloqueProd {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,4 +144,20 @@ form div {
     .product-categories {
         width: 300px;
     }
+}
+
+@media (min-width: 769px) {
+
+    .form-product-container {
+        background-color: #fff;
+    }
+
+    .bloqueProd {
+        box-shadow: 0px 0px 15px rgba(75, 1, 29, 0.9);
+        border-radius: 25px;
+        width: 400px;
+        background-color: #eee;
+
+    }
+
 }
