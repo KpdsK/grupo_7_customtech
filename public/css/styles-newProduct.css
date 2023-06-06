@@ -11,7 +11,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height0vh;
+    height: 100vh;
     width: 80vw;
     margin-top: 40px;
     text-align: center;
@@ -84,6 +84,7 @@ form div {
 }
 
 .cantidad-product-container  {
+    display: flex;
     background-color: #4B011D;
     color: #fff;
     border-radius: 5px;
@@ -98,7 +99,7 @@ form div {
 
 .product-cantidad {
     width: 20vw;
-    height: 20px;
+    height: 25px;
     
 }
 
@@ -131,15 +132,16 @@ form div {
 
 @media (min-width: 361px) {
 
-    header nav {
-        justify-content: space-between;
+
+    .text-field-product {
+        width: 300px;
     }
 
-    .text-field {
-        padding: 10%;
-        border-radius: 5px;
-        border: 0;
-        padding: 2.5%;
-        width: 28vw;
+    .cantidad-product-container input {
+        width: 150px;
+    }
+
+    .product-categories {
+        width: 300px;
     }
 }
