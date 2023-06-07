@@ -6,7 +6,7 @@ body {
 
 .producto-nombre{
  font-size: xx-large;
-padding-top: 5%;
+padding-top: 15%;
 }
 .producto-inicio{
   display:flex;
@@ -20,23 +20,29 @@ padding-top: 5%;
     max-width: 600px;
     height: auto;
     border:1px;
+    
 }
 .producto-iconos p{
-  font-size:xx-large;
+  font-size:x-large;
  }
 .producto-iconos{
   font-size:x-large;
-  text-align:right;
-  width: 40%;
+  text-align:center;
+  width: 30%;
+  position: relative;
+  float: right;
  }
 .producto-iconos button {
-    width: 250px;
-    height: 50px;
-    font-size: 16px;
-    border-radius: 5px;
-    color: black;
-    text-align: center;
-    padding-left: 20px;
+  border: none;
+  margin: 0;
+  padding: 2vw 2vw;
+  margin-bottom: 10px;
+  background-color: #C21556;
+  color: white;
+  border-radius: 20px;
+  height: 4vw;
+  font-size: 1.5vw;
+  text-align: center;
 }
 .icono-corazon{
   font-size: 30px;
@@ -102,8 +108,50 @@ padding-top: 5%;
       margin: 0 10px;
       vertical-align: middle;
     }
+   
+   
+    .imagen-pequena {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      margin-bottom: 25px;
+     
+     
+    
+  }
+  
+  .imagen-grande {
+      width: 300px;
+      height: 300px;
+      display: none;
+     
+      
+  }
+  
+  .imagen-pequena:hover + .imagen-grande {
+      display: block;
+  }
  
+ 
+  .producto-contenedor-imagenes {
+    display: flex;
+    
+  
+  }
+   
 
+  
+  
+  .contenedor-producto-mini{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+    
+   
+    
+    
+   
   
 
   @media(max-width: 769px){
@@ -123,7 +171,15 @@ padding-top: 5%;
       margin: 0 5px;
       vertical-align: middle;
     }
-   
+      
+    .zoom img {
+      transition: transform 0.3s;
+    }
+    
+    .zoom img:hover {
+      transform: scale(1.5); 
+    }
+    
   
   }    
   
