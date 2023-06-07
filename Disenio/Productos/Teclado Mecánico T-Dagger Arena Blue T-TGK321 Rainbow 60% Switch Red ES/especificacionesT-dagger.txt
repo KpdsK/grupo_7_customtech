@@ -1,0 +1,25 @@
+General
+Interruptor	Mecanico
+Altura del Producto	104 mm
+Ancho del Producto	293 mm
+Profundidad	35 mm
+Peso	390g
+Conectividad
+Tipo de Conexion	Cable
+Largo del cable	1.50mts
+Tipo de Conexion	USB-C a USB-A
+Caracteristicas
+Layout	Inglés
+Iluminación
+Retroiluminado	Si
+Teclas Iluminadas	Si
+Tipo de Iluminación	RGB
+Teclas
+Vida de la Tecla	No especifica
+Anti-Ghosting	No especifica
+Distancia de Recorrido	No especifica
+Tipo de Interruptor	T-Dagger Red
+Fuerza de Activacion	45gr
+Compatibilidad
+Tipos de Dispositivos Compatibles	Laptop y PC
+Plataformas De Software Compatibles	Windows 7,10,11 o posterior, macOS 10.15 o posterior
