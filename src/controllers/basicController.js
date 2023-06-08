@@ -1,28 +1,28 @@
 const basicController = {
     home: (req, res) => {
-        res.render('home');
+        res.render('home', {cssStyle: "home"});
     },
     login: (req, res) => {
-        res.render('users/login');
+        res.render('users/login', {cssStyle: "login"});
     },
     register: (req, res) => {
-        res.render('users/register');
+        res.render('users/register', {cssStyle: "register"});
     },
     productDetail: (req, res) => {
-        res.render('products/productDetail');
+        res.render('products/productDetail', {cssStyle: "productDetail"});
     },
     productCart: (req, res) => {
-        res.render('productCart');
+        res.render('productCart', {cssStyle: "carrito-whislist"});
     },
     whisList: (req, res) => {
-        res.render('productWhisList');
+        res.render('productWhisList', {cssStyle: "carrito-whislist"});
     },
     newProduct: (req, res) => {
-        res.render('newProduct');
+        res.render('newProduct', {cssStyle: "adminProduct"});
     },
 
     editProduct: (req, res) => {
-        res.render('editProduct');
+        res.render('editProduct', {cssStyle: "adminProduct"});
     }
 };
 

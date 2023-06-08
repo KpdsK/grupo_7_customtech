@@ -262,43 +262,12 @@ input:checked+.slider:before {
         width: 28vw;
     }
 
-    canvas {
-        width: 49vw;
-    }
+.bloqueLogin{
+    height: 120vh;
+    width: 80vw;
+}
 
-    .bloqueLogin {
-        min-width: 320px;
-        width: 50vw;
-    }
-
-    .bloqueSignup legend {
-        font-size: 18px;
-    }
-
-    .remembforgot {
-        margin-bottom: 6vh;
-    }
-
-    .remembforgot legend {
-        font-size: 14px;
-    }
-
-    .register-or {
-        border-radius: 10px;
-        padding: 1%;
-        color: aliceblue;
-        text-align: center;
-        position: relative;
-        width: 40px;
-        position: absolute;
-        bottom: 43.3%;
-    }
-    
-    .label-or {
-        padding: 2%;
-        border-radius: 5px;
-        font-size: 14px;
-    }
+}
 
     canvas {
         position: absolute;
@@ -307,4 +276,3 @@ input:checked+.slider:before {
         height: 0px;
         bottom: 47.5%;
     }
-}

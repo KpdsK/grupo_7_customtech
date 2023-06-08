@@ -1,0 +1,42 @@
+ESPECIFICACIONES DEL PRODUCTO
+
+    Precio
+
+$7.83315
+Precio Especial imagen de enlace
+PRECIO LISTA: $11.984,72
+12 cuotas sin interés de $998,73 a precio de lista
+
+    General
+
+Altura Del Producto127 Mm
+Ancho Del Producto71 Mm
+Profundidad Del Producto41 Mm
+    
+    Conectividad
+
+Tipo De ConexionCableado
+Tipo De ConectorUSB
+    
+    Caracteristicas
+
+CaracteristicasN/A
+
+    Iluminacion
+
+RetroiluminadoSi
+Colores De La RetroiluminacionRGB
+    
+    Mouse
+TipoOptico
+SensorPIXART PMW-3050
+DPI750, 1500, 2000, 2500, 3200 Dpi
+Polling Rate1000 Hz
+Botones6
+
+    Compatibilidad
+
+Tipos De Dispositivos CompatiblesPC, Laptop
+Plataformas De Software CompatiblesWindows 10,11 O Posterior, MacOS 10.15 O Posterior , Chrome OS, Linux
+
+
