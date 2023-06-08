@@ -1,19 +1,36 @@
-function sumar(inputId) {
-    console.log(inputId);
-    const input = document.getElementById(inputId);
+function sumar(inputId, id, precio) {
+    const input = document.getElementById(inputId+id);
     var value = input.value;
+    const label = document.getElementsByClassName("subtotal-"+id)[0];
+    const subtotales = document.getElementsByClassName("subtotal");
+    const total = document.getElementById('total');
     value++;
     input.value = value;
+    label.innerHTML = "$" + value * precio;
+    let totales=0;
+    for (let i of subtotales) {
+        totales += parseFloat(i.textContent.replace('$', ''));
+    }
+    total.innerHTML = '$'+totales;
 }
 
-function restar(inputId) {
-    console.log(inputId);
-    const input = document.getElementById(inputId);
+function restar(inputId, id, precio) {
+    console.log(precio);
+    const input = document.getElementById(inputId+id);
     var value = input.value;
+    const label = document.getElementsByClassName("subtotal-"+id)[0];
+    const subtotales = document.getElementsByClassName("subtotal");
+    const total = document.getElementById('total');
     if (value > 1) {
         value--;
     }
     input.value = value;
+    label.innerHTML = "$" + value * precio ;
+    let totales=0;
+    for (let i of subtotales) {
+        totales += parseFloat(i.textContent.replace('$', ''));
+    }
+    total.innerHTML = '$'+totales;
 }
 
 function quitarProducto(claseElementoAEliminar, sectionToRemove, message) {

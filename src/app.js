@@ -14,6 +14,6 @@ app.get('/404', (req, res)=>{
     res.send('Error página no encontrada')
 });
 
-app.listen(3000, function () {
+app.listen(3007, function () {
     console.log('Aplicación ejemplo, escuchando el puerto 3000!');
 });
