@@ -57,7 +57,7 @@ main {
     font-size: 20px;
     justify-content: space-around;
     /*color: #c21556;*/
-    color: #42048A;
+    color: #fff;
 }
 
 form div {
@@ -137,6 +137,12 @@ form div {
     width: 5vw;
     border-radius: 10px;
     font-size: 2vw;
+}
+
+.label-or {
+    padding: 2%;
+    border-radius: 5px;
+    font-size: 4vw;
 }
 
 canvas {

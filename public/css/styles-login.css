@@ -91,6 +91,12 @@ form div {
     column-gap: 1vw;
 }
 
+.cuadrOr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .register-or {
     border-radius: 10px;
     padding: 2%;
@@ -116,14 +122,22 @@ form div {
     justify-content: space-between;
     align-items: center;
     row-gap: 2vh;
-    margin-top: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2vh;
+
 }
 
 .botonSubmit {
     /*background-color: #c21556;*/
     background-color: #42048A;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
@@ -149,11 +163,17 @@ form div {
     /*background-color: #c21556;*/
     background-color: #42048A;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
     font-size: 5vw;
+}
+
+.cuadrOr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 canvas {
@@ -231,6 +251,10 @@ input:checked+.slider:before {
 
 @media (min-width: 361px) {
 
+    .remembforgot legend {
+        font-size: 1.25vw;
+      }
+
     .icon-register i {
         font-size: 100px;
     }
@@ -262,17 +286,39 @@ input:checked+.slider:before {
         width: 28vw;
     }
 
-.bloqueLogin{
-    height: 120vh;
-    width: 80vw;
-}
+    canvas {
+        width: 49vw;
+    }
 
-}
+    .bloqueLogin {
+        min-width: 320px;
+        width: 50vw;
+    }
+
+    .bloqueSignup legend {
+        font-size: 18px;
+    }
+
+    
+    .label-or {
+        padding: 2%;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .register-or{
+        max-width: 5vw;
+    }
 
     canvas {
-        position: absolute;
         width: 49vw;
         min-width: 314px;
         height: 0px;
         bottom: 47.5%;
     }
+}
+
+
+
+ 
+
