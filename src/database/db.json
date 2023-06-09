@@ -1,0 +1,40 @@
+{ "db": {
+    "productos": [
+    {
+        "id": 1,
+        "nombre": "MacBook Pro",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?",
+        "imagen": "images/img-macbook-pro-2019.jpg",
+        "caracteristica": {
+            "nombre":"Color",
+            "valor":"Negro"
+        },
+        "cantidad": 2,
+        "precio": 1000
+    },
+    {
+        "id": 2,
+        "nombre": "Teclado iluminado",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?",
+        "imagen": "images/teclado.jpg",
+        "caracteristica": {
+            "nombre":"Color",
+            "valor":"Negro"
+        },
+        "cantidad": 6,
+        "precio": 3000
+    },
+    {
+        "id": 3,
+        "nombre": "PC Gamer",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?",
+        "imagen": "images/pc.jpg",
+        "caracteristica": {
+            "nombre":"Color",
+            "valor":"Negro"
+        },
+        "cantidad": 1,
+        "precio": 6000
+    }
+]}
+}
