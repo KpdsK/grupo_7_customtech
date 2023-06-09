@@ -3,12 +3,8 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 80px;
-    background-image: url("../images/wallpaper3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 
@@ -16,24 +12,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 100vh;
     width: 80vw;
-    margin-top: 80px;
     text-align: center;
-    /*background-color: rgba(255, 255, 255, 0.6);*/
-    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 40px;
-    margin-bottom: 10%;
-    /*box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);*/
-    box-shadow: 0px 0px 15px rgba(79, 79, 79, 0.3);
-}
-
-.fotoperfil {
-    color: aliceblue;
+    box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);
 }
 
 
-.form-signup{
+.form-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,8 +32,7 @@ main {
 
 .icon-register i {
     font-size: 25vw;
-    /*color: #c21556;*/
-    color: #42048A;
+    color: #c21556;
     margin-top: 5%;
 }
 
@@ -56,8 +44,7 @@ main {
 .redes i {
     font-size: 20px;
     justify-content: space-around;
-    /*color: #c21556;*/
-    color: #fff;
+    color: #c21556;
 }
 
 form div {
@@ -71,7 +58,7 @@ form div {
     border-radius: 5px;
     padding: 5%;
     width: 50vw;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(121, 121, 121, 0.38);
     border: 0;
 }
@@ -86,8 +73,7 @@ form div {
 }
 
 .botonSubmit {
-    /*background-color: #c21556;*/
-    background-color: #42048A;
+    background-color: #c21556;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -105,15 +91,13 @@ form div {
 }
 
 .bloqueLogin legend {
-    /*color: #c21556;*/
-    color: #42048A;
+    color: #c21556;
     font-size: 4vw;
     font-weight: bold;
 }
 
 .botonLogin {
-   /* background-color: #c21556;*/
-    background-color: #42048A;
+    background-color: #c21556;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -129,8 +113,7 @@ form div {
 }
 
 .register-or{
-    /*background-color: #c21556;*/
-    background-color: #42048A;
+    background-color: #c21556;
     color: aliceblue;
     padding: 2%;
     border: 0;
@@ -139,18 +122,11 @@ form div {
     font-size: 2vw;
 }
 
-.label-or {
-    padding: 2%;
-    border-radius: 5px;
-    font-size: 4vw;
-}
-
 canvas {
     width: 79vw;
     height: 0px;
     bottom: 45%;
-    /*border: .5px solid #c21556;*/
-    border: .5px solid #42048A;
+    border: .5px solid #c21556;
 }
 
 
@@ -219,5 +195,6 @@ canvas {
         min-width: 314px;
         height: 0px;
         bottom: 47.5%;
+        border: .5px solid #c21556;
     }
 }
