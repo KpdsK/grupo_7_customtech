@@ -11,7 +11,7 @@ app.set('views', './src/views');
 app.use('/', routes);
 
 app.get('/404', (req, res)=>{
-    res.send('Error página no encontrada')
+    res.send('Error página no ')
 });
 
 app.listen(3007, function () {
