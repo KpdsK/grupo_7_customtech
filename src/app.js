@@ -15,5 +15,5 @@ app.get('/404', (req, res)=>{
 });
 
 app.listen(3007, function () {
-    console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+    console.log('Aplicación ejemplo, escuchando el puerto 3007!');
 });
