@@ -75,7 +75,7 @@ form div {
 .botonSubmit {
     background-color: #c21556;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
@@ -99,7 +99,7 @@ form div {
 .botonLogin {
     background-color: #c21556;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
