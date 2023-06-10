@@ -4,10 +4,7 @@ body {
   font-family: 'Play', sans-serif;
 }
 
-.producto-nombre{
- font-size: xx-large;
-padding-top: 15%;
-}
+
 .producto-inicio{
   display:flex;
   padding-bottom:  5%;
@@ -22,35 +19,54 @@ padding-top: 15%;
     border:1px;
     
 }
+.producto-iconos h1{
+font-size: x-large;
+text-align: left;
+}
+.producto-iconos h2{
+  font-size: x-large;
+  text-align: left;
+}
 .producto-iconos p{
-  font-size:x-large;
+  font-size:large;
+  text-align: left;
+ }
+ .producto-iconos p i{
+  color:rgb(194, 21, 86, 0.9)
  }
 .producto-iconos{
-  font-size:x-large;
-  text-align:center;
-  width: 30%;
+  font-size:large;
+  text-align:left;
+  width: 40%;
   position: relative;
+  margin-left:200px ;
   float: right;
+
  }
 .producto-iconos button {
   border: none;
   margin: 0;
   padding: 2vw 2vw;
   margin-bottom: 10px;
-  background-color: #C21556;
+  background-color: rgb(194, 21, 86, 0.9);
   color: white;
   border-radius: 20px;
   height: 4vw;
   font-size: 1.5vw;
-  text-align: center;
+float: center;
+ 
 }
 .icono-corazon{
   font-size: 30px;
   padding:1%;
-  color:#ebebeb;
+  color:rgba(240, 227, 232, 0.9);
+  position: fixed;
+  top: 150px; 
+  left: 20px; 
+  z-index: 1;
 }
 .icono-corazon:hover{
-  color:rgb(	235, 235, 235,0.5)
+  color:rgb(194, 21, 86, 0.9)
 }
 
 .producto-especificaciones{
@@ -73,15 +89,21 @@ padding-top: 15%;
 }
 /**/
 .producto-linea{
+  padding-top: 20px;
   font-size:x-large;
   text-align: center;
   border-bottom: 1px dashed #ebebeb;
  
  }
- .producto-caracteristica h6{
-  border-bottom: 2px solid black;
+ .producto-caracteristica h4{
+  border-bottom: 2px solid rgb(194, 21, 86, 0.9);
   font-size: large;
  
+}
+
+.producto-caracteristica p{
+
+  font-size: medium;
 }
 
 
@@ -92,96 +114,118 @@ padding-top: 15%;
   background-color:none;
   padding: 5%;
   margin:5%;
-  border-color: black;
+  border-color: rgb(194, 21, 86, 0.9);
  }
   .producto-recomendado-titulo{
     text-align: center;
-    font-size:xx-large;
+    font-size:x-large;
    
    
     }
   
     .linea {
       display: inline-block;
-      border-top: 1px solid black;
+      border-top: 1px solid rgb(194, 21, 86, 0.9);;
       width: 30%;
       margin: 0 10px;
       vertical-align: middle;
     }
-   
-   
-    .imagen-pequena {
-      width: 100px;
-      height: 100px;
-      margin: auto;
-      margin-bottom: 25px;
-     
-     
-    
-  }
-  
-  .imagen-grande {
-      width: 300px;
-      height: 300px;
-      display: none;
-     
-      
-  }
-  
-  .imagen-pequena:hover + .imagen-grande {
-      display: block;
-  }
- 
- 
-  .producto-contenedor-imagenes {
-    display: flex;
-    
-  
-  }
-   
-
-  
-  
-  .contenedor-producto-mini{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-  }
-    
-   
-    
-    
-   
+    .producto-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 400px;
+      min-height: 100vh;
+      margin-top: 200px; 
+    }
   
 
-  @media(max-width: 769px){
-    .producto-caracteristica{
+  .image-main {
+      width: 40%;
+      margin-right: 10px;
+      float:inline-start;
+      transition: all 0.3s ease;
+     
+  }
+
+  .image-list {
       display: flex;
       flex-direction: column;
-       width: 100%; 
-      box-sizing: border-box;
-      flex-grow: 1;
+      width: 15%;
+     
+  }
+
+  .image-list img {
       margin-bottom: 10px;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);
+      
+  }
+
+    
+  @media(max-width: 769px) {
+  
+  
+    .producto-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image-main {
+      width: 100%;
      
     }
-    .linea {
-      display: inline-block;
-      border-top: 1px solid black;
-      width: 5%;
-      margin: 0 5px;
-      vertical-align: middle;
-    }
+    .image-list {
+      display:none;
       
-    .zoom img {
-      transition: transform 0.3s;
     }
-    
-    .zoom img:hover {
-      transform: scale(1.5); 
-    }
-    
   
-  }    
+    .producto-iconos {
+      order: 1;
+      width:60%;
+      margin:0%;
+
+    }
+  
+  
+  
+  .producto-especificaciones{
+    display:flex;
+    flex-wrap: wrap;
+    background-color:none;
+    
+   
+  
+  }
+  .producto-caracteristica{
+    display: inline-block;
+    width: 50%; 
+    box-sizing: border-box;
+  
+   
+}
+.producto-caracteristica{
+  padding: 20px;
+}
+.producto-caracteristica h4{
+  font-size:medium;
+}
+.producto-caracteristica p{
+  font-size:small;
+  }
+  }
+
+  .linea{
+    display:none;
+  }
+  .contenedor-main{
+   padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
   
   
   /*footer*/
