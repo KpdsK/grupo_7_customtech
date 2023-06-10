@@ -23,16 +23,18 @@ footer{
     list-style-type: none;
 }
 
+.columnaUno div div i{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .buscador{
-    width: 35%;
+    width: 30%;
     display: flex;
     align-items: center;
 }
 .buscador div{
     width: 95%;
-}
-.buscadorImput{
-    text-align: right;
 }
 
 
