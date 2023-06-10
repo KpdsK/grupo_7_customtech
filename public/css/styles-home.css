@@ -1,5 +1,5 @@
 .main-home {
-  margin-top: 100px;
+  margin-top: 15vh;
 }
 
 .mySlides {display: none}
@@ -171,6 +171,11 @@ img {vertical-align: middle;}
 
 
 @media(min-width: 769px){
+
+    .main-home {
+      margin-top: 10vh;
+    }
+
     .sub-main {
         width: 20%;
     }
