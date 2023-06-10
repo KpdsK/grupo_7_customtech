@@ -7,7 +7,7 @@
     <%- include('../partials/header'); %>
 
 
-    <main>
+    <main class="login">
 
 
         <div class="bloqueLogin">
@@ -26,20 +26,20 @@
                     <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
                 </div>
 
-                <div class="remembforgot">
-                    <legend class="remember">
+                <div class="login-recordar">
+                    <legend class="recordarme">
                         <label class="switch">
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
-                        <label>Remember me</label>
+                        <label>Recordarme</label>
                     </legend>
-                    <legend class="forgot">Forgot your password?</legend>
+                    <legend>¿Olvidaste tu contraseña?</legend>
                 </div>
                 
                 <canvas></canvas>
                 <div class="register-or">
-                    <label class="label-or">OR</label>
+                    <label class="label-or">O</label>
                 </div>
 
                 <div class="redes">
@@ -48,14 +48,14 @@
                 </div>
 
                 <div class="buttons">
-                    <button class="botonSubmit" type="submit">Login</button>
+                    <button class="botonSubmit" type="submit">Ingresar</button>
                     <div class="bloqueSignup">
                         <legend>
-                            Don't have an account?
+                            ¿No tienes cuenta?
                         </legend>
 
                         <button type="submit" formmethod="get" formaction="/register" class="botonSignup"> 
-                            Sign Up
+                            Regístrate
                         </button>
                         
                     </div>

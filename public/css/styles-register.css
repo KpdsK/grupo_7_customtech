@@ -16,7 +16,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 65vh;
     width: 80vw;
     margin-top: 80px;
     text-align: center;
@@ -25,7 +25,6 @@ main {
     border-radius: 40px;
     margin-bottom: 10%;
     /*box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);*/
-    box-shadow: 0px 0px 15px rgba(79, 79, 79, 0.3);
 }
 
 .fotoperfil {
@@ -76,6 +75,14 @@ form div {
     border: 0;
 }
 
+.fotoPerfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+    max-width: 150px;
+}
+
 
 .buttons {
     display: flex;
@@ -106,7 +113,7 @@ form div {
 
 .bloqueLogin legend {
     /*color: #c21556;*/
-    color: #42048A;
+    color: #fff;
     font-size: 4vw;
     font-weight: bold;
 }
@@ -126,31 +133,40 @@ form div {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    position: relative;
+    top: 10px;
+
 }
 
 .register-or{
     /*background-color: #c21556;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #42048A;
     color: aliceblue;
-    padding: 2%;
+    padding: 10%;
     border: 0;
     width: 5vw;
+    min-width: 5vw;
     border-radius: 10px;
     font-size: 2vw;
 }
 
 .label-or {
-    padding: 2%;
-    border-radius: 5px;
     font-size: 4vw;
+    padding: 10%;
 }
 
 canvas {
+    position: relative;
+    top: 30px;
     width: 79vw;
     height: 0px;
     bottom: 45%;
     /*border: .5px solid #c21556;*/
-    border: .5px solid #42048A;
+    border: .5px solid #fff;
 }
 
 
@@ -183,11 +199,11 @@ canvas {
     }
 
     .text-field {
-        padding: 10%;
+        padding: 5%;
         border-radius: 5px;
         border: 0;
-        padding: 2.5%;
-        width: 28vw;
+        width: 40vw;
+        max-width: 200px;
     }
 
     canvas {
@@ -195,6 +211,7 @@ canvas {
     }
 
     .bloqueSignup {
+        height: 75vh;
         min-width: 320px;
         width: 50vw;
     }
@@ -211,7 +228,7 @@ canvas {
     }
 
     .register-or{
-        max-width: 5vw;
+        max-width: 8vw;
     }
 
     canvas {
@@ -219,5 +236,11 @@ canvas {
         min-width: 314px;
         height: 0px;
         bottom: 47.5%;
+    }
+}
+
+@media (min-width: 769px){
+    .bloqueSignup{
+        height: 80vh;
     }
 }
