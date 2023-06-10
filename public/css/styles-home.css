@@ -1,4 +1,6 @@
-* {box-sizing: border-box}
+.main-home {
+  margin-top: 100px;
+}
 
 .mySlides {display: none}
 img {vertical-align: middle;}

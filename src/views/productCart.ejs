@@ -7,138 +7,11 @@
         <%- include('partials/header'); %>
             <main class="main-carrito-whislist">
                 <section class="tarjetas-productos">
-                    <article class="tarjeta-producto tar-prod-uno">
-                        <i class="fa fa-trash tacho-basura" onclick="quitarProductoCarrito('tar-prod-uno')"
-                            aria-hidden="true"></i>
-                        <div class="tarjeta-producto-cabecera">
-                            <div class="tarjeta-producto-cabecera-imagen">
-                                <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
-                            </div>
-                            <div class="tarjeta-producto-titulo-descripcion">
-                                <legend>MacBook Pro blabla</legend>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
-                            </div>
-                        </div>
-                        <div class="tarjeta-producto-detalle">
-                            <div class="tarjeta-producto-detalles">
-                                <div class="tarjeta-producto-detalle-titulos">
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Color</label>
-                                        <div class="caracteristica">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <label>Negro</label>
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label class="cantidad">Cantidad</label>
-                                        <div class="contador-cantidad">
-                                            <input type="button" id="contador-cantidad-menos-1"
-                                                onclick="restar('contador-cantidad-input-1')" value="-">
-                                            <input name="cantidad" type="text" id="contador-cantidad-input-1" value="1">
-                                            <input type="button" id="contador-cantidad-mas-1"
-                                                onclick="sumar('contador-cantidad-input-1')" value="+">
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Precio</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>SubTotal</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-producto tar-prod-dos">
-                        <i class="fa fa-trash tacho-basura" onclick="quitarProductoCarrito('tar-prod-dos')"
-                                aria-hidden="true"></i>
-                        <div class="tarjeta-producto-cabecera">
-                            <div class="tarjeta-producto-cabecera-imagen">
-                                <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
-                            </div>
-                            <div class="tarjeta-producto-titulo-descripcion">
-                                <legend>MacBook Pro blabla</legend>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
-                            </div>
-                        </div>
-                        <div class="tarjeta-producto-detalle">
-                            <div class="tarjeta-producto-detalles">
-                                <div class="tarjeta-producto-detalle-titulos">
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Color</label>
-                                        <div class="caracteristica">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <label>Negro</label>
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label class="cantidad">Cantidad</label>
-                                        <div class="contador-cantidad">
-                                            <input type="button" id="contador-cantidad-menos-1"
-                                                onclick="restar('contador-cantidad-input-2')" value="-">
-                                            <input name="cantidad" type="text" id="contador-cantidad-input-2" value="1">
-                                            <input type="button" id="contador-cantidad-mas-1"
-                                                onclick="sumar('contador-cantidad-input-2')" value="+">
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Precio</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>SubTotal</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tarjeta-producto tar-prod-tres">
-                        <i class="fa fa-trash tacho-basura" onclick="quitarProductoCarrito('tar-prod-tres')"
-                                aria-hidden="true"></i>
-                        <div class="tarjeta-producto-cabecera">
-                            <div class="tarjeta-producto-cabecera-imagen">
-                                <img src="images/img-macbook-pro-2019.jpg" alt="imagen-producto-1">
-                            </div>
-                            <div class="tarjeta-producto-titulo-descripcion">
-                                <legend>MacBook Pro blabla</legend>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, delectus?</p>
-                            </div>
-                        </div>
-                        <div class="tarjeta-producto-detalle">
-                            <div class="tarjeta-producto-detalles">
-                                <div class="tarjeta-producto-detalle-titulos">
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Color</label>
-                                        <div class="caracteristica">
-                                            <i class="fa fa-circle" aria-hidden="true"></i>
-                                            <label>Negro</label>
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label class="cantidad">Cantidad</label>
-                                        <div class="contador-cantidad">
-                                            <input type="button" id="contador-cantidad-menos-1"
-                                                onclick="restar('contador-cantidad-input-3')" value="-">
-                                            <input name="cantidad" type="text" id="contador-cantidad-input-3" value="1">
-                                            <input type="button" id="contador-cantidad-mas-1"
-                                                onclick="sumar('contador-cantidad-input-3')" value="+">
-                                        </div>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>Precio</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                    <div class="tarjeta-producto-detalle-item">
-                                        <label>SubTotal</label>
-                                        <label id="precio">$1000</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    <% let total=0 %>
+                    <% productos.forEach(function(p){ %>
+                        <%- include('partials/productCardCart', {producto: p}); %>
+                        <%  total += p.cantidad * p.precio %>
+                    <% }); %>
                 </section>
                 <section class="carrito-total-section">
                     <div class="contenedor-total">
@@ -148,7 +21,7 @@
                         <div class="carrito-total-boton">
                             <div class="carrito-total">
                                 <label>Total</label>
-                                <label>$1000</label>
+                                <label id="total">$<%= total %></label>
                             </div>
                             <div class="carrito-comprar">
                                 <input type="button" class="comprar" value="Comprar">

@@ -235,12 +235,9 @@ footer {
     padding-right: 10%;
 }
 
-#contador-cantidad-menos-1,
-#contador-cantidad-mas-1,
-#contador-cantidad-menos-2,
-#contador-cantidad-mas-2,
-#contador-cantidad-menos-3,
-#contador-cantidad-mas-3 {
+.contador-cantidad-menos,
+.contador-cantidad-mas
+ {
     display: inline-flex;
     border: none;
     color: white;
@@ -254,31 +251,21 @@ footer {
     justify-content: center;
 }
 
-#contador-cantidad-menos-1:hover,
-#contador-cantidad-mas-1:hover,
-#contador-cantidad-menos-2:hover,
-#contador-cantidad-mas-2:hover,
-#contador-cantidad-menos-3:hover,
-#contador-cantidad-mas-3:hover {
+.contador-cantidad-menos:hover,
+.contador-cantidad-mas:hover {
     background: #575b71;
     color: #fff;
 }
 
-#contador-cantidad-menos-1,
-#contador-cantidad-menos-2,
-#contador-cantidad-menos-3 {
+.contador-cantidad-menos {
     border-radius: 13px 0 0 13px;
 }
 
-#contador-cantidad-mas-1,
-#contador-cantidad-mas-2,
-#contador-cantidad-mas-3 {
+.contador-cantidad-mas {
     border-radius: 0 13px 13px 0;
 }
 
-#contador-cantidad-input-1,
-#contador-cantidad-input-2,
-#contador-cantidad-input-3 {
+.contador-cantidad-input {
     width: 7vw;
     height: 4vw;
     margin: 0;
@@ -289,21 +276,13 @@ footer {
     color: #C21556;
 }
 
-#contador-cantidad-menos-1:link,
-#contador-cantidad-mas-1:link,
-#contador-cantidad-menos-2:link,
-#contador-cantidad-mas-2:link,
-#contador-cantidad-menos-3:link,
-#contador-cantidad-mas-3:link {
+.contador-cantidad-menos:link,
+.contador-cantidad-mas:link {
     color: #fff;
 }
 
-#contador-cantidad-menos-1:visited,
-#contador-cantidad-mas-1:visited,
-#contador-cantidad-menos-2:visited,
-#contador-cantidad-mas-2:visited,
-#contador-cantidad-menos-3:visited,
-#contador-cantidad-mas-3:visited {
+.contador-cantidad-menos:visited,
+.contador-cantidad-mas:visited {
     color: #fff;
 }
 
@@ -328,19 +307,13 @@ footer {
         max-width: 313px;
     }
 
-    #contador-cantidad-input-1,
-    #contador-cantidad-input-2,
-    #contador-cantidad-input-3 {
+    .contador-cantidad-input {
         max-width: 32px;
         max-height: 19px;
     }
 
-    #contador-cantidad-menos-1,
-    #contador-cantidad-mas-1,
-    #contador-cantidad-menos-2,
-    #contador-cantidad-mas-2,
-    #contador-cantidad-menos-3,
-    #contador-cantidad-mas-3 {
+    .contador-cantidad-menos,
+    .contador-cantidad-mas {
         max-width: 32px;
         max-height: 19px;
     }
@@ -427,19 +400,13 @@ footer {
         width: 313px;
     }
 
-    #contador-cantidad-input-1,
-    #contador-cantidad-input-2,
-    #contador-cantidad-input-3 {
+    .contador-cantidad-input {
         width: 32px;
         height: 19px;
     }
 
-    #contador-cantidad-menos-1,
-    #contador-cantidad-mas-1,
-    #contador-cantidad-menos-2,
-    #contador-cantidad-mas-2,
-    #contador-cantidad-menos-3,
-    #contador-cantidad-mas-3 {
+    .contador-cantidad-menos,
+    .contador-cantidad-mas {
         width: 32px;
         height: 19px;
     }

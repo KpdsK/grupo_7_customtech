@@ -1,0 +1,42 @@
+ESPECIFICACIONES DEL PRODUCTO
+
+  Precio
+
+$5.45025
+Precio Especial imagen de enlace
+PRECIO LISTA: $8.338,88
+12 cuotas sin interés de $694,91 a precio de lista
+
+  General
+
+Altura Del Producto40 Mm
+Ancho Del Producto68 Mm
+Profundidad Del Producto130 Mm
+Peso75 G
+
+  Conectividad
+
+Tipo De ConexionCable - Usb
+Tipo De ConectorUSB Tipo A
+
+  Caracteristicas
+
+CaracteristicasN/A
+
+
+  Iluminacion
+
+RetroiluminadoRGB
+Colores De La RetroiluminacionRGB
+
+  Mouse
+
+TipoOptico
+DPI6400
+Polling RateNo Especifica
+Botones6
+
+  Compatibilidad
+
+Tipos De Dispositivos CompatiblesPC, Laptop
+Plataformas De Software CompatiblesWindows 10,11 O Posterior, MacOS 10.15 O Posterior, Linux 10
