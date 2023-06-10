@@ -112,9 +112,9 @@ footer div{
 }
 
     
-@media(min-width: 361px){
+@media(max-width: 769px){
    
-    footer{
+    .sectionFooter{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -125,7 +125,8 @@ footer div{
 }
 
 @media(min-width: 769px){  
-    footer section{
+    
+    .sectionFooter{
         display: flex;
         justify-content: space-around;
     }
