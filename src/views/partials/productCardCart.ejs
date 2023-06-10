@@ -30,10 +30,10 @@
                     <div class="tarjeta-producto-detalle-item">
                         <label class="cantidad">Cantidad</label>
                         <div class="contador-cantidad">
-                            <input type="button" id="contador-cantidad-menos-<%= producto.id %>"
+                            <input type="button" class="contador-cantidad-menos" id="contador-cantidad-menos-<%= producto.id %>"
                                 onclick="restar('contador-cantidad-input-',<%= producto.id %>, <%= producto.precio %>)" value="-">
-                            <input name="cantidad" type="text" id="contador-cantidad-input-<%= producto.id %>" value="<%= producto.cantidad %>">
-                            <input type="button" id="contador-cantidad-mas-<%= producto.id %>"
+                            <input name="cantidad" type="text" class="contador-cantidad-input" id="contador-cantidad-input-<%= producto.id %>" value="<%= producto.cantidad %>">
+                            <input type="button" class="contador-cantidad-mas" id="contador-cantidad-mas-<%= producto.id %>"
                                 onclick="sumar('contador-cantidad-input-',<%= producto.id %>, <%= producto.precio %>)" value="+">
                         </div>
                     </div>
