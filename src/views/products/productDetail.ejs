@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head'); %>
-
   <body>
     <%- include('../partials/header'); %>
       <main>
         <script>
           function changeMainImage(image) {
-
             var mainImage = document.getElementById('main-image');
             mainImage.src = image.src
           }
@@ -86,8 +84,6 @@
 
         <h4 class="producto-recomendado-titulo"> <span class="linea"></span>Productos recomendados<span
             class="linea"></span></h4>
-
-
         <div class="contenedor-main">
           <% productos.forEach(function(p){ %>
             <%- include('../partials/tarjetasProductosHomeDetalle', {producto: p}); %>
