@@ -3,8 +3,12 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 80px;
+    background-image: url("../images/wallpaper3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
 }
 
 
@@ -14,9 +18,10 @@ main {
     justify-content: center;
     height: 65vh;
     width: 80vw;
+    margin-top: 80px;
     text-align: center;
-    margin-top: 10%;
-    background-color: rgba(255, 255, 255, 0.6);
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 40px;
     margin-bottom: 10%;
     /*box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);*/
@@ -27,7 +32,7 @@ main {
 }
 
 
-.form-login {
+.form-signup{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +42,8 @@ main {
 
 .icon-register i {
     font-size: 25vw;
-    color: #c21556;
+    /*color: #c21556;*/
+    color: #42048A;
     margin-top: 5%;
 }
 
@@ -49,7 +55,8 @@ main {
 .redes i {
     font-size: 20px;
     justify-content: space-around;
-    color: #c21556;
+    /*color: #c21556;*/
+    color: #fff;
 }
 
 form div {
@@ -63,7 +70,7 @@ form div {
     border-radius: 5px;
     padding: 5%;
     width: 50vw;
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0px 0px 10px rgba(121, 121, 121, 0.38);
     border: 0;
 }
@@ -86,7 +93,8 @@ form div {
 }
 
 .botonSubmit {
-    background-color: #c21556;
+    /*background-color: #c21556;*/
+    background-color: #42048A;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -111,7 +119,8 @@ form div {
 }
 
 .botonLogin {
-    background-color: #c21556;
+   /* background-color: #c21556;*/
+    background-color: #42048A;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -227,13 +236,6 @@ canvas {
         min-width: 314px;
         height: 0px;
         bottom: 47.5%;
-        border: .5px solid #c21556;
-    }
-}
-
-@media (min-width: 769px){
-    .bloqueSignup{
-        height: 80vh;
     }
 }
 

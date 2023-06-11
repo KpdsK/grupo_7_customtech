@@ -4,6 +4,11 @@
     align-items: center;
     text-align: center;
     margin-top: 80px;
+    background-image: url("../images/wallpaper3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
 }
 
 .bloqueLogin {
@@ -13,7 +18,7 @@
     height: 65vh;
     width: 80vw;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 40px;
     margin-top: 80px;
     margin-bottom: 10%;
@@ -31,8 +36,8 @@
 
 .icon-register i {
     font-size: 25vw;
-    color: #c21556;
-    margin-top: 30%;
+    /*color: #c21556;*/
+    color: #42048A;
 }
 
 .redes {
@@ -43,7 +48,8 @@
 .redes i {
     font-size: 20px;
     justify-content: space-around;
-    color: #c21556;
+    /*color: #c21556;*/
+    color: #fff ;
 }
 
 form div {
@@ -63,7 +69,7 @@ form div {
 
 .login-recordar {
     display: flex;
-    justify-content: space-evenly;
+    margin-bottom: 6vh;
     column-gap: 3vw;
     align-items: center;
 }
@@ -72,6 +78,7 @@ form div {
     font-size: 3vw;
     font-weight: bold;
     margin-bottom: 8vh;
+    color: aliceblue;
   }
 
 
@@ -82,10 +89,18 @@ form div {
     column-gap: 1vw;
 }
 
+.cuadrOr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .register-or {
     border-radius: 10px;
-    padding: 1%;
-    background-color: #c21556;
+    padding: 2%;
+    /*background-color: #c21556;
+    color: aliceblue;*/
+    background-color: #42048A;
     color: aliceblue;
     text-align: center;
     position: absolute;
@@ -111,9 +126,10 @@ form div {
 
 
 .botonSubmit {
-    background-color: #c21556;
+    /*background-color: #c21556;*/
+    background-color: #42048A;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
@@ -129,15 +145,17 @@ form div {
 }
 
 .bloqueSignup legend {
-    color: #c21556;
+   /* color: #c21556;*/
+   color: aliceblue;
     font-size: 4vw;
     font-weight: bold;
 }
 
 .botonSignup {
-    background-color: #c21556;
+    /*background-color: #c21556;*/
+    background-color: #42048A;
     color: aliceblue;
-    padding: 8%;
+    padding: 3%;
     border: 0;
     width: 50vw;
     border-radius: 25px;
@@ -158,7 +176,8 @@ canvas {
     width: 79vw;
     height: 0px;
     bottom: 45%;
-    border: .5px solid #c21556;
+    /*border: .5px solid #c21556;*/
+    border: .5px solid #fff;
 }
 
 .switch {
@@ -201,11 +220,13 @@ canvas {
 }
 
 input:checked+.slider {
-    background-color: #c21556;
+    /*background-color: #c21556;*/
+    background-color: #42048A;
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #c21556;
+    /*box-shadow: 0 0 1px #c21556;*/
+    box-shadow: 0 0 1px #42048A;
 }
 
 input:checked+.slider:before {
@@ -281,10 +302,11 @@ input:checked+.slider:before {
         font-size: 14px;
     }
 
-
+    .register-or{
+        max-width: 5vw;
+    }
 
     canvas {
-        position: absolute;
         width: 49vw;
         min-width: 314px;
         height: 0px;
