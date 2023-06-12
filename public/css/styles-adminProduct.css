@@ -16,16 +16,16 @@
     margin-top: 40px;
     text-align: center;
     margin-bottom: 10%;
-    color: #42048A;
+    color: #4B011D;
 
 }
 
 h2 {
-    color:#42048A;
+    color:#4B011D;
     margin-bottom: 10% ;
 }
 
-.form-Product {
+.form-product {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ h2 {
 }
 
 
-form div {
+.form-product div {
     margin-bottom: 10px;
     border-radius: 5%;
     margin-top: 2%;
@@ -47,8 +47,8 @@ form div {
     padding: 5%;
     width: 50vw;
     background-color: #ffffff;
-    border: 1px solid #42048A;
-    color: #42048A;
+    border: 1px solid #4B011D;
+    color: #4B011D;
     
 }
 
@@ -67,7 +67,7 @@ form div {
     width: 50vw;
     padding: 2%;
     color: #fff;
-    background-color: #42048A;
+    background-color: #4B011D;
     border: 1px solid #fff;
     border-radius: 5px;
 
@@ -86,7 +86,7 @@ form div {
 
 .cantidad-product-container  {
     display: flex;
-    background-color: #42048A;
+    background-color: #4B011D;
     color: #fff;
     border-radius: 5px;
 }
@@ -124,9 +124,9 @@ form div {
     width: 100px;
     height: 25px;
     color: #ffffff;
-    background-color: #42048A;
+    background-color: #4B011D;
     border-radius: 5px;
-    border: 1px solid #42048A;
+    border: 1px solid #4B011D;
 }
 
 
