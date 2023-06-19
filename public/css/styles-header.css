@@ -1,7 +1,7 @@
 header {
     display: flex;
     width: 100vw;
-    background-color: #4B011D;
+    background-color: #4F04A3;
     height: 15vh;
     position: fixed;
     z-index: 3;
@@ -59,7 +59,7 @@ header {
 }    
 
 .search i {
-    color: #4B011D;
+    color: #4F04A3;
     margin-right: -25px;
     z-index: 1;
 }    
@@ -69,9 +69,9 @@ header {
     width: 100%;
     text-indent: 25px;
     border-radius: 5px;
-    border: 1px solid #4B011D;
+    border: 1px solid #4F04A3;
     margin: 5px;
-    color: #4B011D;
+    color: #4F04A3;
 }    
 
 
@@ -134,7 +134,7 @@ header {
     .header-nav-container i {
         border: 1px solid #fff;
         border-radius: 50%;
-        color: #4B011D;
+        color: #4F04A3;
         padding: 10px;
         background-color: #fff;
 
@@ -168,7 +168,7 @@ header {
     }
 
     .header-nav-container i:hover {
-        background-color: #4B011D;
+        background-color: #4F04A3;
         color: #fff;
     }
 }
