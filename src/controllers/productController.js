@@ -35,16 +35,6 @@ const productController = {
     processEditProduct: (req,res) => {
         const editProduct = datosProducto.find((row) => row.id == req.params.id);
 
-            // editProduct.nombre =  req.body.name;
-            // editProduct.descripcion = req.body.descripcion;
-            // editProduct.image =  req.body.image;
-            // editProduct.cantidad = req.body.productCantidad;
-            // editProduct.categoria =  req.body.categories;
-            // editProduct.general = req.body.general;
-            // editProduct.caracteristicas = req.body.caracteristicas;
-            // editProduct.compatibilidad = req.body.compatibilidad;
-            // editProduct.precio =req.body.precio; //! IDEA DE ROMI 
-
             for(let product of req.body) {
                 editProduct[product] = req.body[product]
             }
