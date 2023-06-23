@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Notebook",
+    "descripcion": "laptop ultima generacio",
+    "image": "1687557199238.jpg",
+    "cantidad": "23",
+    "categoria": "componentes-pc",
+    "general": "nice",
+    "carateristicas": "asda",
+    "compatibilidad": "sasda",
+    "precio": "sadad"
+  }
+]

@@ -7,10 +7,11 @@
     background-color: #eee;
 }
 
-.bloqueProd {
+.bloque-prod {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 90vh;
     width: 80vw;
     margin-top: 40px;
@@ -117,6 +118,7 @@ h2 {
 .button-products {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     width: 250px;
 }
 
@@ -127,8 +129,17 @@ h2 {
     background-color: #4B011D;
     border-radius: 5px;
     border: 1px solid #4B011D;
+    margin: 10px;
 }
 
+.delete-button {
+    width: 100px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #4B011D;
+    border-radius: 5px;
+    border: 1px solid #4B011D;
+}
 
 
 @media (min-width: 361px) {
@@ -153,7 +164,7 @@ h2 {
         background-color: #fff;
     }
 
-    .bloqueProd {
+    .bloque-prod {
         box-shadow: 0px 0px 15px rgba(70, 70, 70, 0.9);
         border-radius: 25px;
         width: 400px;

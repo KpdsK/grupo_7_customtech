@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('./partials/head')  %>
+<%-include('partials/head')  %>
 
 <body>
 
-    <%-include('./partials/header')  %>
+    <%-include('partials/header')  %>
 
     <main class="form-product-container">
 
 
-        <div class="bloqueProd">
+        <div class="bloque-prod">
 
-            <form class="form-product" action="/home" method="GET">
+            <form class="form-product" action="/products/editProduct/<%= editProduct.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
 
                 <h2>Editar producto</h2>
                 
-              
 
                 <div>
-                    <input class="text-field-product" type="text" name="" placeholder="Descripción">
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" value="<%= editProduct.descripcion  %>">
                 </div>
                 
 
                 <div class="product-file-container">
                     <label class="product-label-file" for="fotoProduct">Cambiar imagenes</label>
-                    <input type="file"   name="fotoProduct" id="fotoProduct">
+                    <input type="file" value="<% editProduct.image %>"  name="image" id="fotoProduct">
                 </div>
 
                 <div class="cantidad-product-container">
                     <label for="product-cantidad">Cantidad</label>
-                    <input class="text-field-product product-cantidad" type="text" name="product-cantidad" id=""  placeholder="cantidad">
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" value="<%= editProduct.productCantidad %>" id=""  placeholder="cantidad">
                 </div>
                 
                 
@@ -61,29 +60,31 @@
 
                 <div class="general">
                     <label for="general">General</label>
-                    <input class="text-field-product" type="text" name="general" placeholder="General" id="">
+                    <input class="text-field-product" type="text" name="general" placeholder="General" id=""  value="<%= editProduct.general%>" >
                 </div>
 
                 <div class="general">
                     <label for="general">Caracteristicas</label>
-                    <input class="text-field-product" type="text" name="general" placeholder="Caracteristicas" id="">
+                    <input class="text-field-product" type="text" name="carateristicas" placeholder="Caracteristicas" id="" value="<%= editProduct.carateristicas %>">
                 </div>
 
                 <div class="general">
                     <label for="general">Compatibilidad</label>
-                    <input class="text-field-product" type="text" name="general" placeholder="Compatibilidad" id="">
+                    <input class="text-field-product" type="text" name="compatibilidad" placeholder="Compatibilidad" id="" value="<%= editProduct.compatibilidad %>">
                 </div>
 
                 <div>
-                    <input class="text-field-product" type="text" name="precio" placeholder="Precio">
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" value="<%= editProduct.precio %>">
                 </div>
              
                 <div class="button-products">
                     <button>Guardar</button>
                     <button>Cancelar</button>
                 </div>
-                
             </form>
+            <form method="POST" action="/products/editProduct/<%= editProduct.id %>?_method=DELETE">
+                <button class="delete-button" type="submit">BORRAR</button> 
+              </form>
 
         </div>
 
