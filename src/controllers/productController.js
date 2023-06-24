@@ -8,7 +8,7 @@ function getProductsFromDBHome() {
 
 const productController = {
     newProduct: (req, res) => {
-        res.render('newProduct', { cssStyle: "adminProduct"  });
+        res.render('products/newProduct', { cssStyle: "adminProduct"  });
     },
 
     processNewProduct: (req,res) => {
@@ -31,7 +31,7 @@ const productController = {
 
     editProduct: (req, res) => {
         const editProduct = datosProducto.find((row) => row.id == req.params.id);
-        if(editProduct) return res.render('editProduct', { cssStyle: "adminProduct", editProduct: editProduct });
+        if(editProduct) return res.render('products/editProduct', { cssStyle: "adminProduct", editProduct: editProduct });
         else return res.send('romi tuvo la culpa');
     },
 
@@ -48,7 +48,7 @@ const productController = {
     },
     productDetail: (req, res) => {
         const editProduct = datosProducto.find((row) => row.id == req.params.id);
-        return  res.render('products/productDetail', { cssStyle: "product", editProduct: editProduct , productos:getProductsFromDBHome() });
+        return  res.render('products/productDetail', { cssStyle: "product", editProduct: editProduct });
     },
 
     deleteProcess: (req, res) => {
@@ -56,6 +56,10 @@ const productController = {
         editProduct.borrado = true
         fs.writeFileSync(path.resolve(__dirname, '../database/product.json'), JSON.stringify(datosProducto, null, 2), "utf-8") 
         return res.redirect("/")
+    },
+    listProducts : (req,res) => {
+        const noErased =  datosProducto.filter((row) => row.borrado != true) 
+        return res.render('products/listProducts', { cssStyle: "listProducts",  product: noErased} );
     }
 
 

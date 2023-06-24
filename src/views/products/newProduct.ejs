@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('partials/head')  %>
+<%-include('../partials/head')  %>
 
 <body>
 
-    <%-include('partials/header')  %>
+    <%-include('../partials/header')  %>
 
     <main class="form-product-container">
 
 
         <div class="bloque-prod">
 
-            <form class="form-product" action="/products/editProduct/<%= editProduct.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
+            <form class="form-product" action="/products/newProduct" method="post" enctype="multipart/form-data"> 
 
-                <h2>Editar producto</h2>
-                
+                <h2>Nuevo producto</h2>
+
 
                 <div>
-                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" value="<%= editProduct.descripcion  %>">
+                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto">
+                </div>
+
+
+                <div>
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción">
                 </div>
                 
 
                 <div class="product-file-container">
-                    <label class="product-label-file" for="fotoProduct">Cambiar imagenes</label>
-                    <input type="file" value="<% editProduct.image %>"  name="image" id="fotoProduct">
+                    <label class="product-label-file" for="image">Agregar imagenes</label>
+                    <input type="file" name="image" id="image">
                 </div>
 
                 <div class="cantidad-product-container">
                     <label for="product-cantidad">Cantidad</label>
-                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" value="<%= editProduct.productCantidad %>" id=""  placeholder="cantidad">
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad">
                 </div>
-                
-                
+
                 
                 <div class="product-description">
                     
@@ -41,7 +45,7 @@
                         <label for="categories">Categorias</label>
                         
                         <select class="product-categories" name="categories" id="" >
-                            <option class="product-categories-options" value="perifericos">Perifericos</option>
+                            <option  class="product-categories-options" value="perifericos">Perifericos</option>
                             <option class="product-categories-options" value="componentes-pc">Componentes de PC</option>
                             <option class="product-categories-options" value="componentes-pc">Notebooks</option>
                             <option class="product-categories-options" value="componentes-pc">Computadoras</option>
@@ -49,48 +53,44 @@
                             <option class="product-categories-options" value="componentes-pc">Conectividad</option>
                             <option class="product-categories-options" value="componentes-pc">Productos OUTLET</option>
                         </select>
-                        
                     </div>
                     
                     
                 </div>
 
-                
                 <h4>Especificaciones</h4>
 
                 <div class="general">
                     <label for="general">General</label>
-                    <input class="text-field-product" type="text" name="general" placeholder="General" id=""  value="<%= editProduct.general%>" >
+                    <input class="text-field-product" type="text" name="general" placeholder="General" id="">
                 </div>
 
                 <div class="general">
                     <label for="general">Caracteristicas</label>
-                    <input class="text-field-product" type="text" name="carateristicas" placeholder="Caracteristicas" id="" value="<%= editProduct.carateristicas %>">
+                    <input class="text-field-product" type="text" name="caracteristicas" placeholder="Caracteristicas" id="">
                 </div>
 
                 <div class="general">
                     <label for="general">Compatibilidad</label>
-                    <input class="text-field-product" type="text" name="compatibilidad" placeholder="Compatibilidad" id="" value="<%= editProduct.compatibilidad %>">
+                    <input class="text-field-product" type="text" name="compatibilidad" placeholder="Compatibilidad" id="">
                 </div>
 
                 <div>
-                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" value="<%= editProduct.precio %>">
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio">
                 </div>
              
                 <div class="button-products">
-                    <button>Guardar</button>
-                    <button>Cancelar</button>
+                    <button><a href="/products/listProducts">Agregar</a></button>
+                    <button><a href="/">Cancelar</a></button>
                 </div>
+
             </form>
-            <form method="POST" action="/products/editProduct/<%= editProduct.id %>?_method=DELETE">
-                <button class="delete-button" type="submit">BORRAR</button> 
-              </form>
 
         </div>
 
     </main>
 
-    <%-include('./partials/footer')  %>
+    <%-include('../partials/footer')  %>
 
 </body>
 

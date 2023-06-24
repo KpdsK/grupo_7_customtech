@@ -7,14 +7,18 @@
     background-color: #eee;
 }
 
+.form-product-container a {
+    color: #fff;
+}
+
 .bloque-prod {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     width: 80vw;
-    margin-top: 40px;
+    margin-top: 5vh;
     text-align: center;
     margin-bottom: 10%;
     color: #4B011D;
@@ -119,6 +123,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    align-items: center;
     width: 250px;
 }
 
@@ -160,6 +165,11 @@ h2 {
 
 @media (min-width: 769px) {
 
+
+    .button-products {
+        flex-direction: row;
+    }
+
     .form-product-container {
         background-color: #fff;
     }
@@ -168,8 +178,7 @@ h2 {
         box-shadow: 0px 0px 15px rgba(70, 70, 70, 0.9);
         border-radius: 25px;
         width: 400px;
-        background-color: #eee;
-
+        background-color: #eee
     }
 
 }

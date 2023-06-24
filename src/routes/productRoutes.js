@@ -38,4 +38,7 @@ productRouter.delete('/editProduct/:id', productController.deleteProcess);
 // productDetail 
 productRouter.get('/productDetail/:id', productController.productDetail);
 
+// listPorduct
+productRouter.get('/listProducts', productController.listProducts);
+
 module.exports = productRouter;

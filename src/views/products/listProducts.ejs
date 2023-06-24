@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+<body>
+
+    <%- include('../partials/header'); %>
+
+<div class="list-products">
+    <% product.forEach((row) => {  %>
+        <article class="list-container"> 
+            <a href="/products/productDetail/<%= row.id %>">
+                <div class="image-list-container">
+                    <img class="" src="/images/<%= row.image %>" alt="<%= row.image %>">
+                </div>
+                <div class="info-list">
+                    <h2 class="nombre"><%= row.nombre %></h2>
+                    <p class="descripcion"><%= row.descripcion %></p> 
+                    <p class="precio">$<%= row.precio %></p>
+                </div>
+            </a>
+        </article>
+        <% }) %>
+</div>
+
+</main>
+
+<%- include('../partials/footer'); %>
+
+</body>
+</html>
