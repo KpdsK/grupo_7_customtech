@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head'); %>
+<%- include('../partials/head.ejs'); %>
   <body>
-    <%- include('../partials/header'); %>
+    <%- include('../partials/header.ejs'); %>
       <main>
         <script>
           function changeMainImage(image) {
@@ -90,7 +90,7 @@
 <div class="contenedor-main">
   <% productos.forEach(function(p){ %>
     <%- include('../partials/tarjetasProductosHomeDetalle', {producto: p}); %>
-  <% }); %>
+  <%})%>
 </div>
 </main>
 <%- include('../partials/footer'); %>

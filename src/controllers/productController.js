@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const datosProducto = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/product.json')))
+function getProductsFromDBHome() {
+    return (JSON.parse(fs.readFileSync('src/database/db.json', 'utf8'))).db.productosHome;
+}
 
 
 const productController = {
@@ -45,7 +48,7 @@ const productController = {
     },
     productDetail: (req, res) => {
         const editProduct = datosProducto.find((row) => row.id == req.params.id);
-        return  res.render('products/productDetail', { cssStyle: "product", editProduct: editProduct });
+        return  res.render('products/productDetail', { cssStyle: "product", editProduct: editProduct , productos:getProductsFromDBHome() });
     },
 
     deleteProcess: (req, res) => {

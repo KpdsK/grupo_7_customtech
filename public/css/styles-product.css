@@ -1,3 +1,254 @@
-.detail-container {
-  margin-top: 10vh;
+@import url(/css/styles-home.css);
+
+.producto-inicio{
+  display:flex;
+  padding-bottom:  5%;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  margin:5%;
+ }
+.producto-inicio img {
+    max-width: 700px;
+    height: auto;
+    border:1px;
+    
 }
+.producto-iconos h1{
+  font-size: x-large;
+  text-align: left;
+  }
+  .producto-iconos h2{
+    font-size: xx-large;
+    text-align:justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .producto-iconos p{
+    font-size:x-large;
+    text-align: left;
+    margin-top: 20x;
+    margin-bottom: 20px;
+   }
+   .producto-iconos p i{
+    color:rgb(194, 21, 86, 0.9)
+   }
+  .producto-iconos{
+    font-size:x-large;
+    text-align:left;
+    width: 50%;
+    position: relative;
+    margin-left:200px ;
+    justify-content: flex-end
+  
+   }
+  .producto-iconos button {
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #C21556;
+    color: white;
+    border-radius: 20px;
+    width: 80%;
+    height: 40%;
+    font-size:x-large;
+   
+  }
+  
+  .icono-corazon{
+    font-size: 30px;
+    padding:0%;
+    color:rgba(240, 227, 232, 0.9);
+    position:relative;
+   
+   bottom: 210px;
+    left: 30px; 
+    right: 0%;
+   
+  }
+  
+  
+  .producto-especificaciones{
+    display:flex;
+    flex-wrap: wrap;
+    background-color:none;
+    padding: 5%;
+    margin:5%;
+   
+  
+  }
+  .producto-caracteristica{
+    display: inline-block;
+    width: 30%; 
+    box-sizing: border-box;
+    padding: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+   
+  }
+  /**/
+  .producto-linea{
+    padding-top: 20px;
+    font-size:x-large;
+    text-align: center;
+    border-bottom: 1px dashed #ebebeb;
+   
+   }
+   .producto-caracteristica h4{
+    border-bottom: 2px solid rgb(194, 21, 86, 0.9);
+    font-size: large;
+   
+  }
+  
+  .producto-caracteristica p{
+  
+    font-size: medium;
+  }
+  
+  
+   /*producto-recomendado*/
+    
+   .producto-recomendado{
+    display: flex;
+    background-color:none;
+    padding: 5%;
+    margin:5%;
+    border-color: rgb(194, 21, 86, 0.9);
+   }
+    .producto-recomendado-titulo{
+      text-align: center;
+      font-size:x-large;
+      border-bottom: 1px dashed #ebebeb;
+     
+     
+      }
+    
+      .linea {
+        display: inline-block;
+        border-top: 1px solid rgb(194, 21, 86, 0.9);;
+        width: 30%;
+        margin: 0 10px;
+        vertical-align: middle;
+      }
+      .producto-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 400px;
+        min-height: 100vh;
+        margin-top: 50px; 
+      }
+    
+  
+    .image-main {
+        width: 40%;
+        margin-right: 5px;
+        float:inline-start;
+        transition: all 0.3s ease;
+       
+    }
+  
+    .image-list {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+       
+    }
+  
+    .image-list img {
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);
+        
+    }
+  
+    .producto-nombre{
+     padding-top: 100px;
+     text-align: justify;
+    }
+      
+      
+    @media(max-width: 769px) {
+    
+    
+      .producto-container {
+        display: flex;
+        flex-direction: column;
+  
+      }
+  
+      .image-main {
+        width: 100%;
+       
+      }
+      .image-list {
+        display:none;
+        
+      }
+    
+      .producto-iconos {
+        order: 1;
+        width:60%;
+        margin:0%;
+        
+  
+      }
+    
+    
+    
+    .producto-especificaciones{
+      display:flex;
+      flex-wrap: wrap;
+      background-color:none;
+      
+     
+    
+    }
+    .producto-caracteristica{
+      display: inline-block;
+      width: 100%; 
+      box-sizing: border-box;
+    
+     
+  }
+  .producto-caracteristica{
+    padding: 20px;
+  }
+  .producto-caracteristica h4{
+    font-size:medium;
+  }
+  .producto-caracteristica p{
+    font-size:small;
+    }
+    
+  
+    .linea{
+      display:none;
+    }
+    .contenedor-main{
+     padding: 1%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+    }
+  
+  .producto-iconos p{
+    display:none;
+  }
+  
+  .producto-iconos h2 {
+    text-align: center;
+  
+  
+  }
+  .producto-iconos button{
+    
+    float: center;
+  }
+  .icono-corazon{
+  display: none;
+  }
+  
+  }
