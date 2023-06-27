@@ -1,10 +1,20 @@
-const fs = require('fs');
-const path = require('path');
-const datosProducto = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/product.json')))
-function getProductsFromDBHome() {
-    return (JSON.parse(fs.readFileSync('src/database/db.json', 'utf8'))).db.productosHome;
-}
+const modeloDatos = require("./databaseController");
 
+const createObjectFromDataBody = (req) => {
+    return {
+        "id": req.body.id,
+        "nombre": req.body.name,
+        "descripcion": req.body.descripcion,
+        "image": (req.file) ? req.file.filename : '',
+        "cantidad": req.body.productCantidad,
+        "categoria": req.body.categories,
+        "general": req.body.general,
+        "carateristicas": req.body.caracteristicas,
+        "compatibilidad": req.body.compatibilidad,
+        "precio": req.body.precio,
+        "borrado": (req.body.borrado) ? req.body.borrado : false
+    }
+}
 
 const productController = {
     newProduct: (req, res) => {
@@ -12,57 +22,38 @@ const productController = {
     },
 
     processNewProduct: (req,res) => {
-        const newProduct = {
-            "id": datosProducto.length+1,
-            "nombre": req.body.name,
-            "descripcion": req.body.descripcion,
-            "image": req.file.filename,
-            "cantidad": req.body.productCantidad,
-            "categoria": req.body.categories,
-            "general": req.body.general,
-            "carateristicas": req.body.caracteristicas,
-            "compatibilidad": req.body.compatibilidad,
-            "precio": req.body.precio,
-        }
-        console.log(newProduct.image)
-        fs.writeFileSync(path.resolve(__dirname, '../database/product.json',), JSON.stringify([...datosProducto, newProduct],null, 2),"utf-8");
+        const newProduct = createObjectFromDataBody(req);
+        modeloDatos("product").crear(newProduct);
         return  res.redirect('/');
     },
 
     editProduct: (req, res) => {
-        const editProduct = datosProducto.find((row) => row.id == req.params.id);
-        if(editProduct) return res.render('products/editProduct', { cssStyle: "adminProduct", editProduct: editProduct });
+        const editProduct = modeloDatos("product").buscar(req.params.id);
+        if(editProduct) return res.render('products/newProduct', { cssStyle: "adminProduct", editProduct: editProduct });
         else return res.send('romi tuvo la culpa');
     },
 
     processEditProduct: (req,res) => {
-        const editProduct = datosProducto.find((row) => row.id == req.params.id);
-
-            for(let product of req.body) {
-                editProduct[product] = req.body[product]
-            }
-        
-        fs.writeFileSync(path.resolve(__dirname, '../database/product.json',), JSON.stringify(datosProducto ,null, 2),"utf-8");
-        console.log(editProduct);
-        return  res.redirect('/') 
+        const productToModify = createObjectFromDataBody(req);
+        if (!productToModify.image) { productToModify.image = modeloDatos("product").buscar(productToModify.id).image }
+        modeloDatos("product").modificar(productToModify);
+        return res.redirect('/') 
     },
     productDetail: (req, res) => {
-        const editProduct = datosProducto.find((row) => row.id == req.params.id);
-        return  res.render('products/productDetail', { cssStyle: "product", editProduct: editProduct });
+        const product = modeloDatos("product").buscar(req.params.id);
+        return  product.borrado ? res.send('El producto no Existe') : res.render('products/productDetail', { cssStyle: "product", editProduct: product, products: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
     },
 
     deleteProcess: (req, res) => {
-        const editProduct = datosProducto.find(row => row.id == req.params.id) 
-        editProduct.borrado = true
-        fs.writeFileSync(path.resolve(__dirname, '../database/product.json'), JSON.stringify(datosProducto, null, 2), "utf-8") 
+        const productToDelete = modeloDatos("product").buscar(req.params.id);
+        productToDelete.borrado = true
+        modeloDatos("product").modificar(productToDelete);
         return res.redirect("/")
     },
     listProducts : (req,res) => {
-        const noErased =  datosProducto.filter((row) => row.borrado != true) 
+        const noErased =  modeloDatos("product").listar().filter((row) => row.borrado != true) 
         return res.render('products/listProducts', { cssStyle: "listProducts",  product: noErased} );
     }
-
-
 };
 
 module.exports = productController;
