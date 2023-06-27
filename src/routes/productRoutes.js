@@ -33,7 +33,7 @@ productRouter.put('/editProduct/:id',  fileUpload.single('image'), productContro
 
 // delete 
 
-productRouter.delete('/products/:id', productController.deleteProcess);
+productRouter.delete('/:id', productController.deleteProcess);
 
 // productDetail 
 productRouter.get('/productDetail/:id', productController.productDetail);

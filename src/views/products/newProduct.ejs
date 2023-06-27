@@ -84,6 +84,12 @@
                 </div>
 
             </form>
+            <% if (locals.editProduct) { %>
+                <form method="POST" action="/products/<%= editProduct.id %>?_method=DELETE">
+                    <button class="delete-button" type="submit">BORRAR</button> 
+                  </form>
+            <% } %>
+            
 
         </div>
 
