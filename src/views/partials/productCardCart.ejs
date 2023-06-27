@@ -2,7 +2,7 @@
         <i class="fa fa-trash tacho-basura" onclick="quitarProductoCarrito(<%= producto.id %>)" aria-hidden="true"></i>
         <div class="tarjeta-producto-cabecera">
             <div class="tarjeta-producto-cabecera-imagen">
-                <img src=<%=producto.imagen %> alt="imagen-producto-1">
+                <img src="/images/<%=producto.image %>" alt="imagen-producto-1">
             </div>
             <div class="tarjeta-producto-titulo-descripcion">
                 <legend>
@@ -18,12 +18,12 @@
                 <div class="tarjeta-producto-detalle-titulos">
                     <div class="tarjeta-producto-detalle-item">
                         <label>
-                            <%= producto.caracteristica.nombre %>
+                            Color
                         </label>
                         <div class="caracteristica">
                             <i class="fa fa-circle" aria-hidden="true"></i>
                             <label>
-                                <%= producto.caracteristica.valor %>
+                                Negro
                             </label>
                         </div>
                     </div>
