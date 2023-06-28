@@ -46,7 +46,7 @@
     border: none;
     margin-bottom: 20px;
     margin-top: 20px;
-    background-color: #4F04A3;
+    background-color: #4f04a3;
     color: white;
     border-radius: 20px;
     width: 80%;
@@ -95,7 +95,7 @@
    
    }
    .producto-caracteristica h4{
-    border-bottom: 2px solid rgb(194, 21, 86, 0.9);
+    border-bottom: 2px solid rgba(79, 4, 163, 0.89);
     font-size: large;
    
   }
@@ -113,7 +113,7 @@
     background-color:none;
     padding: 5%;
     margin:5%;
-    border-color: rgb(194, 21, 86, 0.9);
+    border-color: rgba(79, 4, 163, 0.89);
    }
     .producto-recomendado-titulo{
       text-align: center;
@@ -125,7 +125,7 @@
     
       .linea {
         display: inline-block;
-        border-top: 1px solid rgb(194, 21, 86, 0.9);;
+        border-top: 1px solid rgba(79, 4, 163, 0.89);;
         width: 30%;
         margin: 0 10px;
         vertical-align: middle;
@@ -159,7 +159,7 @@
         margin-bottom: 10px;
         width: 100%;
         cursor: pointer;
-        box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);
+        box-shadow: 0px 0px 15px rgba(79, 4, 163, 0.89);
         
     }
   

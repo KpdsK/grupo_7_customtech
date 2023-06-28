@@ -50,18 +50,5 @@
   "compatibilidad": "Compatibilidad, bla bla bladddd",
   "precio": "485344",
   "borrado": false
- },
- {
-  "id": "5",
-  "nombre": "Producto Prueba 2",
-  "descripcion": "Prueba descripcion2",
-  "image": "auricular.jpg",
-  "cantidad": "3",
-  "categoria": "conectividad",
-  "general": "Especificacion General 3",
-  "carateristicas": "Caracteristicas, nueva car 3",
-  "compatibilidad": "Compatibilidad, bla bla bla 3",
-  "precio": "4853333",
-  "borrado": false
  }
 ]
