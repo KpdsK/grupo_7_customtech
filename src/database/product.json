@@ -1,39 +1,67 @@
 [
-  {
-    "id": 1,
-    "nombre": "Notebook",
-    "descripcion": "laptop ultima generacio",
-    "image": "1687557199238.jpg",
-    "cantidad": "23",
-    "categoria": "componentes-pc",
-    "general": "nice",
-    "carateristicas": "asda",
-    "compatibilidad": "sasda",
-    "precio": "sadad"
-  },
-  {
-    "id": 2,
-    "nombre": "Notebook",
-    "descripcion": "laptop ultima generacio",
-    "image": "1687557199238.jpg",
-    "cantidad": "23",
-    "categoria": "componentes-pc",
-    "general": "nice",
-    "carateristicas": "asda",
-    "compatibilidad": "sasda",
-    "precio": "sadad",
-    "borrado": true
-  },
-  {
-    "id": 3,
-    "nombre": "Notebook",
-    "descripcion": "laptop ultima generacio",
-    "image": "1687557199238.jpg",
-    "cantidad": "23",
-    "categoria": "componentes-pc",
-    "general": "nice",
-    "carateristicas": "asda",
-    "compatibilidad": "sasda",
-    "precio": "sadad"
-  }
+ {
+  "id": 1,
+  "nombre": "Notebook 1",
+  "descripcion": "laptop ultima generacio",
+  "image": "1687557199238.jpg",
+  "cantidad": "23",
+  "categoria": "notebooks",
+  "general": "nice",
+  "carateristicas": "asda",
+  "compatibilidad": "sasda",
+  "precio": 200000,
+  "borrado": false
+ },
+ {
+  "id": 2,
+  "nombre": "Notebook 2",
+  "descripcion": "laptop ultima generacio",
+  "image": "1687557199238.jpg",
+  "cantidad": "23",
+  "categoria": "monitores",
+  "general": "nice",
+  "carateristicas": "asda",
+  "compatibilidad": "sasda",
+  "precio": 100000,
+  "borrado": false
+ },
+ {
+  "id": "3",
+  "nombre": "Notebook 33",
+  "descripcion": "laptop ultima generacio",
+  "image": "1687557199238.jpg",
+  "cantidad": "23",
+  "categoria": "conectividad",
+  "general": "nice",
+  "carateristicas": "asda",
+  "compatibilidad": "sasda",
+  "precio": "300000",
+  "borrado": false
+ },
+ {
+  "id": "4",
+  "nombre": "dProducto Pruebadd",
+  "descripcion": "Prueba descripcion modificada 4dddd",
+  "image": "auricular.jpg",
+  "cantidad": "34",
+  "categoria": "monitores",
+  "general": "Especificacion General",
+  "carateristicas": "Caracteristicas, bla bla bla rrrr",
+  "compatibilidad": "Compatibilidad, bla bla bladddd",
+  "precio": "485344",
+  "borrado": false
+ },
+ {
+  "id": "5",
+  "nombre": "Producto Prueba 2",
+  "descripcion": "Prueba descripcion2",
+  "image": "auricular.jpg",
+  "cantidad": "3",
+  "categoria": "conectividad",
+  "general": "Especificacion General 3",
+  "carateristicas": "Caracteristicas, nueva car 3",
+  "compatibilidad": "Compatibilidad, bla bla bla 3",
+  "precio": "4853333",
+  "borrado": false
+ }
 ]

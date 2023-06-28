@@ -1,6 +1,6 @@
-<a class="sub-main" href="/productDetail">
+<a class="sub-main" href="/products/productDetail/<%= producto.id %>">
     <p class="fa-regular fa-heart"></p>
-    <img class=productos src=<%= producto.imagen %> alt="macbook pro">
+    <img class=productos src="/images/<%= producto.image %>" alt="Imagen principal">
     <div class="sub-main-descripcion">
     <p class="descripciones"><strong><%= producto.nombre %></strong></p>
     <p class="precios">$<%= producto.precio %></p>

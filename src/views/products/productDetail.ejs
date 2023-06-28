@@ -4,27 +4,27 @@
   <body>
     <%- include('../partials/header.ejs'); %>
       <main>
-        <!-- <script>
+        <script>
           function changeMainImage(image) {
             var mainImage = document.getElementById('main-image');
             mainImage.src = image.src
           }
-        </script> -->
+        </script>
 
 
 
-<div class="producto-nombre"><h1>Notebook Lenovo </h1></div>
+<div class="producto-nombre"><h1><%= editProduct.nombre %> </h1></div>
 <div class="producto-container">
  
   <div class="image-list">
    
   
-    <!-- <img src="\images\detalleProducto\Notebook2.jpeg" alt="Imagen 2" onmouseover="changeMainImage(this)">
-    <img src="\images\detalleProducto\Notebook3.jpeg" alt="Imagen 3" onmouseover="changeMainImage(this)">
-    <img src="\images\detalleProducto\Notebook4.jpeg" alt="Imagen 4" onmouseover="changeMainImage(this)"> -->
+    <img src="/images/<%= editProduct.image %>" alt="Imagen 2" onmouseover="changeMainImage(this)">
+    <img src="/images/<%= editProduct.image %>" alt="Imagen 3" onmouseover="changeMainImage(this)">
+    <img src="/images/<%= editProduct.image %>" alt="Imagen 4" onmouseover="changeMainImage(this)">
   </div>
   
-  <img id="main-image" class="image-main" src="images/<%= editProduct.image %>" alt="Imagen Principal">
+  <img id="main-image" class="image-main" src="/images/<%= editProduct.image %>" alt="Imagen Principal">
   <div class="icono-corazon">
   <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
   </div>
@@ -33,7 +33,7 @@
   <div class="producto-iconos">
 
     
-    <h2>$230.000</h2>
+    <h2>$ <%= editProduct.precio %></h2>
     <form class="Agregar" action="/productCart" method="get">
       <button class="Agregar" type="submit">COMPRAR</button>
     </form>
@@ -88,6 +88,12 @@
 
 <h4 class="producto-recomendado-titulo"> <span class="linea"></span>Productos recomendados<span
     class="linea"></span></h4>
+    
+    <div class="contenedor-main">
+      <% products.forEach(function(p){ %>
+        <%- include('../partials/tarjetasProductosHomeDetalle', {producto: p}); %>
+      <% }); %>
+    </div>
 
 </main>
 <%- include('../partials/footer'); %>

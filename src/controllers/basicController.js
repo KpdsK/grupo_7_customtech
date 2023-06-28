@@ -1,16 +1,12 @@
-const fs = require('fs');
+const modeloDatos = require("./databaseController");
 
 function getProductsFromDB() {
-    return (JSON.parse(fs.readFileSync('src/database/db.json', 'utf8'))).db.productos;
-}
-
-function getProductsFromDBHome() {
-    return (JSON.parse(fs.readFileSync('src/database/db.json', 'utf8'))).db.productosHome;
+    return modeloDatos("product").listar().filter((row) => row.borrado != true);
 }
 
 const basicController = {
     home: (req, res) => {
-        res.render('home', { cssStyle: "home", productos: getProductsFromDBHome() });
+        res.render('home', { cssStyle: "home", productos: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
     },
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });
