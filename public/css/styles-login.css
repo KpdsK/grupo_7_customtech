@@ -38,7 +38,7 @@
 .icon-register i {
     font-size: 25vw;
     /*color: #c21556;*/
-    color: #4B011D;
+    color: #4F04A3;
 }
 
 .redes {
@@ -50,7 +50,7 @@
     font-size: 20px;
     justify-content: space-around;
     /*color: #c21556;*/
-    color: #4B011D ;
+    color: #4F04A3 ;
 }
 
 form div {
@@ -79,7 +79,7 @@ form div {
     font-size: 3vw;
     font-weight: bold;
     margin-bottom: 8vh;
-    color: #4B011D;
+    color: #4F04A3;
   }
 
 
@@ -101,7 +101,7 @@ form div {
     padding: 2%;
     /*background-color: #c21556;
     color: aliceblue;*/
-    background-color: #4B011D;
+    background-color: #4F04A3;
     color: aliceblue;
     text-align: center;
     position: absolute;
@@ -128,7 +128,7 @@ form div {
 
 .botonSubmit {
     /*background-color: #c21556;*/
-    background-color: #4B011D;
+    background-color: #4F04A3;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -147,14 +147,14 @@ form div {
 
 .bloqueSignup legend {
    /* color: #c21556;*/
-   color: #4B011D;
+   color: #4F04A3;
     font-size: 4vw;
     font-weight: bold;
 }
 
 .botonSignup {
     /*background-color: #c21556;*/
-    background-color: #4B011D;
+    background-color: #4F04A3;
     color: aliceblue;
     padding: 3%;
     border: 0;
@@ -222,12 +222,12 @@ canvas {
 
 input:checked+.slider {
     /*background-color: #c21556;*/
-    background-color: #4B011D;
+    background-color: #4F04A3;
 }
 
 input:focus+.slider {
     /*box-shadow: 0 0 1px #c21556;*/
-    box-shadow: 0 0 1px #4B011D;
+    box-shadow: 0 0 1px #4F04A3;
 }
 
 input:checked+.slider:before {

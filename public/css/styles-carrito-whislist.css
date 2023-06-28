@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     background-color: white;
     margin: 15px auto;
-    box-shadow: 0px 0px 10px #C21556;
+    box-shadow: 0px 0px 10px #4F04A3;
 }
 
 .tacho {
@@ -103,7 +103,7 @@ label[class="cantidad"] {
 .corazon-whislist {
     position: absolute;
     margin: 0px;
-    color: #C21556;
+    color: #4F04A3;
     z-index: 1;
 }
 
@@ -173,7 +173,7 @@ footer {
     margin: 0;
     padding: 2vw 2vw;
     margin-bottom: 10px;
-    background-color: #C21556;
+    background-color: #4F04A3;
     color: white;
     border-radius: 20px;
     height: 13vw;
@@ -215,7 +215,7 @@ footer {
     font-size: 4vw;
     text-align: end;
     margin-bottom: 0;
-    background-color: #C21556;
+    background-color: #4F04A3;
     opacity: 1;
 }
 
@@ -225,7 +225,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 0px;
-    background-color: #C21556;
+    background-color: #4F04A3;
     border-radius: 20px;
 }
 
@@ -246,7 +246,7 @@ footer {
     height: 5vw;
     margin: 0;
     font-size: 1vw;
-    background: #C21556;
+    background: #4F04A3;
     text-decoration: none;
     justify-content: center;
 }
@@ -273,7 +273,7 @@ footer {
     text-align: center;
     border: none;
     background: #fff;
-    color: #C21556;
+    color: #4F04A3;
 }
 
 .contador-cantidad-menos:link,

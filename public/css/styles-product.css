@@ -31,7 +31,7 @@
     margin-bottom: 20px;
    }
    .producto-iconos p i{
-    color:rgb(194, 21, 86, 0.9)
+    color:rgba(127, 0, 201, 0.9)
    }
   .producto-iconos{
     font-size:x-large;
@@ -46,7 +46,7 @@
     border: none;
     margin-bottom: 20px;
     margin-top: 20px;
-    background-color: #C21556;
+    background-color: #4F04A3;
     color: white;
     border-radius: 20px;
     width: 80%;

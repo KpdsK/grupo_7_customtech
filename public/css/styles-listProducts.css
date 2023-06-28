@@ -11,6 +11,8 @@
     padding: 10px;
     width: 100%;
     margin-top: 5vh;
+    border-radius: 10px;
+    background-color: white;
 }
 
 
@@ -25,7 +27,7 @@
 }
 
 .info-list {
-    color: #4B011D;
+    color: #4F04A3;
 }
 
 .info-list h2 {
@@ -44,6 +46,14 @@
 
     .list-container {
         width: 50%;
+    }
+
+    .list-container:hover{
+        box-shadow: 0px 0px 10px #4F04A3;
+    }
+
+    .list-container:hover .descripcion{
+        display: block;
     }
 
     .image-list-container {
