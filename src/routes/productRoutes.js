@@ -23,22 +23,22 @@ const fileUpload = multer({
 
 // new product
 
-productRouter.get('/newProduct', productController.newProduct);
-productRouter.post('/newProduct', fileUpload.single('image') ,productController.processNewProduct);
+productRouter.get('/create', productController.newProduct);
+productRouter.post('/', fileUpload.single('image') ,productController.processNewProduct);
 
 // edit
 
-productRouter.get('/editProduct/:id', productController.editProduct);
-productRouter.put('/editProduct/:id',  fileUpload.single('image'), productController.processEditProduct);
+productRouter.get('/:id/edit', productController.editProduct);
+productRouter.put('/:id',  fileUpload.single('image'), productController.processEditProduct);
 
 // delete 
 
 productRouter.delete('/:id', productController.deleteProcess);
 
 // productDetail 
-productRouter.get('/productDetail/:id', productController.productDetail);
+productRouter.get('/:id', productController.productDetail);
 
 // listPorduct
-productRouter.get('/listProducts', productController.listProducts);
+productRouter.get('/', productController.listProducts);
 
 module.exports = productRouter;
