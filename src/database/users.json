@@ -153,7 +153,7 @@
   "deseados": [],
   "carrito": []
  },
- {
+ { //gdgdgdgdgdgdgd
   "id": 12,
   "nombre": "Darbie",
   "apellido": "Millea",
@@ -186,7 +186,7 @@
   "nombre": "Ely",
   "apellido": "Nissle",
   "email": "enissled@yandex.ru",
-  "contrasenia": "aF6\"Y/x\"",
+  "contrasenia": "aF6Y/x",
   "borrado": false,
   "imagen": "/images/avatars/pletzale.jpg",
   "tipoPerfil": "admin",
