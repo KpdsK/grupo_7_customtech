@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('partials/head')  %>
+
+<body>
+
+    <%-include('partials/header')  %>
+
+    <main class="form-product-container">
+
+
+        <div class="bloqueProd">
+
+            <form class="form-product" action="/products/newProduct" method="post" enctype="multipart/form-data"> 
+
+                <h2>Nuevo producto</h2>
+
+
+                <div>
+                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto">
+                </div>
+
+
+                <div>
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción">
+                </div>
+                
+
+                <div class="product-file-container">
+                    <label class="product-label-file" for="image">Agregar imagenes</label>
+                    <input type="file" name="image" id="image">
+                </div>
+
+                <div class="cantidad-product-container">
+                    <label for="product-cantidad">Cantidad</label>
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad">
+                </div>
+
+                
+                <div class="product-description">
+                    
+                    <div class="categories-container">
+                        
+                        <label for="categories">Categorias</label>
+                        
+                        <select class="product-categories" name="categories" id="" >
+                            <option  class="product-categories-options" value="perifericos">Perifericos</option>
+                            <option class="product-categories-options" value="componentes-pc">Componentes de PC</option>
+                            <option class="product-categories-options" value="componentes-pc">Notebooks</option>
+                            <option class="product-categories-options" value="componentes-pc">Computadoras</option>
+                            <option class="product-categories-options" value="componentes-pc">Monitores</option>
+                            <option class="product-categories-options" value="componentes-pc">Conectividad</option>
+                            <option class="product-categories-options" value="componentes-pc">Productos OUTLET</option>
+                        </select>
+                    </div>
+                    
+                    
+                </div>
+
+                <h4>Especificaciones</h4>
+
+                <div class="general">
+                    <label for="general">General</label>
+                    <input class="text-field-product" type="text" name="general" placeholder="General" id="">
+                </div>
+
+                <div class="general">
+                    <label for="general">Caracteristicas</label>
+                    <input class="text-field-product" type="text" name="caracteristicas" placeholder="Caracteristicas" id="">
+                </div>
+
+                <div class="general">
+                    <label for="general">Compatibilidad</label>
+                    <input class="text-field-product" type="text" name="compatibilidad" placeholder="Compatibilidad" id="">
+                </div>
+
+                <div>
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio">
+                </div>
+             
+                <div class="button-products">
+                    <button>Agregar</button>
+                    <button>Cancelar</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <%-include('partials/footer')  %>
+
+</body>
+
+</html>
