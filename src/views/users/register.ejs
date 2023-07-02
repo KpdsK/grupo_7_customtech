@@ -23,12 +23,19 @@
                 </div>
 
                 <div>
-                    <input class="text-field" type="email" name="email" placeholder="E-mail">
+                    <input class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
+                <% if(locals.errors && errors.email) { %>
+                    <p> <%= errors.email.msg %> </p>
+                    <% } %>
 
                 <div>
-                    <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                    <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
                 </div>
+
+                <% if(locals.errors && errors.contrasenia) { %>
+                    <p> <%= errors.contrasenia.msg %> </p>
+                    <% } %>
 
                 <div>
                     <input class="text-field" type="password" name="contrasenia" placeholder="Confirmar contraseña">
