@@ -6,7 +6,7 @@ function getProductsFromDB() {
     return modeloDatos("product").listar().filter((row) => row.borrado != true);
 }
 
-const { validationResult } = require("express-validator"); //PARA PODER USAR REGISTERVALIDATION.JS
+const { validationResult } = require("express-validator");
 
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
 
@@ -33,21 +33,20 @@ const userController = {
             "contrasenia": req.body.password
         }
 
-        // RESULTADO DE LA VALIDACIÓN: ESTO GUARDA UN OBJETO LITERAL QUE TIENE UNA PROPIEDAD QUE SE LLAMA "ERRORS"
-        // QUE TIENE UN ARRAY CON ERRORES
         const rdoValidacion = validationResult(req)
         console.log(rdoValidacion.errors) 
 
-        if(rdoValidacion.errors.length > 0) { //SI ERRORS (QUE ES UN ARRAY ) TIENE UNA LONGITUD MAYOR A 0 SE VERIFICA QUE HAY ERRORES
-            return res.render('register', { 
+        if(rdoValidacion.errors.length > 0) { 
+            return res.render('users/register', { 
+            cssStyle: "register",
             errors: rdoValidacion.mapped(), 
-            oldData: req.body //OLDDATA PARA QUE QUEDE LO LLENADO POR EL USUARIO
+            oldData: req.body 
         })
         }
 
         //User.create(req.body);
 
-        fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
+        fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), JSON.stringify([...datos, user], null, 2));
         return res.redirect('/')
     },
 
