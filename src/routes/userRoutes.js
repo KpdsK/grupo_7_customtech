@@ -30,7 +30,7 @@ userRouter.get('/productWhisList', userController.whisList);
 userRouter.get('/login', userController.login);
 
 userRouter.get('/register', userController.register);
-userRouter.post('/users/register', registerValidation, userController.processRegister);
+userRouter.post('/users/register', fileUpload.single('image'), registerValidation, userController.processRegister);
 
 
 module.exports = userRouter;
