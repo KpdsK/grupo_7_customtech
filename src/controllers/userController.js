@@ -1,11 +1,16 @@
 const modeloDatos = require("./databaseController");
+const fs = require('fs');
+const path = require('path')
 
 function getProductsFromDB() {
     return modeloDatos("product").listar().filter((row) => row.borrado != true);
 }
+
 const { validationResult } = require("express-validator"); //PARA PODER USAR REGISTERVALIDATION.JS
 
-const User = require ('../models/User.js')
+const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
+
+//const User = require ('../models/User.js')
 
 const userController = {
     home: (req, res) => {
@@ -20,6 +25,14 @@ const userController = {
 
     processRegister: (req, res) => {
 
+        const user = {
+            "id": datos.length + 1,
+            "nombreCompleto": req.body.nombre,
+            "email": req.body.email,
+            "image": req.body.fotoPerfil,
+            "contrasenia": req.body.password
+        }
+
         // RESULTADO DE LA VALIDACIÓN: ESTO GUARDA UN OBJETO LITERAL QUE TIENE UNA PROPIEDAD QUE SE LLAMA "ERRORS"
         // QUE TIENE UN ARRAY CON ERRORES
         const rdoValidacion = validationResult(req)
@@ -32,10 +45,10 @@ const userController = {
         })
         }
 
-        User.create(req.body);
+        //User.create(req.body);
 
-        //fs.writeFileSync(path.resolve(//__dirname, '../database/user.json'), JSON.stringify([...allUsers, newUser], null, 2));
-        return res.send('ok, cargado')
+        fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
+        return res.redirect('/')
     },
 
     
