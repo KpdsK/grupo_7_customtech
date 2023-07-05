@@ -2,7 +2,7 @@
 // 2. Buscar al usuario que se quiere loguear por su email. LISTO (findByField)
 // 3. Buscar a un usuario por su id. LISTO (findByPk)
 // 4. Editar la informacion de un usuario
-// 5. Eliminiar a un usuario de la DB
+// 5. Eliminiar a un usuario de la DB (delete)
 
 const fs = require('fs');
 const { Module } = require('module');

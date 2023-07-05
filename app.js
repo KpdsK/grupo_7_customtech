@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const basicRouter = require('./routes/routes')
+const basicRouter = require('./routes/userRoutes')
 const productRouter = require('./routes/productRoutes')
 
 app.use(express.static(path.join(__dirname, 'public')));

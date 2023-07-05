@@ -3,10 +3,11 @@ const modeloDatos = require("./databaseController");
 function getProductsFromDB() {
     return modeloDatos("product").listar().filter((row) => row.borrado != true);
 }
-const { validationResult } = require("express-validator"); // PARA PODER USAR REGISTERVALIDATION.JS
-//const User = require ('./src/models/User')
+const { validationResult } = require("express-validator"); //PARA PODER USAR REGISTERVALIDATION.JS
 
-const basicController = {
+const User = require ('../models/User.js')
+
+const userController = {
     home: (req, res) => {
         res.render('home', { cssStyle: "home", productos: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
     },
@@ -25,11 +26,16 @@ const basicController = {
         console.log(rdoValidacion.errors) 
 
         if(rdoValidacion.errors.length > 0) { //SI ERRORS (QUE ES UN ARRAY ) TIENE UNA LONGITUD MAYOR A 0 SE VERIFICA QUE HAY ERRORES
-            return res.render('register', { errors: rdoValidacion.mapped(), oldData: req.body })//OLDDATA PARA QUE QUEDE LO LLENADO POR EL USUARIO
+            return res.render('register', { 
+            errors: rdoValidacion.mapped(), 
+            oldData: req.body //OLDDATA PARA QUE QUEDE LO LLENADO POR EL USUARIO
+        })
         }
 
-        fs.writeFileSync(path.resolve(__dirname, '../database/user.json'), JSON.stringify([...datos, user], null, 2));
-        return res.redirect('/')
+        User.create(req.body);
+
+        //fs.writeFileSync(path.resolve(//__dirname, '../database/user.json'), JSON.stringify([...allUsers, newUser], null, 2));
+        return res.send('ok, cargado')
     },
 
     
@@ -42,4 +48,4 @@ const basicController = {
     
 };
 
-module.exports = basicController;
+module.exports = userController;
