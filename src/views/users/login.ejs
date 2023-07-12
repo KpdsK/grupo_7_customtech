@@ -12,7 +12,7 @@
 
         <div class="bloqueLogin">
 
-            <form class="form-login" action="/" method="GET">
+            <form class="form-login" action="users/login" method="post">
 
                 <div class="icon-register">
                     <i class="fa-solid fa-circle-user"></i>
@@ -23,13 +23,19 @@
                 </div>
 
                 <div>
+                    <% if(locals.errors && errors.datosMal) { %>
+                        <p> <%= errors.datosMal.msg %> </p>
+                        <% } %>
+                </div>
+
+                <div>
                     <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
                 </div>
 
                 <div class="login-recordar">
                     <legend class="recordarme">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" name="recordame" id="recordame">
                             <span class="slider round"></span>
                         </label>
                         <label>Recordarme</label>

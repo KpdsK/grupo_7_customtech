@@ -4,6 +4,7 @@ const registerValidation = require('../middlewares/registerValidation');
 const userRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
+const logMiddleware = require('../middlewares/logMiddleware')
 
 
 const multerDiskStorage = multer.diskStorage({
@@ -28,6 +29,9 @@ userRouter.get('/productCart', userController.productCart);
 userRouter.get('/productWhisList', userController.whisList);
 
 userRouter.get('/login', userController.login);
+userRouter.post('/users/login', userController.proccesLogin)
+
+userRouter.get('/perfil',  logMiddleware ,userController.perfil);
 
 userRouter.get('/register', userController.register);
 userRouter.post('/users/register', fileUpload.single('image'), registerValidation, userController.processRegister);

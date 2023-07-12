@@ -19,6 +19,35 @@ const userController = {
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });
     },
+
+    proccesLogin:(req,res) => {
+        const user = datos.find(row => row.email == req.body.email);
+        const errors = {
+            datosMal: {
+                msg: "Datos Incorrectos",
+            }
+        }
+        if(user) {
+            if(user.contrasenia == req.body.contrasenia) {
+                delete user.contrasenia;
+                req.session.userLog = user;
+                if (req.body.cookie){
+                    res.cookie("recordame", user.email, {maxAge: 1000*60*60})
+                }
+                return res.redirect('/perfil');
+            } else {
+                return res.render('users/login', {errors, cssStyle: "login"})
+            }
+        } else {
+            return res.render('users/login', {errors, cssStyle: "login"})
+        }
+    },
+
+    perfil: (req,res) => {
+        const user = req.session.userLog
+        res.render('users/perfil', { user: user ,cssStyle: "perfil" })
+    },
+
     register: (req, res) => {
         res.render('users/register', { cssStyle: "register" });
     },

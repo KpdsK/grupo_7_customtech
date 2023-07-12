@@ -4,8 +4,21 @@ const app = express()
 const routes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookie = require('cookie-parser');
+const cookieExist = require('./middlewares/cookieMiddleware');
 
 app.use(express.static(path.join(__dirname, '../public')));
+
+app.use(cookie())
+
+app.use(session({
+    secret: 'My secret o-o',
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(cookieExist);
 
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
@@ -13,6 +26,7 @@ app.set('views', './src/views');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 
 app.use(methodOverride('_method'));
 
