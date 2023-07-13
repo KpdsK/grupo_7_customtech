@@ -6,11 +6,7 @@
     "contrasenia": "bL7($%WsBveHf2",
     "borrado": false,
     "imagen": "/images/avatars/pletzale.jpg",
-    "tipoPerfil": "usuario",
-    "fechaCreacion": "02-12-2022",
-    "fechaUltimoLogin": "1638264911",
-    "deseados": [],
-    "carrito": []
+    "tipoPerfil": "usuario"
   },
   {
     "id": 2,
@@ -19,11 +15,7 @@
     "contrasenia": "aO4@BJ>&0YSdxZ{",
     "borrado": true,
     "imagen": "",
-    "tipoPerfil": "usuario",
-    "fechaCreacion": "08-03-2021",
-    "fechaUltimoLogin": "1578893760",
-    "deseados": [],
-    "carrito": []
+    "tipoPerfil": "usuario"
   },
   {
     "id": 3,
