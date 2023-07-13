@@ -2,7 +2,7 @@
 const logMiddleware = (req, res, next) => {
 
   if (!req.session.userLog) {
-    return res.redirect('users/login')
+    return res.redirect('/login')
   } else {
     next();
   }

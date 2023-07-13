@@ -5,6 +5,7 @@ const userRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
 const logMiddleware = require('../middlewares/logMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
 
 
 const multerDiskStorage = multer.diskStorage({
@@ -24,16 +25,16 @@ const fileUpload = multer({
 
 userRouter.get('/', userController.home);
 
-userRouter.get('/productCart', userController.productCart);
+userRouter.get('/productCart', logMiddleware, userController.productCart);
 
-userRouter.get('/productWhisList', userController.whisList);
+userRouter.get('/productWhisList', logMiddleware, userController.whisList);
 
-userRouter.get('/login', userController.login);
+userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', userController.proccesLogin)
 
 userRouter.get('/perfil',  logMiddleware ,userController.perfil);
 
-userRouter.get('/register', userController.register);
+userRouter.get('/register', guestMiddleware, userController.register);
 userRouter.post('/users/register', fileUpload.single('image'), registerValidation, userController.processRegister);
 
 
