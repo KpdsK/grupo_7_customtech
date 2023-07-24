@@ -147,7 +147,7 @@
 
 #### Dejar de hacer
 * No exteriorizar inquietudes o dudas sobre el trabajo a realizar.
-* Ningun integrante pdeberá tomarse atribuciones o roles no correspondidos ni designados por consenso dentro del grupo.
+* Ningun integrante deberá tomarse atribuciones o roles no correspondidos ni designados por consenso dentro del grupo.
 * Aislarse y no solicitar ayuda o comunicar inconvenientes que puedan impactar negativamente tanto en el grupo como en el proyecto.
 * No tener presente las opiniones, fortalezas y debilidades de cada uno de los integrantes del grupo.
 
