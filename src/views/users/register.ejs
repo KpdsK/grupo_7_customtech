@@ -12,7 +12,7 @@
 
         <div class="bloqueSignup">
 
-            <form class="form-signup" action="/users/register" method="post">
+            <form class="form-signup" action="/users/register" method="post" enctype="multipart/form-data">
 
                 <div class="icon-register">
                     <i class="fa-solid fa-circle-user"></i>
@@ -37,9 +37,6 @@
                     <p> <%= errors.contrasenia.msg %> </p>
                     <% } %>
 
-                <div>
-                    <input class="text-field" type="password" name="contrasenia" placeholder="Confirmar contraseña">
-                </div>
 
                 <div class="fotoPerfil">
                     <label class="fotoperfil" for="fotoPerfil">Agregar imagen</label>

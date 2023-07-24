@@ -1,6 +1,7 @@
 const modeloDatos = require("./databaseController");
 const fs = require('fs');
 const path = require('path')
+const bcrypt = require('bcrypt')
 
 function getProductsFromDB() {
     return modeloDatos("product").listar().filter((row) => row.borrado != true);
@@ -20,7 +21,7 @@ const userController = {
         res.render('users/login', { cssStyle: "login" });
     },
 
-    proccesLogin:(req,res) => {
+    proccesLogin:async(req,res) => {
         const user = datos.find(row => row.email == req.body.email);
         const errors = {
             datosMal: {
@@ -28,7 +29,7 @@ const userController = {
             }
         }
         if(user) {
-            if(user.contrasenia == req.body.contrasenia) {
+            if(await bcrypt.compare(req.body.contrasenia,user.contrasenia)) {
                 delete user.contrasenia;
                 req.session.userLog = user;
                 if (req.body.cookie){
@@ -52,14 +53,14 @@ const userController = {
         res.render('users/register', { cssStyle: "register" });
     },
 
-    processRegister: (req, res) => {
-
+    processRegister: async(req, res) => {
+        console.log(req.body)
         const user = {
             "id": datos.length + 1,
             "nombreCompleto": req.body.nombre,
             "email": req.body.email,
-            "image": req.body.fotoPerfil,
-            "contrasenia": req.body.password
+            "image": req.file.filename,
+            "contrasenia": await bcrypt.hash(req.body.contrasenia, 10)
         }
 
         const rdoValidacion = validationResult(req)

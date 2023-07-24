@@ -10,7 +10,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware')
 
 const multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.resolve(__dirname, '../../public/img'))
+        cb(null, path.resolve(__dirname, '../../public/images'))
     },
     filename: (req, file, cb) => {
         let imageName = Date.now() + path.extname(file.originalname);
@@ -35,7 +35,7 @@ userRouter.post('/users/login', userController.proccesLogin)
 userRouter.get('/perfil',  logMiddleware ,userController.perfil);
 
 userRouter.get('/register', guestMiddleware, userController.register);
-userRouter.post('/users/register', fileUpload.single('image'), registerValidation, userController.processRegister);
+userRouter.post('/users/register', fileUpload.single('fotoPerfil'), registerValidation, userController.processRegister);
 
 
 module.exports = userRouter;
