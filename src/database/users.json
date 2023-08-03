@@ -154,5 +154,12 @@
     "email": "cv@d.s",
     "image": "1690154295307.jpeg",
     "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS"
+  },
+  {
+    "id": 19,
+    "nombreCompleto": "nicolas",
+    "email": "nico1432@gmail.com",
+    "image": "1690855072689.jpg",
+    "contrasenia": "$2b$10$rYZXzdDZFmmxeJbSLq/L3OSlHjtvFg63J6nhz6.BraWlLpBhYG13i"
   }
 ]
