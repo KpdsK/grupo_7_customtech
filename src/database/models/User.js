@@ -41,7 +41,7 @@ module.exports = (sequelize, dataTypes) => {
 
   const config = {
     tableName: 'user',
-    timestamps: false,
+    timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
     deletedAt: true
@@ -54,7 +54,7 @@ module.exports = (sequelize, dataTypes) => {
   User.associate = (models)=> {
     User.belongsTo(models.Profile,{
         as: 'profile',
-        foreignKey:'id_bills',
+        foreignKey:'id_profile',
 
     })
 

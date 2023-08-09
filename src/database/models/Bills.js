@@ -13,9 +13,6 @@ module.exports = (sequelize, dataTypes) => {
    fecha:{
        type: dataTypes.DATE
    },
-   id_user: {
-        type: dataTypes.INTEGER
-   },
    release_date: {
     type: dataTypes.DATE
    },
@@ -33,7 +30,10 @@ deleted_at: {
 
   const config = {
     tableName: 'bills',
-    timestamps: false
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    deletedAt: true
    }
 
 
