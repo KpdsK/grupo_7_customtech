@@ -2,9 +2,10 @@ module.exports = (sequelize, dataTypes) => {
   const alias = "ProductImage"
   const cols ={
    id:{
-       type: dataTypes.INTEGER,
-       primaryKey: true,
-       autoIncrement: true
+    type: dataTypes.BIGINT(10).UNSIGNED,
+    primaryKey: true,
+    allowNull: false,
+    autoIncrement: true
    },
    image:{
        type: dataTypes.STRING,
@@ -22,7 +23,10 @@ module.exports = (sequelize, dataTypes) => {
   }
   const config = {
     tableName: 'product_image',
-    timestamps: false
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    deletedAt: false
    }
 
   const ProductImage = sequelize.define(alias, cols, config)

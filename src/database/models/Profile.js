@@ -2,9 +2,10 @@ module.exports = (sequelize, dataTypes) => {
   const alias = "Profile"
   const cols ={
    id:{
-       type: dataTypes.INTEGER,
-       primaryKey: true,
-       autoIncrement: true
+    type: dataTypes.BIGINT(10).UNSIGNED,
+    primaryKey: true,
+    allowNull: false,
+    autoIncrement: true
    },
    name:{
        type: dataTypes.STRING,
@@ -14,15 +15,18 @@ module.exports = (sequelize, dataTypes) => {
 
   const config = {
     tableName: 'profile',
-    timestamps: false
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    deletedAt: false
    }
 
-  const profile = sequelize.define(alias, cols, config)
+  const Profile = sequelize.define(alias, cols, config)
   Profile.associate= (models)=>{
     Profile.hasMany(models.User,
     {
         as:"userprofile",
         foreignKey:"id_profile",
     })}
-  return profile
+  return Profile
 }

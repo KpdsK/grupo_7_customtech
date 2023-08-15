@@ -2,8 +2,9 @@ module.exports = (sequelize, dataTypes) => {
    const alias = "Products"
    const cols ={
     id:{
-        type: dataTypes.INTEGER,
+        type: dataTypes.BIGINT(10).UNSIGNED,
         primaryKey: true,
+        allowNull: false,
         autoIncrement: true
     },
     name:{
@@ -42,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
-    deletedAt: true
+    deletedAt: false
    }
    
     const Products = sequelize.define(alias,cols,config)

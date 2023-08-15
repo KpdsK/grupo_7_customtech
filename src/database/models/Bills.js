@@ -2,9 +2,10 @@ module.exports = (sequelize, dataTypes) => {
   const alias = "Bills"
   const cols ={
    id:{
-       type: dataTypes.INTEGER,
-       primaryKey: true,
-       autoIncrement: true
+    type: dataTypes.BIGINT(10).UNSIGNED,
+    primaryKey: true,
+    allowNull: false,
+    autoIncrement: true
    },
    total:{
        type: dataTypes.INTEGER,
@@ -33,7 +34,7 @@ deleted_at: {
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
-    deletedAt: true
+    deletedAt: false
    }
 
 
