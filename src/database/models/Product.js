@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-   const alias = "Products"
+   const alias = "Product"
    const cols ={
     id:{
         type: dataTypes.BIGINT(10).UNSIGNED,
@@ -21,20 +21,14 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.BOOLEAN
     },
     id_category: {
-        type: dataTypes.INTEGER
+        type: dataTypes.BIGINT(10).UNSIGNED
     },
-    release_date: {
-        type: dataTypes.DATE
-   },
    created_at: {
     type: dataTypes.DATE
     },
     updated_at: {
         type: dataTypes.DATE
-    },
-    deleted_at: {
-        type: dataTypes.DATE
-    }   
+    }
     
    }
 
@@ -46,29 +40,29 @@ module.exports = (sequelize, dataTypes) => {
     deletedAt: false
    }
    
-    const Products = sequelize.define(alias,cols,config)
+    const Product = sequelize.define(alias,cols,config)
 
-    Products.associate= (models)=>{
-            Products.hasMany(models.ProductImage,
+    Product.associate= (models)=>{
+            Product.hasMany(models.ProductImage,
             {
                 as:"product_image",
                 foreignKey:"id_products",
             })
 
-            Products.belongsTo(models.Category, {
-                as: "category",
+            Product.belongsTo(models.Category, {
+                as: "categorys",
                 foreignKey:'id_category'
            }) 
 
-            Products.belongsToMany(models.Bills,{
+            Product.belongsToMany(models.Bill,{
 
-                through:'BillsProducts',
+                through:'BillsProduct',
                 foreignKey:'id_products',
                 otherKey:'id_bills'
             })}
     
     
-    return Products
+    return Product
 
 
 }

@@ -26,18 +26,13 @@ module.exports = (sequelize, dataTypes) => {
    image:{
         type: dataTypes.STRING,
    },
-   release_date: {
+   created_at: {
         type: dataTypes.DATE
    },
-   created_at: {
-    type: dataTypes.DATE
-    },
     updated_at: {
         type: dataTypes.DATE
     },
-    deleted_at: {
-        type: dataTypes.DATE
-    }   
+    id_profile: dataTypes.BIGINT(10).UNSIGNED   
   }
 
   const config = {
@@ -49,17 +44,14 @@ module.exports = (sequelize, dataTypes) => {
    }
    const User = sequelize.define(alias, cols, config)
 
-
-  
-  
   User.associate = (models)=> {
     User.belongsTo(models.Profile,{
-        as: 'profile',
+        as: 'profiles',
         foreignKey:'id_profile',
 
     })
 
-    User.hasMany(models.Bills, {
+    User.hasMany(models.Bill, {
       as: 'bills',
       foreignKey:'id_user'
     })
