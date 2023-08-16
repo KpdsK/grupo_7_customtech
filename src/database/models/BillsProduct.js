@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  const alias = "BillsProducts"
+  const alias = "BillsProduct"
   const cols ={
    id:{
     type: dataTypes.BIGINT(10).UNSIGNED,
@@ -8,11 +8,11 @@ module.exports = (sequelize, dataTypes) => {
     autoIncrement: true
    },
    id_bills:{
-       type: dataTypes.INTEGER,
+       type: dataTypes.BIGINT(10).UNSIGNED,
        allowNull: false
    },
    id_products:{
-       type: dataTypes.INTEGER
+       type: dataTypes.BIGINT(10).UNSIGNED
    },
    cantidad:{
        type: dataTypes.INTEGER
@@ -24,13 +24,13 @@ module.exports = (sequelize, dataTypes) => {
   }
   
   const config = {
-    tableName: 'billsProducts',
+    tableName: 'bills_products',
     timestamps: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
     deletedAt: false
    }
 
-  const BillsProducts = sequelize.define(alias, cols, config)
-  return BillsProducts
+  const BillsProduct = sequelize.define(alias, cols, config)
+  return BillsProduct
 }

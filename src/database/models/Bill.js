@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  const alias = "Bills"
+  const alias = "Bill"
   const cols ={
    id:{
     type: dataTypes.BIGINT(10).UNSIGNED,
@@ -14,18 +14,13 @@ module.exports = (sequelize, dataTypes) => {
    fecha:{
        type: dataTypes.DATE
    },
-   release_date: {
+  created_at: {
     type: dataTypes.DATE
-   },
-    created_at: {
-    type: dataTypes.DATE
+    },
+  updated_at: {
+      type: dataTypes.DATE
   },
-updated_at: {
-    type: dataTypes.DATE
-},
-deleted_at: {
-    type: dataTypes.DATE
-}   
+  id_user: dataTypes.BIGINT(10).UNSIGNED
 
   }
 
@@ -39,23 +34,23 @@ deleted_at: {
 
 
 
-  const Bills = sequelize.define(alias, cols, config)
-  Bills.associate = (models)=>{
+  const Bill = sequelize.define(alias, cols, config)
+  Bill.associate = (models)=>{
     
-    Bills.belongsToMany(models.Products,{
-        through:'BillsProducts',
+    Bill.belongsToMany(models.Product,{
+        through:'BillsProduct',
         foreignKey:'id_bills',
         otherKey:'id_products'
     })
 
-    Bills.belongsTo(models.User, {
-      as: 'user',
+    Bill.belongsTo(models.User, {
+      as: 'users',
       foreignKey: 'id_user'
     })
   }
 
 
-  return Bills
+  return Bill
 
   
 }

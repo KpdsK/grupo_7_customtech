@@ -12,10 +12,7 @@ module.exports = (sequelize, dataTypes) => {
        allowNull: false
    },
    id_products:{
-       type: dataTypes.INTEGER
-   },
-   price:{
-       type: dataTypes.VARCHAR
+       type: dataTypes.BIGINT(10).UNSIGNED
    },
    erased:{
        type: dataTypes.BOOLEAN
@@ -33,8 +30,8 @@ module.exports = (sequelize, dataTypes) => {
 
   ProductImage.associate= (models)=>{
 
-    ProductImage.belongsTo(models.Products, {
-        as: "productsimage",
+    ProductImage.belongsTo(models.Product, {
+        as: "productsimages",
         foreignKey:'id_products'
    })}
 
