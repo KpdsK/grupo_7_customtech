@@ -1,11 +1,12 @@
-const modeloDatos = require("./databaseController");
+// const modeloDatos = require("./databaseController");
+const db = require("../database/models");
 const fs = require('fs');
 const path = require('path')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 
-function getProductsFromDB() {
-    return modeloDatos("product").listar().filter((row) => row.borrado != true);
-}
+// function getProductsFromDB() {
+//     return db.User.findAll() ("product").listar().filter((row) => row.borrado != true);
+// }
 
 const { validationResult } = require("express-validator");
 
@@ -15,7 +16,7 @@ const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/us
 
 const userController = {
     home: (req, res) => {
-        res.render('home', { cssStyle: "home", productos: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
+        res.render('home', { cssStyle: "home", productos: db("product").listar().filter((row) => !row.borrado).slice(0,4) });
     },
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });
@@ -75,8 +76,9 @@ const userController = {
         }
 
         //User.create(req.body);
+        db.User.create({user})
 
-        fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), JSON.stringify([...datos, user], null, 2));
+        // fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), JSON.stringify([...datos, user], null, 2));
         return res.redirect('/')
     },
 
