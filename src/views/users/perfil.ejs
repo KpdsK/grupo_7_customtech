@@ -20,14 +20,8 @@
               </div>
             
             </section>
-            
-            
-              <a href="/edit/<%= user.id %>">Editar</a>
-            </section>
-            
-            <section class="seguridad">
-              <a href="/seguridad/<%= user.id %>"><h3><strong>SEGURIDAD</strong> <%= user.seguridad %></h3></a>
-           
+
+  
               <form action="/<%= user.id%>/edit/user/?_method=PUT" method="put"  >
                 <button>Editar</button>
 
