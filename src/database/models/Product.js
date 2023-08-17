@@ -23,14 +23,13 @@ module.exports = (sequelize, dataTypes) => {
     id_category: {
         type: dataTypes.BIGINT(10).UNSIGNED
     },
-   created_at: {
+     created_at: {
     type: dataTypes.DATE
     },
-    updated_at: {
+    update_at: {
         type: dataTypes.DATE
     }
-    
-   }
+}
 
    const config = {
     tableName: 'products',

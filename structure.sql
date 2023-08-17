@@ -11,7 +11,7 @@ CREATE TABLE `user`(
     `email` VARCHAR(255) NULL,
     `password` VARCHAR(255) NOT NULL,
     `erased` TINYINT(1) NOT NULL,
-    `image` VARCHAR(255) NOT NULL,
+    `image` VARCHAR(255),
     `id_profile` INT UNSIGNED NOT NULL,
     `created_at` DATE NOT NULL,
     `update_at` DATE NOT NULL,
@@ -34,6 +34,7 @@ CREATE TABLE `products`(
     `id_category` INT UNSIGNED NOT NULL,
     `create_at` DATE NOT NULL,
     `update_at` DATE NOT NULL,
+    `stock` INT UNSIGNED,
     PRIMARY KEY(id),
 	FOREIGN KEY (id_category) REFERENCES category(id)
 );

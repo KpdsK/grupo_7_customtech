@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
   created_at: {
     type: dataTypes.DATE
     },
-  updated_at: {
+  update_at: {
       type: dataTypes.DATE
   },
   id_user: dataTypes.BIGINT(10).UNSIGNED
