@@ -11,10 +11,10 @@ CREATE TABLE `user`(
     `email` VARCHAR(255) NULL,
     `password` VARCHAR(255) NOT NULL,
     `erased` TINYINT(1) NOT NULL,
-    `image` VARCHAR(255) NOT NULL,
+    `image` VARCHAR(255),
     `id_profile` INT UNSIGNED NOT NULL,
     `created_at` DATE NOT NULL,
-    `update_at` DATE NOT NULL,
+    `updated_at` DATE NOT NULL,
     PRIMARY KEY(id),
 	FOREIGN KEY (id_profile) REFERENCES profile(id)
 );
@@ -33,7 +33,8 @@ CREATE TABLE `products`(
     `erased` TINYINT(1) NOT NULL,
     `id_category` INT UNSIGNED NOT NULL,
     `create_at` DATE NOT NULL,
-    `update_at` DATE NOT NULL,
+    `updated_at` DATE NOT NULL,
+    `stock` INT UNSIGNED,
     PRIMARY KEY(id),
 	FOREIGN KEY (id_category) REFERENCES category(id)
 );
@@ -45,7 +46,7 @@ CREATE TABLE `bills`(
     `fecha` DATE NOT NULL,
     `id_user` INT UNSIGNED NOT NULL,
     `created_at` DATE NOT NULL,
-    `update_at` DATE NOT NULL,
+    `updated_at` DATE NOT NULL,
      PRIMARY KEY(id),
      FOREIGN KEY (id_user) REFERENCES user(id)
 );
