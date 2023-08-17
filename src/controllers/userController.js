@@ -1,4 +1,4 @@
-// const modeloDatos = require("./databaseController");
+const modeloDatos = require("./databaseController");
 const db = require("../database/models");
 const fs = require('fs');
 const path = require('path')
@@ -16,14 +16,17 @@ const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/us
 
 const userController = {
     home: (req, res) => {
-        res.render('home', { cssStyle: "home", productos: db("product").listar().filter((row) => !row.borrado).slice(0,4) });
+        res.render('home', { cssStyle: "home", productos: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
     },
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });
     },
 
     proccesLogin:async(req,res) => {
-        const user = datos.find(row => row.email == req.body.email);
+        // const user = datos.find(row => row.email == req.body.email);
+        const user = db.User.find(row => row.email == req.body.email).then(function (user) {return user}).catch((error) => {
+            console.error('Usuario no encontrado: ', error);
+        });
         const errors = {
             datosMal: {
                 msg: "Datos Incorrectos",
@@ -57,11 +60,11 @@ const userController = {
     processRegister: async(req, res) => {
         console.log(req.body)
         const user = {
-            "id": datos.length + 1,
-            "nombreCompleto": req.body.nombre,
+            "name": req.body.nombre,
             "email": req.body.email,
-            "image": req.file.filename,
-            "contrasenia": await bcrypt.hash(req.body.contrasenia, 10)
+            "image": req.file ? req.file.filename : '',
+            "password": await bcrypt.hash(req.body.contrasenia, 10),
+            "created_at": Date.now(),
         }
 
         const rdoValidacion = validationResult(req)
@@ -76,7 +79,7 @@ const userController = {
         }
 
         //User.create(req.body);
-        db.User.create({user})
+        db.User.create(user)
 
         // fs.writeFileSync(path.resolve(__dirname, '../database/users.json'), JSON.stringify([...datos, user], null, 2));
         return res.redirect('/')

@@ -21,7 +21,8 @@ module.exports = (sequelize, dataTypes) => {
    },
    erased:{
        type: dataTypes.BOOLEAN,
-       allowNull: false
+       allowNull: false,
+       defaultValue: false
    },
    image:{
         type: dataTypes.STRING,
@@ -32,7 +33,9 @@ module.exports = (sequelize, dataTypes) => {
    updated_at: {
     type: dataTypes.DATE
   },
-    id_profile: dataTypes.BIGINT(10).UNSIGNED   
+    id_profile: dataTypes.BIGINT(10).UNSIGNED,
+    allowNull: false,
+    defaultValue: 1
   }
 
   const config = {
