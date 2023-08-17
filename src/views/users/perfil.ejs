@@ -13,24 +13,14 @@
               <a href="/informacionPersonal/<%= user.id %>"><h3><strong>INFORMACION PERSONAL</strong> <%= user.informacionPersonal %></h3></a>
             </section>
 
-            <form action="/user/delete/<%= user.id%>?_method=DELETE" method="post"  >
-              <button>Eliminar</button>
-              
               <div>
                 <p><strong>Nombre de Usuario:</strong> <%= user.nombreUsuario %></p>
-                <p><strong>Fecha de Nacimiento:</strong> <%= user.fechaNacimiento %></p>
                 <p><strong>Email:</strong> <%= user.email %></p>
-                <p><strong>Telefono:</strong> <%= user.telefono %></p>
-                <p><strong>Domicilio:</strong> <%= user.domicilio %></p>
-                <p><strong>Tipo de Perfil:</strong> <%= user.tipoPerfil %></p>
                 <a href="/edit/<%= user.id %>">Editar</a>
               </div>
             
             </section>
             
-            <section class="TARJETAS">
-
-              <a href="/mediosDePago/<%= user.id %>"><h3><strong>MEDIOS DE PAGO</strong> <%= user.mediosDePago %></h3></a>
             
               <a href="/edit/<%= user.id %>">Editar</a>
             </section>
@@ -38,11 +28,12 @@
             <section class="seguridad">
               <a href="/seguridad/<%= user.id %>"><h3><strong>SEGURIDAD</strong> <%= user.seguridad %></h3></a>
            
-              <a href="/edit/<%= user.id %>">Editar</a>
-            </section>
+              <form action="/<%= user.id%>/edit/user/?_method=PUT" method="put"  >
+                <button>Editar</button>
 
-            <form action="/user/delete/<%= user.id%>?_method=DELETE" method="post"  >
+            <form action="/<%= user.id%>/delete/user/?_method=DELETE" method="post"  >
               <button>Eliminar</button>
+              
     </section>
 
     <%- include('../partials/footer.ejs') %>
