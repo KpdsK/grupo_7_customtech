@@ -21,6 +21,9 @@
                 <div>
                     <input class="text-field" type="text" name="nombre" placeholder="Nombre completo">
                 </div>
+                <% if(locals.errors && errors.nombre) { %>
+                    <p> <%= errors.nombre.msg %> </p>
+                    <% } %>
 
                 <div>
                     <input class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">

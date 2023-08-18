@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head.ejs') %>
-<body>
+<%- include('../partials/head.ejs') %>
+
+  <body>
     <%- include('../partials/header.ejs') %>
-    <section class="perfil-container">
-        <form>
-          <h2><div class="primer-contenedor">
-            <%= user.nombreCompleto %>
-              <img src="/images/<%= user.images %>" alt="<%= user.nombreCompleto %>">
-          </div></h2>
-            <section class="datos">              
-              <a href="/informacionPersonal/<%= user.id %>"><h3><strong>INFORMACION PERSONAL</strong> <%= user.informacionPersonal %></h3></a>
-            </section>
+      <section class="perfil-container">
+          <h2>
+            <div class="primer-contenedor">
+              <%= user.name %>
+                <img src="/images/<%= user.image %>" alt="<%= user.name %>">
+            </div>
+          </h2>
+          <section class="datos">
+            <h3><strong>INFORMACION PERSONAL</strong></h3>
+          </section>
 
-              <div>
-                <p><strong>Nombre de Usuario:</strong> <%= user.nombreUsuario %></p>
-                <p><strong>Email:</strong> <%= user.email %></p>
-                <a href="/edit/<%= user.id %>">Editar</a>
-              </div>
-            
-            </section>
+          <div>
+            <form action="/users/<%= user.id%>/edit" method="post" enctype="multipart/form-data">
+              <p><strong>Nombre de Usuario:</strong><input class="text-field" type="text" name="nombre"
+                  placeholder="Nombre completo" value="<%= user.name %>">
+                <% if(locals.errors && errors.nombre) { %>
+                  <p>
+                    <%= errors.nombre.msg %>
+                  </p>
+                  <% } %>
+              <p><strong>Email:</strong><input class="text-field" type="email" name="email" placeholder="E-mail"
+                  value="<%= user.email %>">
+                      <% if(locals.errors && errors.email) { %>
+                        <p>
+                          <%= errors.email.msg %>
+                        </p>
+                        <% } %>
+              <p><strong>Agregar imagen</strong><input type="file" name="fotoPerfil" id="fotoPerfil"></p>
+              <p><strong>Clave:</strong> <input class="text-field" type="password" name="contrasenia"
+                              placeholder="Contraseña"></p>
+                          <% if(locals.errors && errors.contrasenia) { %>
+                            <p>
+                              <%= errors.contrasenia.msg %>
+                            </p>
+                            <% } %>
+              <button type="submit">Editar</button>
+            </form>
+            <form action="/users/<%= user.id%>/delete?_method=DELETE" method="post">
+              <button type="submit">Eliminar</button>
+            </form>
+          </div>
+      </section>
 
-  
-              <form action="/<%= user.id%>/edit/user/?_method=PUT" method="put"  >
-                <button>Editar</button>
+      <%- include('../partials/footer.ejs') %>
+  </body>
 
-            <form action="/<%= user.id%>/delete/user/?_method=DELETE" method="post"  >
-              <button>Eliminar</button>
-              
-    </section>
-
-    <%- include('../partials/footer.ejs') %>
-</body>
 </html>
