@@ -9,7 +9,7 @@ module.exports = (sequelize, dataTypes) => {
     },
     name:{
         type: dataTypes.STRING,
-        allowNull: false
+        // allowNull: false
     },
     description:{
         type: dataTypes.STRING
@@ -17,14 +17,17 @@ module.exports = (sequelize, dataTypes) => {
     price:{
         type: dataTypes.INTEGER
     },
+    stock:{
+        type: dataTypes.BIGINT(10).UNSIGNED
+    },
     erased:{
         type: dataTypes.BOOLEAN
     },
     id_category: {
         type: dataTypes.BIGINT(10).UNSIGNED
     },
-     created_at: {
-    type: dataTypes.DATE
+    created_at: {
+        type: dataTypes.DATE
     },
     updated_at: {
         type: dataTypes.DATE

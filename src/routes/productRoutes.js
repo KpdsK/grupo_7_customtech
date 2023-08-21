@@ -22,17 +22,14 @@ const fileUpload = multer({
 
 
 // new product
-
 productRouter.get('/create', productController.newProduct);
 productRouter.post('/', fileUpload.single('image') ,productController.processNewProduct);
 
 // edit
-
 productRouter.get('/:id/edit', productController.editProduct);
 productRouter.put('/:id',  fileUpload.single('image'), productController.processEditProduct);
 
 // delete 
-
 productRouter.delete('/:id', productController.deleteProcess);
 
 // productDetail 
@@ -40,5 +37,6 @@ productRouter.get('/:id', productController.productDetail);
 
 // listPorduct
 productRouter.get('/', productController.listProducts);
+
 
 module.exports = productRouter;

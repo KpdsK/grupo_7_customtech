@@ -21,12 +21,12 @@
                 <% } %>
                 
                 <div>
-                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.nombre %>"<%} %> >
+                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> >
                 </div>
 
 
                 <div>
-                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.descripcion %>"<%} %> >
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> >
                 </div>
                 
 
@@ -37,7 +37,7 @@
 
                 <div class="cantidad-product-container">
                     <label for="product-cantidad">Cantidad</label>
-                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad" <% if (locals.editProduct) {%> value="<%= editProduct.cantidad %>"<%} %> >
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad" <% if (locals.editProduct) {%> value="<%= editProduct.stock %>"<%} %> >
                 </div>
 
                 
@@ -48,8 +48,8 @@
                         <label for="categories">Categorias</label>
                         
                         <select class="product-categories" name="categories" id="" >
-                            <% ['Perifericos','Notebooks','Computadoras','Monitores','Conectividad','Productos OUTLET','Auriculares'].forEach(element => { %>
-                                <option  class="product-categories-options" value="<%= element.toLowerCase().replace(' ', '-') %>" <%= (locals.editProduct && locals.editProduct.categoria.toLowerCase() == element.toLowerCase().replace(' ', '-')) ? 'selected' : '' %> ><%= element %></option>
+                            <% categorias.forEach(element => { %>
+                                <option  class="product-categories-options" value="<%= element.id %>" <%= locals.editProduct && locals.editProduct.id_category == element.id ? 'selected' : '' %> ><%= element.name %></option>
                             <% }) %>
                         </select>
                     </div>
@@ -75,7 +75,7 @@
                 </div>
 
                 <div>
-                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.precio %>"<%} %>>
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %>>
                 </div>
              
                 <div class="button-products">

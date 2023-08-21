@@ -13,7 +13,7 @@
 
 
 
-<div class="producto-nombre"><h1><%= editProduct.nombre %> </h1></div>
+<div class="producto-nombre"><h1><%= editProduct.name %> </h1></div>
 <div class="producto-container">
  
   <div class="image-list">
@@ -33,7 +33,7 @@
   <div class="producto-iconos">
 
     
-    <h2>$ <%= editProduct.precio %></h2>
+    <h2>$ <%= editProduct.price %></h2>
     <form class="Agregar" action="/productCart" method="get">
       <button class="Agregar" type="submit">COMPRAR</button>
     </form>
@@ -46,7 +46,7 @@
 </div>
 
 <h3 class="producto-descripcion">Descripcion</h3>
-<p><%= editProduct.descripcion %> </p>
+<p><%= editProduct.description %> </p>
 
 
 <h4 class="producto-recomendado-titulo"> <span class="linea"></span>Productos recomendados<span
