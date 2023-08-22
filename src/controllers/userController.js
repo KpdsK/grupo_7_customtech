@@ -12,11 +12,11 @@ const { validationResult } = require("express-validator");
 
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
 
-//const User = require ('../models/User.js')
 
 const userController = {
-    home: (req, res) => {
-        res.render('home', { cssStyle: "home", productos: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0, 4) });
+    home: async (req, res) => {
+        const productsData = await db.Product.findAll()
+        res.render('home', { cssStyle: "home", productos: productsData.filter((row) => !row.erased).slice(0, 4) });
     },
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });

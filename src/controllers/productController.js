@@ -65,10 +65,11 @@ const productController = {
 
     productDetail: async (req, res) => {
         console.log(req.params.id)
+        const productData = await db.Product.findAll()
         await db.Product.findAll(
             {where: { id: req.params.id, erased: false }, raw: true })
             .then(function(product) {
-                return res.render('products/productDetail', { cssStyle: "product", editProduct: product[0], products: modeloDatos("product").listar().filter((row) => !row.borrado).slice(0,4) });
+                return res.render('products/productDetail', { cssStyle: "product", editProduct: product[0], products: productData.filter((row) => !row.erased).slice(0,4) });
     })
     },
 
