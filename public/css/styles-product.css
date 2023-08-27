@@ -1,254 +1,141 @@
-@import url(/css/styles-home.css);
-
-.producto-inicio{
-  display:flex;
-  padding-bottom:  5%;
-  padding-top: 0%;
-  padding-left: 0%;
-  padding-right: 0%;
-  margin:5%;
- }
-.producto-inicio img {
-    max-width: 700px;
-    height: auto;
-    border:1px;
-    
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.producto-iconos h1{
-  font-size: x-large;
-  text-align: left;
-  }
-  .producto-iconos h2{
-    font-size: xx-large;
-    text-align:justify;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .producto-iconos p{
-    font-size:x-large;
-    text-align: left;
-    margin-top: 20x;
-    margin-bottom: 20px;
-   }
-   .producto-iconos p i{
-    color:rgba(127, 0, 201, 0.9)
-   }
-  .producto-iconos{
-    font-size:x-large;
-    text-align:left;
-    width: 50%;
-    position: relative;
-    margin-left:200px ;
-    justify-content: flex-end
-  
-   }
-  .producto-iconos button {
-    border: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    background-color: #4f04a3;
-    color: white;
-    border-radius: 20px;
-    width: 80%;
-    height: 40%;
-    font-size:x-large;
-   
-  }
-  
-  .icono-corazon{
-    font-size: 30px;
-    padding:0%;
-    color:rgba(240, 227, 232, 0.9);
-    position:relative;
-   
-   bottom: 210px;
-    left: 30px; 
-    right: 0%;
-   
-  }
-  
-  
-  .producto-especificaciones{
-    display:flex;
-    flex-wrap: wrap;
-    background-color:none;
-    padding: 5%;
-    margin:5%;
-   
-  
-  }
-  .producto-caracteristica{
-    display: inline-block;
-    width: 30%; 
-    box-sizing: border-box;
-    padding: 10px;
-    flex-grow: 1;
-    margin-bottom: 10px;
-   
-  }
-  /**/
-  .producto-linea{
-    padding-top: 20px;
-    font-size:x-large;
-    text-align: center;
-    border-bottom: 1px dashed #ebebeb;
-   
-   }
-   .producto-caracteristica h4{
-    border-bottom: 2px solid rgba(79, 4, 163, 0.89);
-    font-size: large;
-   
-  }
-  
-  .producto-caracteristica p{
-  
-    font-size: medium;
-  }
-  
-  
-   /*producto-recomendado*/
-    
-   .producto-recomendado{
+
+.product-detail-title  {
+  text-align: center;
+  color: #4F04A3;
+  padding-top: 15vh;
+}
+
+
+.product-container-image {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icono-corazon i {
+  color: #fff;
+  background-color: #4F04A3;
+  border: 1px solid #4F04A3;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+  /* width: 25%; */
+}
+
+.detail-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-image-container img {
+  width: 75%;
+  padding: 5px;
+}
+
+
+
+.product-icons  {
+  background-color:  #eee;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  color: #4F04A3;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+}
+
+.product-icons button { 
+  width: 100px;
+  height: 25px;
+  color: #ffffff;
+  background-color: #4F04A3;
+  border-radius: 5px;
+  border: 1px solid #4F04A3;
+  margin: 10px;
+}
+
+
+
+.product-detail-description  {
+  padding: 10px;   
+}
+
+.sub-main{
+  display: block;
+  background-color: white;
+  width: 100%;
+  border: solid 1px #ebebeb;
+  margin: auto;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  transition: all 450ms;
+}
+
+.sub-main-descripcion{
+  position: relative;
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+
+.product-recomended-title {
+  color: #4F04A3;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.productos {
+  width: 100%;
+  border-bottom: solid 1px #ebebeb;
+  margin: auto;
+  border-radius: 10px;
+  transition: all 450ms;
+}
+
+
+@media (min-width: 361px){
+
+  .product-icons {
     display: flex;
-    background-color:none;
-    padding: 5%;
-    margin:5%;
-    border-color: rgba(79, 4, 163, 0.89);
-   }
-    .producto-recomendado-titulo{
-      text-align: center;
-      font-size:x-large;
-      border-bottom: 1px dashed #ebebeb;
-      margin-top: 10vh;
-     
-      }
-    
-      .linea {
-        display: inline-block;
-        border-top: 1px solid rgba(79, 4, 163, 0.89);;
-        width: 30%;
-        margin: 0 10px;
-        vertical-align: middle;
-      }
-      .producto-container {
-        display: flex;
-        align-items: center;
-        position: relative;
-        height: 400px;
-        min-height: 100vh;
-        margin-top: 50px; 
-      }
-    
-  
-    .image-main {
-        width: 40%;
-        margin-right: 5px;
-        float:inline-start;
-        transition: all 0.3s ease;
-       
-    }
-  
-    .image-list {
-        display: flex;
-        flex-direction: column;
-        width: 15%;
-       
-    }
-  
-    .image-list img {
-        margin-bottom: 10px;
-        width: 100%;
-        cursor: pointer;
-        box-shadow: 0px 0px 15px rgba(79, 4, 163, 0.89);
-        
-    }
-  
-    .producto-nombre{
-     padding-top: 100px;
-     text-align: justify;
-    }
-      
-      
-    @media(max-width: 769px) {
-    
-    
-      .producto-container {
-        display: flex;
-        flex-direction: column;
-  
-      }
-  
-      .image-main {
-        width: 100%;
-       
-      }
-      .image-list {
-        display:none;
-        
-      }
-    
-      .producto-iconos {
-        order: 1;
-        width:60%;
-        margin:0%;
-        
-  
-      }
-    
-    
-    
-    .producto-especificaciones{
-      display:flex;
-      flex-wrap: wrap;
-      background-color:none;
-      
-     
-    
-    }
-    .producto-caracteristica{
-      display: inline-block;
-      width: 100%; 
-      box-sizing: border-box;
-    
-     
+    justify-content: space-between;
+    width: 80%;
   }
-  .producto-caracteristica{
-    padding: 20px;
+
+  .product-price {
+    width: 50%;
   }
-  .producto-caracteristica h4{
-    font-size:medium;
+
+  .product-detail-description {
+    width: 50%;
   }
-  .producto-caracteristica p{
-    font-size:small;
-    }
-    
-  
-    .linea{
-      display:none;
-    }
-    .contenedor-main{
-     padding: 1%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  
-    }
-  
-  .producto-iconos p{
-    display:none;
+
+
+
+  .contenedor-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  .producto-iconos h2 {
-    text-align: center;
-  
-  
+
+  .sub-main {
+    width: 40%;
+    margin: 10px;
   }
-  .producto-iconos button{
-    
-    float: center;
+
+}
+
+
+@media (min-width: 769px) {
+  .sub-main {
+    width: 15%;
   }
-  .icono-corazon{
-  display: none;
+
+  .product-icons button {
+    width: 150px;
   }
-  
-  }
+}

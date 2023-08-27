@@ -3,55 +3,77 @@
 <%- include('../partials/head.ejs'); %>
   <body>
     <%- include('../partials/header.ejs'); %>
-      <main>
+      <!-- <main>
         <script>
           function changeMainImage(image) {
             var mainImage = document.getElementById('main-image');
             mainImage.src = image.src
           }
-        </script>
+        </script> -->
 
 
 
-<div class="producto-nombre"><h1><%= editProduct.name %> </h1></div>
-<div class="producto-container">
+  <div class="product-container">
+
+
+    <div class="product-detail-title">
+      <h1><%= editProduct.name %> </h1>
+    </div>
  
-  <div class="image-list">
+  <!-- <div class="image-list"> -->
    
   
     <!-- <img src="/images/<%= editProduct.image %>" alt="Imagen 2" onmouseover="changeMainImage(this)">
     <img src="/images/<%= editProduct.image %>" alt="Imagen 3" onmouseover="changeMainImage(this)">
     <img src="/images/<%= editProduct.image %>" alt="Imagen 4" onmouseover="changeMainImage(this)"> -->
 
-  </div>
-  
-  <img id="main-image" class="image-main" src="/images/<%= editProduct.image %>" alt="Imagen Principal">
-  <div class="icono-corazon">
-  <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
-  </div>
-  
-  
-  <div class="producto-iconos">
+  <!-- </div> -->
+
+  <div class="product-container-image">
 
     
-    <h2>$ <%= editProduct.price %></h2>
-    <form class="Agregar" action="/productCart" method="get">
-      <button class="Agregar" type="submit">COMPRAR</button>
-    </form>
+    <div class="detail-image-container">
+      <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
+    </div>
+    <div class="icono-corazon">
+      <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
+    </div>
 
-    <p><i class="fas fa-solid fa-check"></i>STOCK EN LA WEB </p>
-    <p><i class="fas fa-solid fa-check"></i>STOCK EN EL LOCAL</p>
-    <p><i class="fas fa-solid fa-store"></i>RETIRO ¡GRATIS!</p>
-    <p><i class="fas fa-solid fa-truck"></i>ENVIO</p>
   </div>
-</div>
-
-<h3 class="producto-descripcion">Descripcion</h3>
-<p><%= editProduct.description %> </p>
 
 
-<h4 class="producto-recomendado-titulo"> <span class="linea"></span>Productos recomendados<span
-    class="linea"></span></h4>
+    <div class="product-icons">
+      <div class="product-price">
+        <h2>$ <%= editProduct.price %></h2>
+        <form class="Agregar" action="/productCart" method="get">
+          <button class="Agregar" type="submit">COMPRAR</button>
+        </form>
+    
+        <p><%= editProduct.stock %> STOCK EN LA WEB </p>
+        <p><i class="fas fa-solid fa-check"></i>STOCK EN EL LOCAL</p>
+        <p><i class="fas fa-solid fa-store"></i>RETIRO ¡GRATIS!</p>
+        <p><i class="fas fa-solid fa-truck"></i>ENVIO</p>
+        
+      </div>
+    
+      <div class="product-detail-description">
+      
+          <div >
+            
+            <h3 >Descripcion</h3>
+            <p><%= editProduct.description %> </p>
+          </div>
+      
+      </div>
+    </div>
+    
+
+   
+  
+
+
+
+<h4 class="product-recomended-title"> Productos recomendados</h4>
     
     <div class="contenedor-main">
       <% products.forEach(function(p){ %>
@@ -59,7 +81,6 @@
       <% }); %>
     </div>
 
-</main>
 <%- include('../partials/footer'); %>
 </body>
 
