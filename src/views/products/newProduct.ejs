@@ -21,12 +21,21 @@
                 <% } %>
                 
                 <div>
-                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> >
+                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.name %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.name) { %>
+                        <p> <%= errors.name.msg %> </p>
+                    <% } %>
                 </div>
 
-
                 <div>
-                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> >
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.descripcion %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.descripcion) { %>
+                        <p> <%= errors.descripcion.msg %> </p>
+                    <% } %>
                 </div>
                 
 
@@ -34,10 +43,20 @@
                     <label class="product-label-file" for="image">Agregar imagenes</label>
                     <input type="file" name="image" id="image">
                 </div>
+                <div>
+                    <% if(locals.errors && errors.image) { %>
+                        <p> <%= errors.image.msg %> </p>
+                    <% } %>
+                </div>
 
                 <div class="cantidad-product-container">
                     <label for="product-cantidad">Cantidad</label>
-                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad" <% if (locals.editProduct) {%> value="<%= editProduct.stock %>"<%} %> >
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad" <% if (locals.editProduct) {%> value="<%= editProduct.stock %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.productCantidad %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.productCantidad) { %>
+                        <p> <%= errors.productCantidad.msg %> </p>
+                    <% } %>
                 </div>
 
                 
@@ -57,12 +76,14 @@
                     
                 </div>
 
-
-
                 <div>
-                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %>>
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.precio %>"<%} %> >
                 </div>
-             
+                <div>
+                    <% if(locals.errors && errors.precio) { %>
+                        <p> <%= errors.precio.msg %> </p>
+                    <% } %>
+                </div>
                 <div class="button-products">
                     <button><%= (locals.editProduct) ? "Modificar" : "Agregar" %></button>
                     <button><a href="/">Cancelar</a></button>

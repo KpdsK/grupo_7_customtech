@@ -10,7 +10,6 @@ module.exports = [
       throw new Error('Ya existe un usuario registrado con ese correo electronico');
     }
     req.body={"user":existingUser,...req.body}
-    console.log(req.body)
   }),
   body('contrasenia').exists().isStrongPassword({ minLength: 8, minUppercase: 1, minLowercase: 1, minSymbols: 1, minNumbers: 1 }).withMessage('La contraseña debe contener letras en Mayuscula y minuscula, al menos un numero y un caracter especial'),
   body('fotoPerfil').custom(async (_, { req }) => {

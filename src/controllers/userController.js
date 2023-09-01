@@ -44,7 +44,7 @@ const userController = {
             return res.render('users/register', {
                 cssStyle: "register",
                 errors: rdoValidacion.mapped(),
-                oldData: req.body
+                editProduct: req.body
             })
         }
 
