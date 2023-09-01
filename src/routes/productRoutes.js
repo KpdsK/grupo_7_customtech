@@ -16,7 +16,6 @@ const multerDiskStorage = multer.diskStorage({
     }
 });
 
-
 const fileUpload = multer({
     storage: multerDiskStorage
 });
@@ -28,7 +27,7 @@ productRouter.post('/', fileUpload.single('image'), validateCreateProduct, produ
 
 // edit
 productRouter.get('/:id/edit', productController.editProduct);
-productRouter.put('/:id',  fileUpload.single('image'), productController.processEditProduct);
+productRouter.put('/:id',  fileUpload.single('image'), validateCreateProduct, productController.processEditProduct);
 
 // delete 
 productRouter.delete('/:id', productController.deleteProcess);

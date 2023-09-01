@@ -6,11 +6,15 @@ module.exports = [
     body('name').exists().notEmpty().withMessage('El nombre no puede estar vacio').isLength({ min: 5 }).withMessage('Longitud de nombre demasiado corto'),
     body('descripcion').exists().notEmpty().withMessage('La descripción no puede estar vacia').isLength({ min: 20 }).withMessage('Longitud de descripción demasiado corto'),
     body('image').custom(async (_, {req}) => {
+        console.log(req.method)
         if (!(req.file)) {
-            throw new Error('Debe seleccionar una imagen')
-        }
-        if (!(['.jpg', '.jpeg', '.png', '.gif'].includes((path.extname(req.file.path)).toLowerCase()))) {
-            throw new Error('Formato imagen no valido (solo JPG, JPEG, PNG, GIF)')
+            if(req.method!='PUT'){
+                throw new Error('Debe seleccionar una imagen')
+            }
+        } else {
+            if (!(['.jpg', '.jpeg', '.png', '.gif'].includes((path.extname(req.file.path)).toLowerCase()))) {
+                throw new Error('Formato imagen no valido (solo JPG, JPEG, PNG, GIF)')
+            }
         }
     }),
     body('productCantidad').exists().isInt().withMessage('La cantidad debe ser un valor numerico'),

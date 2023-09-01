@@ -56,21 +56,34 @@ const productController = {
     },
 
     processEditProduct: async (req, res) => {
-        const obj = {
-            name: req.body.name,
-            description: req.body.descripcion,
-            price: req.body.precio,
-            stock: req.body.productCantidad,
-            id_category: req.body.categories,
-            updated_at: Date.now(),
-        };
-        if (req.file){obj = {image: req.file.filename, ...obj} }
-        await db.Product.update(obj, {
-            where: {
-                id: req.params.id,
-            }
-        });
-        return res.redirect('/')
+        const rdoValidacion = validationResult(req)
+        if (rdoValidacion.errors.length > 0) {
+            await db.Category.findAll({ attributes: ['id', 'name'], raw: true })
+                .then(function (arrCategorias) {
+                    return res.render('products/newProduct', {
+                        cssStyle: "adminProduct",
+                        categorias: arrCategorias,
+                        oldReq: req.body,
+                        errors: rdoValidacion.mapped()
+                    })
+                })
+        } else {
+            const obj = {
+                name: req.body.name,
+                description: req.body.descripcion,
+                price: req.body.precio,
+                stock: req.body.productCantidad,
+                id_category: req.body.categories,
+                updated_at: Date.now(),
+            };
+            if (req.file) { obj = { image: req.file.filename, ...obj } }
+            await db.Product.update(obj, {
+                where: {
+                    id: req.params.id,
+                }
+            });
+            return res.redirect('/')
+        }
     },
 
     productDetail: async (req, res) => {
