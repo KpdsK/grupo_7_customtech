@@ -23,29 +23,15 @@ const userController = {
     },
 
     proccesLogin: async (req, res) => {
-        // const user = datos.find(row => row.email == req.body.email);
-        const user = await db.User.findAll({ where: { email: req.body.email, erased: false} }).then(function (user) { return user[0] }).catch((error) => {
-            console.error('Usuario no encontrado: ', error);
-        });
-        const errors = {
-            datosMal: {
-                msg: "Datos Incorrectos",
-            }
-        }
-        if (user) {
-            if (await bcrypt.compare(req.body.contrasenia, user.password)) {
-                delete user.password;
-                req.session.userLog = user;
-                if (req.body.cookie) {
-                    res.cookie("recordame", user.email, { maxAge: 1000 * 60 * 60 })
-                }
-                return res.redirect('/perfil');
-            } else {
-                return res.render('users/login', { errors, cssStyle: "login" })
-            }
-        } else {
-            return res.render('users/login', { errors, cssStyle: "login" })
-        }
+        const rdoValidacion = validationResult(req)
+        if (rdoValidacion.errors.length > 0) {
+            return res.render('users/login', {
+                cssStyle: "login",
+                errors: rdoValidacion.mapped(),
+                oldData: req.body
+            })
+        } 
+        return res.redirect('/perfil');
     },
 
     perfil: (req, res) => {

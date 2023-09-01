@@ -1,6 +1,7 @@
 const express = require('express');
 const userController = require('../controllers/userController');
 const registerValidation = require('../middlewares/registerValidation');
+const loginValidation = require('../middlewares/loginValidation');
 const userRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
@@ -30,7 +31,7 @@ userRouter.get('/productCart', logMiddleware, userController.productCart);
 userRouter.get('/productWhisList', logMiddleware, userController.whisList);
 
 userRouter.get('/login', guestMiddleware, userController.login);
-userRouter.post('/users/login', userController.proccesLogin)
+userRouter.post('/users/login', loginValidation, userController.proccesLogin)
 
 userRouter.get('/perfil', logMiddleware, userController.perfil);
 userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), registerValidation, userController.updateUserData)

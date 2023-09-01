@@ -1,1 +1,5 @@
 node_modules
+Wireframe
+nodemon.json
+.gitignore
+src/pruebasModeloDatos.js
