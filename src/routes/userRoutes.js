@@ -6,7 +6,8 @@ const userRouter = express.Router();
 const multer = require('multer');
 const path = require('path');
 const logMiddleware = require('../middlewares/logMiddleware')
-const guestMiddleware = require('../middlewares/guestMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const editUserValidation = require('../middlewares/editUserValidation');
 
 
 const multerDiskStorage = multer.diskStorage({
@@ -34,7 +35,7 @@ userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', loginValidation, userController.proccesLogin)
 
 userRouter.get('/perfil', logMiddleware, userController.perfil);
-userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), registerValidation, userController.updateUserData)
+userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), editUserValidation, userController.updateUserData)
 userRouter.delete('/users/:id/delete', logMiddleware, userController.deleteUser)
 
 userRouter.get('/register', guestMiddleware, userController.register);

@@ -30,7 +30,7 @@
                 </div>
                 <% if(locals.errors && errors.email) { %>
                     <p> <%= errors.email.msg %> </p>
-                    <% } %>
+                <% } %>
 
                 <div>
                     <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
@@ -38,14 +38,16 @@
 
                 <% if(locals.errors && errors.contrasenia) { %>
                     <p> <%= errors.contrasenia.msg %> </p>
-                    <% } %>
+                <% } %>
 
 
                 <div class="fotoPerfil">
                     <label class="fotoperfil" for="fotoPerfil">Agregar imagen</label>
                     <input type="file" name="fotoPerfil" id="fotoPerfil">
                 </div>
-
+                <% if(locals.errors && errors.fotoPerfil) { %>
+                    <p> <%= errors.fotoPerfil.msg %> </p>
+                <% } %>
                
                 <canvas></canvas>
 

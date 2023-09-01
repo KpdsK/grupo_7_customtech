@@ -1,17 +1,11 @@
-const modeloDatos = require("./databaseController");
 const db = require("../database/models");
 const fs = require('fs');
 const path = require('path')
 const bcrypt = require('bcryptjs')
 
-// function getProductsFromDB() {
-//     return db.User.findAll() ("product").listar().filter((row) => row.borrado != true);
-// }
-
 const { validationResult } = require("express-validator");
 
 const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
-
 
 const userController = {
     home: async (req, res) => {
@@ -24,7 +18,6 @@ const userController = {
 
     proccesLogin: async (req, res) => {
         const rdoValidacion = validationResult(req)
-        console.log(rdoValidacion.mapped())
         if (rdoValidacion.errors.length > 0) {
             return res.render('users/login', {
                 cssStyle: "login",
@@ -45,17 +38,7 @@ const userController = {
     },
 
     processRegister: async (req, res) => {
-        console.log(req.body)
-        const user = {
-            "name": req.body.nombre,
-            "email": req.body.email,
-            "image": req.file ? req.file.filename : '',
-            "password": await bcrypt.hash(req.body.contrasenia, 10),
-            "created_at": Date.now(),
-        }
-
         const rdoValidacion = validationResult(req)
-        console.log(rdoValidacion.errors)
 
         if (rdoValidacion.errors.length > 0) {
             return res.render('users/register', {
@@ -65,15 +48,21 @@ const userController = {
             })
         }
 
+        const user = {
+            "name": req.body.nombre,
+            "email": req.body.email,
+            "image": req.file ? req.file.filename : '',
+            "password": await bcrypt.hash(req.body.contrasenia, 10),
+            "created_at": Date.now(),
+        }
+
         db.User.create(user)
 
         return res.redirect('/')
     },
 
     updateUserData: async (req, res) => {
-        console.log(req.body)
         const rdoValidacion = validationResult(req)
-        console.log(rdoValidacion.errors)
 
         if (rdoValidacion.errors.length > 0) {
             return res.render('users/perfil', {
@@ -82,7 +71,6 @@ const userController = {
                 cssStyle: "perfil"
             })
         }
-        console.log('req.body')
         const userDB = await db.User.findAll({ where: { email: req.body.email } }).then(function (user) { return user[0] }).catch((error) => {
             console.error('Usuario no encontrado: ', error);
         });
@@ -108,7 +96,6 @@ const userController = {
     },
 
     deleteUser: async (req, res) => {
-        console.log(req.params)
         await db.User.update({
             erased: true,
         }, {
