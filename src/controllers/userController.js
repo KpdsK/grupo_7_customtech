@@ -24,6 +24,7 @@ const userController = {
 
     proccesLogin: async (req, res) => {
         const rdoValidacion = validationResult(req)
+        console.log(rdoValidacion.mapped())
         if (rdoValidacion.errors.length > 0) {
             return res.render('users/login', {
                 cssStyle: "login",

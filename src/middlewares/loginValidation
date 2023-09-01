@@ -5,8 +5,7 @@ const bcrypt = require('bcryptjs')
 module.exports = [
 
     body('contrasenia').exists().notEmpty().withMessage('La contraseña no debe ser vacia.'),
-    body('email').exists().notEmpty().isEmail().withMessage('Indicá un email'),
-    body('email').custom(async (value, { req }) => {
+    body('email').exists().notEmpty().withMessage('No puede ser vacio').isEmail().withMessage('Indicá un email').custom(async (value, { req }) => {
         const user = await db.User.findAll({ where: { email: value } }).then(usuarios => usuarios[0]);
         if (!user) {
             throw new Error('El correo no esta registrado')

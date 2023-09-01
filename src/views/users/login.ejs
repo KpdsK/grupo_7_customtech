@@ -23,13 +23,18 @@
                 </div>
 
                 <div>
-                    <% if(locals.errors && errors.datosMal) { %>
-                        <p> <%= errors.datosMal.msg %> </p>
-                        <% } %>
+                    <% if(locals.errors && errors.email) { %>
+                        <p> <%= errors.email.msg %> </p>
+                    <% } %>
                 </div>
 
                 <div>
                     <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                </div>
+                <div>
+                    <% if(locals.errors && errors.contrasenia) { %>
+                        <p> <%= errors.contrasenia.msg %> </p>
+                    <% } %>
                 </div>
 
                 <div class="login-recordar">
