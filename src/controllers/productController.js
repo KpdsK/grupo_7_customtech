@@ -47,10 +47,8 @@ const productController = {
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
             .then(function (editProduct) {
-                console.log(editProduct[0])
                 db.Category.findAll({ attributes: ['id', 'name'], raw: true })
                     .then(function (arrCategorias) {
-                        console.log(editProduct[0])
                         if (editProduct[0]) return res.render('products/newProduct', { cssStyle: "adminProduct", editProduct: editProduct[0], categorias: arrCategorias });
                         else return res.send('romi tuvo la culpa');
                     })
@@ -67,7 +65,6 @@ const productController = {
             updated_at: Date.now(),
         };
         if (req.file){obj = {image: req.file.filename, ...obj} }
-        console.log(obj)
         await db.Product.update(obj, {
             where: {
                 id: req.params.id,
@@ -77,7 +74,6 @@ const productController = {
     },
 
     productDetail: async (req, res) => {
-        console.log(req.params.id)
         const productData = await db.Product.findAll()
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
@@ -87,7 +83,6 @@ const productController = {
     },
 
     deleteProcess: async (req, res) => {
-        console.log(req.params.id)
         await db.Product.update({
             erased: true,
         }, {
