@@ -41,7 +41,12 @@
 
                 <div class="product-file-container">
                     <label class="product-label-file" for="image">Agregar imagenes</label>
-                    <input type="file" name="image" id="image">
+                    <input id="product-image" type="file" name="image">
+                </div>
+                <div>
+                    <% if(locals.errors && errors.image) { %>
+                        <p> <%= errors.image.msg %> </p>
+                    <% } %>
                 </div>
                 <div>
                     <% if(locals.errors && errors.image) { %>
@@ -89,6 +94,8 @@
                     <button><a href="/">Cancelar</a></button>
                 </div>
 
+
+
             </form>
             <% if (locals.editProduct) { %>
                 <form method="POST" action="/products/<%= editProduct.id %>?_method=DELETE">
@@ -100,7 +107,7 @@
         </div>
 
     </main>
-
+    <script src="/js/product.js"></script>
     <%-include('../partials/footer')  %>
 
 </body>
