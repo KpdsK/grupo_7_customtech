@@ -28,6 +28,13 @@ a {
     color: #000;
 }
 
+.erroresLista {
+    color: red;
+    list-style: none;
+    text-align: start;
+    padding: 5px;
+}
+
 
 
 

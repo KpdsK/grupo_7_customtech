@@ -21,7 +21,7 @@
                 <% } %>
                 
                 <div>
-                    <input class="text-field-product" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.name %>"<%} %> >
+                    <input class="text-field-product" id="product-name" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.name %>"<%} %> >
                 </div>
                 <div>
                     <% if(locals.errors && errors.name) { %>
@@ -30,7 +30,7 @@
                 </div>
 
                 <div>
-                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.descripcion %>"<%} %> >
+                    <input class="text-field-product" id="product-desc" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.descripcion %>"<%} %> >
                 </div>
                 <div>
                     <% if(locals.errors && errors.descripcion) { %>
@@ -81,19 +81,22 @@
                     
                 </div>
 
+                
                 <div>
-                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.precio %>"<%} %> >
+                    <input class="text-field-product" id="product-price" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.precio %>"<%} %> >
                 </div>
                 <div>
                     <% if(locals.errors && errors.precio) { %>
                         <p> <%= errors.precio.msg %> </p>
-                    <% } %>
+                        <% } %>
                 </div>
+
+                    <ul class="erroresLista"></ul>
+
                 <div class="button-products">
                     <button><%= (locals.editProduct) ? "Modificar" : "Agregar" %></button>
                     <button><a href="/">Cancelar</a></button>
                 </div>
-
 
 
             </form>

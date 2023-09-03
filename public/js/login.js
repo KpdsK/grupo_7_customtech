@@ -32,7 +32,7 @@ window.onload = () => {
       if (errores.length > 0) {
         erroresLista.innerHTML =  ` `
         for (let error of errores) {
-            erroresLista.innerHTML += <li>${error}</li>
+            erroresLista.innerHTML += `<li>${error}</li>`
         }
       } else {
         erroresLista.innerHTML +=  ` `
