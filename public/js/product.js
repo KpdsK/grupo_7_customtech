@@ -5,14 +5,7 @@ window.onload = function(){
     const image = document.querySelector('#product-image')
     const precio = document.querySelector('#product-price')
     const erroresLista = document.querySelector('.erroresLista')
-   const objErrores = {
-       nombre: "Llenar el campo"
-   }
-    name.addEventListener("blur",function(){
-       name.value == "" ? objErrores.nombre = "Llenar el campo" : objErrores.nombre = null
-       console.log(objErrores.nombre)
-       console.log(precio);
-    })
+   
    
    
        form.addEventListener('submit', async (e) => {
@@ -31,18 +24,29 @@ window.onload = function(){
                name.classList.add('is-valid')
            }
 
-           if(description.value == '') {
-            errores.push('Debe llenar la descripcion ')
-            description.classList.add('is-invalid')
-            description.classList.remove('is-valid') 
-           } else {
-            description.classList.remove('is-invalid')
-            description.classList.add('is-valid')
-            }   
+           if (name.value.length < 5) {
+   
+            errores.push('El nombre debe tener al menos 5 caracteres')
+                name.classList.add('is-invalid')
+                name.classList.remove('is-valid') 
+            } else {
+                name.classList.remove('is-invalid')
+                name.classList.add('is-valid')
+            }
+
+
+            if(description.value == '' || description.value.length < 20) {
+                errores.push('La descripcion es muy corta')
+                description.classList.add('is-invalid')
+                description.classList.remove('is-valid') 
+               } else {
+                description.classList.remove('is-invalid')
+                description.classList.add('is-valid')
+                }  
 
            
             if (image.files.length == 0) {
-                errores.push('Debe seleccionar una imagen de perfil');
+                errores.push('Debe seleccionar una imagen');
             } else {
              const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
              const fileName = image.files[0].name;
@@ -54,7 +58,7 @@ window.onload = function(){
             }
             
            if(precio.value == '') {
-            errores.push('Debe llenar el precio ')
+            errores.push('Debe llenar el campo precio ')
             precio.classList.add('is-invalid')
             precio.classList.remove('is-valid') 
            } else {
@@ -72,9 +76,10 @@ window.onload = function(){
                }
            } else{
                erroresLista.innerHTML =  ` `
-               /* form.submit() */  //! ROMi no te olvides de descomentar esta linea para que se haga el submit 
+                form.submit()
             
-           }
+        }
+            
 
 
    

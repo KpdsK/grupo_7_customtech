@@ -19,7 +19,7 @@
                 </div>
 
                 <div>
-                    <input class="text-field" type="email" name="email" placeholder="E-mail">
+                    <input id="email" class="text-field" type="email" name="email" placeholder="E-mail">
                 </div>
 
                 <div>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div>
-                    <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                    <input id="password" class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
                 </div>
                 <div>
                     <% if(locals.errors && errors.contrasenia) { %>
@@ -67,9 +67,8 @@
                             ¿No tienes cuenta?
                         </legend>
 
-                        <button type="submit" formmethod="get" formaction="/register" class="botonSignup"> 
-                            Regístrate
-                        </button>
+                        <a href="/register" class="botonSignup">Regístrate</a>
+
                         
                     </div>
 

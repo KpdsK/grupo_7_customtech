@@ -19,21 +19,21 @@
                 </div>
 
                 <div>
-                    <input class="text-field" type="text" name="nombre" placeholder="Nombre completo">
+                    <input id="register-name" class="text-field" type="text" name="nombre" placeholder="Nombre completo">
                 </div>
                 <% if(locals.errors && errors.nombre) { %>
                     <p> <%= errors.nombre.msg %> </p>
                     <% } %>
 
                 <div>
-                    <input class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input id="register-email" class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
                 <% if(locals.errors && errors.email) { %>
                     <p> <%= errors.email.msg %> </p>
                 <% } %>
 
                 <div>
-                    <input class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
+                    <input id="register-passw" class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
                 </div>
 
                 <% if(locals.errors && errors.contrasenia) { %>
@@ -71,9 +71,7 @@
                             ¿Ya tienes una cuenta?
                         </legend>
 
-                        <button type="submit" formmethod="get" formaction="/login" class="botonLogin"> 
-                            Ingresar
-                        </button>
+                        <a href="/login" class="botonLogin">Ingresá</a>
                         
                     </div>
 

@@ -7,7 +7,7 @@ window.onload = function(){
            const email = document.querySelector('#register-email')
            const password = document.querySelector('#register-passw')
            const image = document.querySelector('#fotoPerfil')
-           const erroresLista = document.querySelector('#erroresLista')
+           const erroresLista = document.querySelector('.erroresLista')
 
 
            let errores = []

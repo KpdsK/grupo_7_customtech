@@ -1,8 +1,8 @@
 window.onload = () => {
-    const form = document.querySelector('#form-login');
+    const form = document.querySelector('.form-login');
     const email = document.querySelector('#email');
     const password = document.querySelector('#password');
-    const erroresLista = document.querySelector('#erroresLista');
+    const erroresLista = document.querySelector('.erroresLista');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -21,7 +21,7 @@ window.onload = () => {
 
 
       if(password.value == '') {
-        errores.push('Coloque el password');
+        errores.push('Coloque la contraseña');
         email.classList.add('is-invalid')
         email.classList.remove('is-valid')
       } else {
@@ -36,6 +36,8 @@ window.onload = () => {
         }
       } else {
         erroresLista.innerHTML +=  ` `
+        form.submit()
       } 
+      form.submit()
     })
 }
