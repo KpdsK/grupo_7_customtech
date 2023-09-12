@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookie = require('cookie-parser');
 const cookieExist = require('./middlewares/cookieMiddleware');
+const productApiRouter = require('./routes/api/productApiRoutes')
+const userApiRouter = require('./routes/api/userApiRoutes')
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -32,6 +34,9 @@ app.use(methodOverride('_method'));
 
 app.use('/', routes);
 app.use('/products' ,productRoutes);
+
+app.use('/api/products', productApiRouter)
+app.use('/api/users', userApiRouter)
 
 app.get('/404', (req, res)=>{
     res.send('Error página no encontrada')
