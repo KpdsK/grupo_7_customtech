@@ -107,11 +107,13 @@ const userController = {
         return res.redirect('/')
     },
 
-    productCart: (req, res) => {
-        res.render('productCart', { cssStyle: "carrito-whislist", productos: getProductsFromDB() });
+    productCart:  (req, res) => {
+        
+        res.render('productCart', { cssStyle: "carrito-whislist"});
+                
     },
-    whisList: (req, res) => {
-        res.render('productWhisList', { cssStyle: "carrito-whislist", productos: getProductsFromDB() });
+    wishList:  (req, res) => {
+        res.render('productWhisList', { cssStyle: "carrito-whislist"});
     },
 
 };

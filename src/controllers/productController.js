@@ -50,7 +50,7 @@ const productController = {
                 db.Category.findAll({ attributes: ['id', 'name'], raw: true })
                     .then(function (arrCategorias) {
                         if (editProduct[0]) return res.render('products/newProduct', { cssStyle: "adminProduct", editProduct: editProduct[0], categorias: arrCategorias });
-                        else return res.send('romi tuvo la culpa');
+                        else return res.send('Error!');
                     })
             })
     },

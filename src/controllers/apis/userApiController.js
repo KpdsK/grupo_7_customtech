@@ -5,18 +5,21 @@ const User = db.User;
 module.exports = {
 
     list: async (req,res) => {
-        let response = {};
+        let response = {data: {}};
         try {
             const usuarios = await User.findAll()
-            response.count = usuarios.length
-            response.users = usuarios.map((usuario) => {
+
+            response.data.count = usuarios.length
+            response.data.users = usuarios.map((usuario) => {
                 return {
                     id: usuario.id,
                     name: usuario.name,
                     email: usuario.email,
-                    detail: `api/users/${req.params.id}`
+                    detail: `api/users/${usuario.id}`
                 }
             }) 
+            return res.json(response)
+
         } catch (e) {
             response.msg = "Hubo un error"
             return res.json(response)
@@ -26,17 +29,21 @@ module.exports = {
     detail: async (req,res) => {
         let response = {};
         try {
-            const findUser = await User.findByPk(req.params.id, {attributes: {exclude:["password", "profile"]}})
+            const findUser = await User.findByPk(req.params.id, {attributes: {exclude:["password", "profile"]}});
+
             response.meta = {
                 status: 200,
+                total: findUser.length,
                 url: `api/users/${req.params.id}`
-            }
+            };
             response.data = findUser;
             return res.json(response);
+
         } catch (error) {
             console.log ("Hubo un error:", error);
             response.meta = {
                 status: 500,
+                total: null,
                 url: `api/users/${req.params.id}`
             };
             response.msg = `Oops! algo salió mal al querer buscar al usuario con ID: ${req.params.id}`

@@ -29,7 +29,7 @@ userRouter.get('/', userController.home);
 
 userRouter.get('/productCart', logMiddleware, userController.productCart);
 
-userRouter.get('/productWhisList', logMiddleware, userController.whisList);
+userRouter.get('/productWishList', logMiddleware, userController.wishList);
 
 userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', loginValidation, userController.proccesLogin)
