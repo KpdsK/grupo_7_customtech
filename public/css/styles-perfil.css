@@ -1,6 +1,89 @@
 .perfil-container {
-  height: 80vh;
-  margin-top: 15vh;
+  height: 600px;
   text-align: center;
+  color: #4F04A3;
+  margin-top: 150px;
 }
+
+.primer-contenedor img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.datos {
+  padding: 10px;
+}
+
+.text-field-perfil {
+  width: 150px;
+  border: #4F04A3 solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  color: #4F04A3;
+}
+
+.input-file::file-selector-button {
+  background-color: #4F04A3;
+  border: 1px solid #4F04A3;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.button-submit {
+  background-color: #4F04A3;
+  border: 1px solid #4F04A3;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+}
+
+
+@media (min-width: 361px) {
+
+
+  .perfil-data {
+    text-align: center;
+    background-color: #eee;
+    width: 80vw;
+    margin: auto;
+    border: 1px solid #4F04A3;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+
+@media (min-width:769px) {
+  .perfil-data {
+    width: 750px;
+  }
+
+  .input-container {
+    justify-content: space-between;
+    width: 350px;
+    margin: auto;
+  }
+
+}
+
+
+
+
+
 

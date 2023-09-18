@@ -1,5 +1,5 @@
 .main-home {
-  margin-top: 15vh;
+  margin-top: 150px;
 }
 
 .mySlides {display: none}
@@ -145,7 +145,7 @@ img {vertical-align: middle;}
     margin-left: 10%;
 }
 .descripciones{
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 15px;
     color: #666;
     transition: all 450ms;
@@ -206,7 +206,7 @@ img {vertical-align: middle;}
 @media(min-width: 769px){
 
   .main-home {
-    margin-top: 10vh;
+    margin-top: 100px;
   }
 
 

@@ -3,8 +3,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 150px;
+    margin-bottom: 50px;
     background-color: #eee;
+    height: 800px;
 }
 
 .form-product-container a {
@@ -22,7 +24,7 @@
     text-align: center;
     margin-bottom: 10%;
     color: #4F04A3;
-
+    height: inherit;
 }
 
 h2 {
@@ -148,7 +150,9 @@ h2 {
 
 
 @media (min-width: 361px) {
-
+    .bloque-prod {
+        margin: auto;
+    }
 
     .text-field-product {
         width: 300px;
