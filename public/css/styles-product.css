@@ -3,12 +3,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 150px;
 }
 
 .product-detail-title  {
   text-align: center;
   color: #4F04A3;
-  padding-top: 15vh;
+  padding: 10px;
 }
 
 
@@ -100,6 +101,8 @@
 
 @media (min-width: 361px){
 
+ 
+
   .product-icons {
     display: flex;
     justify-content: space-between;
@@ -131,6 +134,10 @@
 
 
 @media (min-width: 769px) {
+
+  .product-detail-title {
+    padding-top: 0;
+  }
   .sub-main {
     width: 15%;
   }
