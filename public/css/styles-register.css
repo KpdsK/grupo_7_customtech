@@ -3,12 +3,12 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 150px;
     /* background-image: url("../images/wallpaper3.jpg"); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
-    background-position-x: center;
+    background-position-x: center; */
 }
 
 
@@ -16,20 +16,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65vh;
-    width: 80vw;
-    margin-top: 80px;
+    width: 100vw;
     text-align: center;
     /*background-color: rgba(255, 255, 255, 0.6);*/
     /* background-color: rgba(0, 0, 0, 0.8); */
     background-color: #eee;
-    border-radius: 40px;
-    margin-bottom: 10%;
     /*box-shadow: 0px 0px 15px rgb(194, 21, 86, 0.9);*/
 }
 
 .fotoperfil {
-    color: aliceblue;
+    color: #4F04A3;
 }
 
 
@@ -130,14 +126,16 @@ form div {
     font-size: 5vw;
 }
 
-.cuadrOr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    top: 10px;
+.input-file {
+    color: #4F04A3;
+}
 
+.input-file::file-selector-button {
+    background-color: #4F04A3;
+    color: #fff;
+    border: 1px solid #4F04A3;
+    border-radius: 5px;
+    padding: 5px
 }
 
 .register-or{
@@ -212,9 +210,11 @@ canvas {
     }
 
     .bloqueSignup {
-        height: 75vh;
+        height: 100%;
         min-width: 320px;
         width: 50vw;
+        border-radius: 30px;
+        margin-bottom: 15px;
     }
 
     .bloqueLogin legend {
@@ -240,8 +240,3 @@ canvas {
     }
 }
 
-@media (min-width: 769px){
-    .bloqueSignup{
-        height: 80vh;
-    }
-}

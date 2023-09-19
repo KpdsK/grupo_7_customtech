@@ -43,24 +43,12 @@
 
                 <div class="fotoPerfil">
                     <label class="fotoperfil" for="fotoPerfil">Agregar imagen</label>
-                    <input type="file" name="fotoPerfil" id="fotoPerfil">
+                    <input  class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
                 </div>
                 <% if(locals.errors && errors.fotoPerfil) { %>
                     <p> <%= errors.fotoPerfil.msg %> </p>
                 <% } %>
                
-                <canvas></canvas>
-
-                <div class="cuadrOr">
-                    <div class="register-or">
-                        <label class="label-or">O</label>
-                    </div>
-                </div>
-
-                <div class="redes">
-                    <i class="fa-brands fa-google"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
 
                 <ul class="erroresLista"></ul>
 
