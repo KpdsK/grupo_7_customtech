@@ -7,15 +7,16 @@ module.exports = {
     list: async (req,res) => {
         let response = {data:{}};
         try { //alias de la asociación en el modelo
-            const [productos, categorys] = await Promise.all([Product.findAll(), Category.findAll({exclude: [ "created_at", "updated_at"]},{include: [{association: categorys}]})]) //PONER NOMBRE DE ASOCIACIÓN
+            const [productos, categorys] = await Promise.all([Product.findAll(), Category.findAll({include: [{association: 'products'}]})]) //PONER NOMBRE DE ASOCIACIÓN
             response.data.count = productos.length
             response.data.countByCategory = {}
 
-            productos.forEach( (categoria) => {
-                response.data.countByCategory[categoria.name] = categoria.productos.length
+            categorys.forEach( (categoria) => {
+                response.data.countByCategory[categoria.name] = categoria.products.length
             });
 
-            response.data.productos = productos.map((product)=> {
+            
+            response.data.products = productos.map((product)=> {
                 return {
                     id: product.id,
                     name: product.name,
@@ -24,6 +25,7 @@ module.exports = {
                     detail: `/api/products/${product.id}`
                 }
             })
+            return res.json(response)
 
         } catch (e) {
             response.msg = "Hubo un error"
