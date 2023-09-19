@@ -7,7 +7,7 @@ module.exports = {
     list: async (req,res) => {
         let response = {data:{}};
         try { //alias de la asociación en el modelo
-            const [productos, categorys] = await Promise.all([Product.findAll(), Category.findAll({include: [{association: categorys}]})]) //PONER NOMBRE DE ASOCIACIÓN
+            const [productos, categorys] = await Promise.all([Product.findAll(), Category.findAll({exclude: [ "created_at", "updated_at"]},{include: [{association: categorys}]})]) //PONER NOMBRE DE ASOCIACIÓN
             response.data.count = productos.length
             response.data.countByCategory = {}
 
@@ -34,7 +34,7 @@ module.exports = {
     detail: async (req,res) => {
         let response = {};
         try {
-            const findProduct = await Product.findByPk(req.params.id, {include: [{association:"categorys"}]}) //me quedé acá
+            const findProduct = await Product.findByPk(req.params.id,  {include: [{association:"categorys"}]}) //me quedé acá {exclude: [ "created_at", "updated_at"]}, ???????????????????????
             response.meta = {
                 status: 200,
                 url: `/api/products/${req.params.id}`

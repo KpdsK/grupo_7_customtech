@@ -29,7 +29,7 @@ module.exports = {
     detail: async (req,res) => {
         let response = {};
         try {
-            const findUser = await User.findByPk(req.params.id, {attributes: {exclude:["password", "profile"]}});
+            const findUser = await User.findByPk(req.params.id, {attributes: {exclude:["created_at", "updated_at", "password", "profile"]}});
 
             response.meta = {
                 status: 200,
