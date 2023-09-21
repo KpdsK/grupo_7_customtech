@@ -40,7 +40,7 @@ window.onload = function(){
                 }
 
                  
-            if (!email.validity.typeMismatch) {
+            if (email.validity.typeMismatch) {
                 errores.push('El E-mail no es válido');
             }else {
                 name.classList.remove('is-invalid')
