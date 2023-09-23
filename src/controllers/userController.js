@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 
 const { validationResult } = require("express-validator");
 
-const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
+// const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
 
 const userController = {
     home: async (req, res) => {
@@ -107,13 +107,15 @@ const userController = {
         return res.redirect('/')
     },
 
-    productCart:  (req, res) => {
+    productCart: async  (req, res) => {
         
-        res.render('productCart', { cssStyle: "carrito-whislist"});
-                
+        const productsData = await db.Product.findAll()
+        return res.render('productCart', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased)});
+        
     },
-    wishList:  (req, res) => {
-        res.render('productWhisList', { cssStyle: "carrito-whislist"});
+    wishList: async  (req, res) => {
+        const productsData = await db.Product.findAll()
+        return res.render('productWishList', { cssStyle: "carrito-whislist",productos: productsData.filter((row) => !row.erased) });
     },
 
 };
