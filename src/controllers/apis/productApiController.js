@@ -22,7 +22,8 @@ module.exports = {
                     name: product.name,
                     description: product.description,
                     category: product.id_category,
-                    detail: `/api/products/${product.id}`
+                    detail: `/api/products/${product.id}`,
+                    image: product.image
                 }
             })
             return res.json(response)

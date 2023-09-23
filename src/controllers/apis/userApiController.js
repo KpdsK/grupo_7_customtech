@@ -15,7 +15,8 @@ module.exports = {
                     id: usuario.id,
                     name: usuario.name,
                     email: usuario.email,
-                    detail: `api/users/${usuario.id}`
+                    detail: `api/users/${usuario.id}`,
+                    image: usuario.image
                 }
             }) 
             return res.json(response)
