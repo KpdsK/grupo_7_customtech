@@ -4,6 +4,7 @@ const productController = require('../controllers/productController');
 const path = require('path');
 const multer = require('multer');
 const validateCreateProduct = require('../middlewares/validateCreateProduct');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 
 const multerDiskStorage = multer.diskStorage({
@@ -22,21 +23,21 @@ const fileUpload = multer({
 
 
 // new product
-productRouter.get('/create', productController.newProduct);
-productRouter.post('/', fileUpload.single('image'), validateCreateProduct, productController.processNewProduct);
+productRouter.get('/create', adminMiddleware, productController.newProduct);
+productRouter.post('/', adminMiddleware, fileUpload.single('image'), validateCreateProduct, productController.processNewProduct);
 
 // edit
-productRouter.get('/:id/edit', productController.editProduct);
-productRouter.put('/:id',  fileUpload.single('image'), validateCreateProduct, productController.processEditProduct);
+productRouter.get('/:id/edit', adminMiddleware, productController.editProduct);
+productRouter.put('/:id', adminMiddleware, fileUpload.single('image'), validateCreateProduct, productController.processEditProduct);
 
 // delete 
-productRouter.delete('/:id', productController.deleteProcess);
+productRouter.delete('/:id', adminMiddleware, productController.deleteProcess);
 
 // productDetail 
-productRouter.get('/:id', productController.productDetail);
+productRouter.get('/:id', adminMiddleware, productController.productDetail);
 
 // listPorduct
-productRouter.get('/', productController.listProducts);
+productRouter.get('/', adminMiddleware, productController.listProducts);
 
 
 module.exports = productRouter;
