@@ -62,6 +62,13 @@
               <button class="button-submit" type="submit">Eliminar</button>
             </form>
           </div>
+          <div>
+            <div>
+              <% if (user && user.id_profile === 2) { %>
+              <button class="button-submit"><a href="/products/create">CARGAR PRODUCTO</a></button>
+              <% } %>
+            </div>
+          </div>
       </section>
 
 

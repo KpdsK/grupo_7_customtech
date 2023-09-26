@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs'); %>
-  <body>
-    <%- include('../partials/header.ejs'); %>
+<body>
+  <%- include('../partials/header.ejs'); %>
       <!-- <main>
         <script>
           function changeMainImage(image) {
@@ -13,31 +13,31 @@
 
 
 
-  <div class="product-container">
+    <div class="product-container">
 
 
-    <div class="product-detail-title">
-      <h1><%= editProduct.name %> </h1>
-    </div>
+      <div class="product-detail-title">
+        <h1><%= editProduct.name %> </h1>
+      </div>
  
-  <!-- <div class="image-list"> -->
-   
-  
-    <!-- <img src="/images/<%= editProduct.image %>" alt="Imagen 2" onmouseover="changeMainImage(this)">
-    <img src="/images/<%= editProduct.image %>" alt="Imagen 3" onmouseover="changeMainImage(this)">
-    <img src="/images/<%= editProduct.image %>" alt="Imagen 4" onmouseover="changeMainImage(this)"> -->
+      <!-- <div class="image-list"> -->
+      
+      
+        <!-- <img src="/images/<%= editProduct.image %>" alt="Imagen 2" onmouseover="changeMainImage(this)">
+        <img src="/images/<%= editProduct.image %>" alt="Imagen 3" onmouseover="changeMainImage(this)">
+        <img src="/images/<%= editProduct.image %>" alt="Imagen 4" onmouseover="changeMainImage(this)"> -->
 
-  <!-- </div> -->
+      <!-- </div> -->
 
-  <div class="product-container-image">
+      <div class="product-container-image">
 
     
-    <div class="detail-image-container">
-      <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
-    </div>
-    <div class="icono-corazon">
-      <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
-    </div>
+      <div class="detail-image-container">
+        <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
+      </div>
+       <div class="icono-corazon">
+        <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
+       </div>
 
   </div>
 
@@ -63,7 +63,11 @@
             <h3 >Descripcion</h3>
             <p><%= editProduct.description %> </p>
           </div>
-      
+          <div>
+            <% if (currentUser && currentUser.id_profile === 2) { %>
+            <button class="Agregar"><a href="/products/<%= editProduct.id %>/edit">EDITAR</a></button>
+            <% } %>
+          </div>
       </div>
     </div>
     
@@ -81,8 +85,10 @@
       <% }); %>
     </div>
 
-<%- include('../partials/footer'); %>
-<script src="/js/header.js" ></script>
+
+
+  <%- include('../partials/footer'); %>
+  <script src="/js/header.js" ></script>
 
 </body>
 

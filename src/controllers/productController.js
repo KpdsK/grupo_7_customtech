@@ -87,11 +87,12 @@ const productController = {
     },
 
     productDetail: async (req, res) => {
+        const currentUser = req.session.userLog
         const productData = await db.Product.findAll({ where: { recommended: true, erased: false } })
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
             .then(function (product) {
-                return res.render('products/productDetail', { cssStyle: "product", editProduct: product[0], products: productData.filter((row) => !row.erased).slice(0, 4) });
+                return res.render('products/productDetail', {currentUser: currentUser, cssStyle: "product", editProduct: product[0], products: productData.filter((row) => !row.erased).slice(0, 4) });
             })
     },
 
