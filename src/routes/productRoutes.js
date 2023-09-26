@@ -1,4 +1,4 @@
-const express =  require('express');
+const express = require('express');
 const productRouter = express.Router();
 const productController = require('../controllers/productController');
 const path = require('path');
@@ -37,7 +37,7 @@ productRouter.delete('/:id', adminMiddleware, productController.deleteProcess);
 productRouter.get('/:id', productController.productDetail);
 
 // listPorduct
-productRouter.get('/', adminMiddleware, productController.listProducts);
+productRouter.get('/', productController.listProducts);
 
 
 module.exports = productRouter;
