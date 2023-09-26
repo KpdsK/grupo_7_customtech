@@ -34,7 +34,7 @@ productRouter.put('/:id', adminMiddleware, fileUpload.single('image'), validateC
 productRouter.delete('/:id', adminMiddleware, productController.deleteProcess);
 
 // productDetail 
-productRouter.get('/:id', adminMiddleware, productController.productDetail);
+productRouter.get('/:id', productController.productDetail);
 
 // listPorduct
 productRouter.get('/', adminMiddleware, productController.listProducts);
