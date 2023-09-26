@@ -87,7 +87,7 @@ const productController = {
     },
 
     productDetail: async (req, res) => {
-        const productData = await db.Product.findAll()
+        const productData = await db.Product.findAll({ where: { recommended: true, erased: false } })
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
             .then(function (product) {

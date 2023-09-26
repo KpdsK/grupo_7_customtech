@@ -9,8 +9,8 @@ const { validationResult } = require("express-validator");
 
 const userController = {
     home: async (req, res) => {
-        const productsData = await db.Product.findAll()
-        res.render('home', { cssStyle: "home", productos: productsData.filter((row) => !row.erased).slice(0, 4) });
+        const productsData = await db.Product.findAll({ where: { recommended: true, erased: false } })
+        res.render('home', { cssStyle: "home", productos: productsData });
     },
     login: (req, res) => {
         res.render('users/login', { cssStyle: "login" });
@@ -24,7 +24,7 @@ const userController = {
                 errors: rdoValidacion.mapped(),
                 oldData: req.body
             })
-        } 
+        }
         return res.redirect('/perfil');
     },
 
@@ -67,7 +67,7 @@ const userController = {
         if (rdoValidacion.errors.length > 0) {
             return res.render('users/perfil', {
                 errors: rdoValidacion.mapped(),
-                user: {"id":req.params.id,...req.body},
+                user: { "id": req.params.id, ...req.body },
                 cssStyle: "perfil"
             })
         }
@@ -107,15 +107,15 @@ const userController = {
         return res.redirect('/')
     },
 
-    productCart: async  (req, res) => {
-        
+    productCart: async (req, res) => {
+
         const productsData = await db.Product.findAll()
-        return res.render('productCart', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased)});
-        
+        return res.render('productCart', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased) });
+
     },
-    wishList: async  (req, res) => {
+    wishList: async (req, res) => {
         const productsData = await db.Product.findAll()
-        return res.render('productWishList', { cssStyle: "carrito-whislist",productos: productsData.filter((row) => !row.erased) });
+        return res.render('productWishList', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased) });
     },
 
 };
