@@ -35,7 +35,9 @@
                 <div>
                     <input id="register-passw" class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
                 </div>
-
+                <ul>
+                    <li>El contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
+                </ul>
                 <% if(locals.errors && errors.contrasenia) { %>
                     <p> <%= errors.contrasenia.msg %> </p>
                 <% } %>
