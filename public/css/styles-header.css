@@ -2,7 +2,7 @@ header {
     display: flex;
     width: 100vw;
     background-color: #4F04A3;
-    height: 150px;
+    height: 100px;
     position: fixed;
     z-index: 3;
     top: 0;
@@ -12,11 +12,12 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 
 .header-image-container {
-    width: 50vw;
+    width: 40vw;
     text-decoration: none;
     display: flex;
     justify-content: space-around;
@@ -37,8 +38,9 @@ header {
 }    
 
 .burger-menu {
+    cursor: pointer;
     color: #fff;
-    width: 50vw;
+    width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,8 +54,71 @@ header {
 }
 
 
-.search {
+.login-modal {
+    display: none;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+}   
+
+.mirar {
     display: flex;
+}
+
+
+.login-modal a {
+    padding: 10px;
+}
+
+.menu-hidden {
+    
+    /* display: none; */
+    position: relative;
+    right: 100vw;
+    background-color: #4F04A3;
+    height: 40vh;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+}
+
+.show {
+    right: 0;
+}
+
+.menu-list {
+    padding: 10px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.icon-container {
+    cursor: pointer;
+    margin: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.icon-container i {
+    color: #fff;
+}
+
+
+.menu-list i {
+    font-size: 25px;
+    margin: 5px;
+}
+
+.menu-list a {
+    color: #fff;
+}
+.search {
+    display: none;
     justify-content: center;
     align-items: center;
 }    
@@ -64,9 +129,21 @@ header {
     z-index: 1;
 }    
 
+.search-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-menu i {
+    color: #4F04A3;
+    margin-right: -25px;
+    z-index: 1;
+}
+
 .header-search-input {
     height: 30px;
-    width: 100%;
+    width: 80%;
     text-indent: 25px;
     border-radius: 5px;
     border: 1px solid #4F04A3;
@@ -85,6 +162,20 @@ header {
 
 
 @media (min-width: 361px) {
+
+    header {
+        height: 115px;
+    }
+    
+
+
+    .header-container {
+        padding: 0;
+    }
+
+    .menu-hidden {
+        display: none;
+    }
 
     .header-img {
         width: 60px;
@@ -108,7 +199,7 @@ header {
 
     .search {
         width: 50vw;
-
+        display: flex;
     }
 
     .header-search-input {
@@ -143,9 +234,6 @@ header {
 
 @media (min-width: 769px) {
 
-    header {
-        height: 100px;
-    }
     
     .header-image-container {
         width: 30vw;
