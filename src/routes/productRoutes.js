@@ -39,5 +39,7 @@ productRouter.get('/:id', productController.productDetail);
 // listPorduct
 productRouter.get('/', productController.listProducts);
 
+// Search Porducts
+productRouter.post('/search', productController.searchProducts);
 
 module.exports = productRouter;

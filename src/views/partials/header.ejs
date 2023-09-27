@@ -1,47 +1,75 @@
 <header>
     <div class="header-container">
-          <a class="header-image-container" href="/">
+        <a class="header-image-container" href="/">
             <img class="header-img" src="/images/favicon.ico" alt="Custom tech">
             <h2>CUSTOMTECH</h2>
-          </a>
-          <div class="burger-menu">
-              <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="menu-hidden"> 
-              <div class="menu-list">
-                <div class="icon-container login-menu-list ">
-                    <i class="fa-solid fa-user"></i>
-                    <div class="login-modal" >
-                        <h4><a href="/login">Login</a></h4>
-                        <h4><a href="/register">Registrarse</a></h4>
-                    </div>
-                </div>
+        </a>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-hidden">
+            <div class="menu-list">
+                <% if (locals.isLoged) { %>
+                        <div class="image-logged-container">
+                            <div>
+                                <img src="/images/<%= locals.userLog.image %>" alt="">
+                                <h4 class="image-logged-title"><%= locals.userLog.name %></h4>
+                            </div>
+                            <div class="logOut">
+                                <a href="/logOut"> Cerrar Cesion</a>
+                            </div>
+                        </div>
+                        
+                        <% }else { %>
+                            <div class="icon-container login-burger">
+                                <i class="fa-solid fa-user"></i>
+                    <% } %>
+                            <div class="login-modal">
+                                <h4><a href="/login">Login</a></h4>
+                                <h4><a href="/register">Registrarse</a></h4>
+                            </div>
+                        </div>
 
                 <div class="icon-container">
-                    <a href="/productWishList"> <i class="fa-solid fa-heart"></i>  </a>
+                   <a href="/productWishList"> <i class="fa-solid fa-heart"></i> Wish List </a>
+                </div>
+                <div class="icon-container">
+                    <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i> Carro</a>
                 </div>
 
-                <div class="icon-container">
-                    <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-              </div>
-              <div class="search-menu ">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" placeholder="Buscar..." class="header-search-input"  >
-              </div>
+                <form  class="search-menu" action="/products/search" method="post">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
+                </form>
             </div>
-            
-            <div class="search">
+        </div>
+    </div>
+
+        <div class="search">
+            <form  class="search-menu" action="/products/search" method="post">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar..." class="header-search-input"  >
-            </div>
-            <nav class="header-nav-container">
-                <ul>
-                    <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                  </ul>
-            </nav>
+                <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
+            </form>
+        </div>
+        <nav class="header-nav-container">
+            <div class="image-header-login" >
+                <div class="modal-header">
+                    <a href="/perfil">Perfil</a>
+                    <a href="/logOut">Cerrar Cesion</a>
+                </div>
+            <% if(locals.isLoged) { %>
+                    <img src="/images/<%= locals.userLog.image %>" alt="">
+                    <h4>Hola, <%= locals.userLog.name %></h4>
+                </div>
+            <% } else { %>
+            <ul>
+                <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                
+            <% } %>
+                <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
     </div>
     <section class="header-categories">
         <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
