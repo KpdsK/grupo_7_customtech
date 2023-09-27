@@ -9,6 +9,7 @@ const cookie = require('cookie-parser');
 const cookieExist = require('./middlewares/cookieMiddleware');
 const productApiRouter = require('./routes/api/productApiRoutes')
 const userApiRouter = require('./routes/api/userApiRoutes')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -19,6 +20,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
+app.use(userLoggedMiddleware)
 
 app.use(cookieExist);
 

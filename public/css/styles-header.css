@@ -57,8 +57,9 @@ header {
 .login-modal {
     display: none;
     justify-content: space-around;
-    padding: 10px;
     align-items: center;
+    position: relative;
+    top: 20px;
 }   
 
 .mirar {
@@ -73,12 +74,12 @@ header {
 .menu-hidden {
     
     /* display: none; */
-    position: relative;
+    position: absolute;
     right: 100vw;
+    top: 100px;
     background-color: #4F04A3;
     height: 40vh;
     width: 100%;
-    border-radius: 0 0 12px 12px;
 }
 
 .show {
@@ -91,7 +92,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: start;
 }
 
 .icon-container {
@@ -99,24 +99,29 @@ header {
     margin: 20px;
     width: 80%;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;   
+    list-style-type: none;
 }
 
-.icon-container i {
-    color: #fff;
-}
-
-
-.menu-list i {
-    font-size: 25px;
+.icon-container li {
+    padding: 5px;
     margin: 5px;
 }
 
-.menu-list a {
+.icon-container i {
+    font-size: 20px;
     color: #fff;
 }
+
+.icon-container a {
+    color: #fff;
+}
+
+
+
 .search {
     display: none;
     justify-content: center;
@@ -160,11 +165,86 @@ header {
     display: none;
 }
 
+.image-logged-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.image-logged-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.image-logged-title {
+    color: #fff;
+    font-size: 20px;
+}
+
+.logOut {
+    padding: 5px 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+} 
+
+.logOut a {
+    color: #4F04A3;
+}
+
+.image-header-login {
+    display: flex;
+    align-items: center;
+}
+
+.image-header-login img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.image-header-login h4 {
+    width: 40px;    
+    margin: 10px;
+    color: #fff;
+}
+
+.modal-header {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    background-color: #fff;
+    width: 140px;
+    height: 120px;
+    border :1px solid #666 ;
+    border-radius: 5px;
+}
+
+
+
+.modal-header a {    
+    background-color: #4F04A3;
+    padding: 5px 10px ;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+}
 
 @media (min-width: 361px) {
 
     header {
-        height: 115px;
+        height: 120px;
     }
     
 
@@ -195,6 +275,7 @@ header {
 
     .header-nav-container {
         display: flex;
+        align-items: center;
     }
 
     .search {
@@ -220,6 +301,7 @@ header {
     .header-nav-container li a {
         text-align: center;
         text-decoration: none;
+        margin: 5px;
     }
 
     .header-nav-container i {
