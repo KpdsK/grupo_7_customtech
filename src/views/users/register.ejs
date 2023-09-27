@@ -22,24 +22,24 @@
                     <input id="register-name" class="text-field" type="text" name="nombre" placeholder="Nombre completo">
                 </div>
                 <% if(locals.errors && errors.nombre) { %>
-                    <p> <%= errors.nombre.msg %> </p>
+                    <p class="error-register"> <%= errors.nombre.msg %> </p>
                     <% } %>
 
                 <div>
                     <input id="register-email" class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
                 <% if(locals.errors && errors.email) { %>
-                    <p> <%= errors.email.msg %> </p>
+                    <p class="error-register"> <%= errors.email.msg %> </p>
                 <% } %>
 
                 <div>
                     <input id="register-passw" class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
                 </div>
                 <ul>
-                    <li>El contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
+                    <li class="passw-debe-tener">El contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
                 </ul>
                 <% if(locals.errors && errors.contrasenia) { %>
-                    <p> <%= errors.contrasenia.msg %> </p>
+                    <p class="error-register"> <%= errors.contrasenia.msg %> </p>
                 <% } %>
 
 
@@ -48,7 +48,7 @@
                     <input  class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
                 </div>
                 <% if(locals.errors && errors.fotoPerfil) { %>
-                    <p> <%= errors.fotoPerfil.msg %> </p>
+                    <p class="error-register"> <%= errors.fotoPerfil.msg %> </p>
                 <% } %>
                
 
