@@ -1,47 +1,49 @@
 <header>
     <div class="header-container">
-          <a class="header-image-container" href="/">
+        <a class="header-image-container" href="/">
             <img class="header-img" src="/images/favicon.ico" alt="Custom tech">
             <h2>CUSTOMTECH</h2>
-          </a>
-          <div class="burger-menu">
-              <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="menu-hidden"> 
-              <div class="menu-list">
+        </a>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-hidden">
+            <div class="menu-list">
                 <div class="icon-container login-menu-list ">
                     <i class="fa-solid fa-user"></i>
-                    <div class="login-modal" >
+                    <div class="login-modal">
                         <h4><a href="/login">Login</a></h4>
                         <h4><a href="/register">Registrarse</a></h4>
                     </div>
                 </div>
 
                 <div class="icon-container">
-                    <a href="/productWishList"> <i class="fa-solid fa-heart"></i>  </a>
+                    <a href="/productWishList"> <i class="fa-solid fa-heart"></i> </a>
                 </div>
 
                 <div class="icon-container">
                     <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
-              </div>
-              <div class="search-menu ">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" placeholder="Buscar..." class="header-search-input"  >
-              </div>
             </div>
-            
-            <div class="search">
+            <div class="search-menu ">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar..." class="header-search-input"  >
+                <input type="text" placeholder="Buscar..." class="header-search-input">
             </div>
-            <nav class="header-nav-container">
-                <ul>
-                    <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
-                    <li><a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                  </ul>
-            </nav>
+        </div>
+
+        <div class="search">
+            <form action="/products/search" method="post">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
+            </form>
+        </div>
+        <nav class="header-nav-container">
+            <ul>
+                <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
+                <li><a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
     </div>
     <section class="header-categories">
         <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>

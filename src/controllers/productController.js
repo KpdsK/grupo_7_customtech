@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
+const { Op } = require("sequelize");
 
 const createObjectFromDataBody = (req) => {
     return {
@@ -92,7 +93,7 @@ const productController = {
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
             .then(function (product) {
-                return res.render('products/productDetail', {currentUser: currentUser, cssStyle: "product", editProduct: product[0], products: productData.filter((row) => !row.erased).slice(0, 4) });
+                return res.render('products/productDetail', { currentUser: currentUser, cssStyle: "product", editProduct: product[0], products: productData.filter((row) => !row.erased).slice(0, 4) });
             })
     },
 
@@ -110,6 +111,16 @@ const productController = {
     listProducts: async (req, res) => {
         await db.Product.findAll(
             { where: { erased: false }, raw: true })
+            .then(function (productList) {
+                return res.render('products/listProducts', { cssStyle: "listProducts", product: productList });
+            })
+    },
+
+    searchProducts: async (req, res) => {
+        console.log(req)
+        console.log(req.body)
+        await db.Product.findAll(
+            { where: { erased: false, name: { [Op.like]: "%" + req.body.txtSearch + "%" } } })
             .then(function (productList) {
                 return res.render('products/listProducts', { cssStyle: "listProducts", product: productList });
             })
