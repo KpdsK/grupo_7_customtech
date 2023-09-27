@@ -12,15 +12,16 @@ window.onload  =() => {
   burger.addEventListener('click' , () => {
     hidden.classList.toggle('show')
 
-    login.addEventListener('click', () => {
-      modal.classList.toggle('mirar')
-    })
   })
-
-
   headerLogin.addEventListener('click', () => {
-    modal.classList.toggle('mirar')
+    modalHeader.classList.toggle('mirar')
   })
+
+  login.addEventListener('click', () => {
+    modal.classList.toggle('mirar');
+  })
+
+
 
 
  

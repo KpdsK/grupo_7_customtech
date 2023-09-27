@@ -62,10 +62,6 @@ header {
     top: 20px;
 }   
 
-.mirar {
-    display: flex;
-}
-
 
 .login-modal a {
     padding: 10px;
@@ -226,7 +222,7 @@ header {
     background-color: #fff;
     width: 140px;
     height: 120px;
-    border :1px solid #666 ;
+    border :1px solid #4F04A3 ;
     border-radius: 5px;
 }
 
@@ -241,22 +237,26 @@ header {
     margin: 10px;
 }
 
-@media (min-width: 361px) {
+.mirar {
+    display: flex;
+}
 
+@media (min-width: 361px) {
+    
     header {
         height: 120px;
     }
     
-
-
+    
+    
     .header-container {
         padding: 0;
     }
-
+    
     .menu-hidden {
         display: none;
     }
-
+    
     .header-img {
         width: 60px;
     }
