@@ -23,7 +23,7 @@
     margin-top: 5vh;
     text-align: center;
     margin-bottom: 10%;
-    color: #4F04A3;
+    color: grey;
     height: inherit;
 }
 
@@ -148,6 +148,13 @@ h2 {
     border: 1px solid #4F04A3;
 }
 
+.product-label-file {
+    color: #4F04A3;
+}
+
+.categorias {
+    color: #4F04A3;
+}
 
 @media (min-width: 361px) {
     .bloque-prod {

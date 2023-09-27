@@ -98,6 +98,10 @@
   transition: all 450ms;
 }
 
+.product-label-file {
+  color: #4F04A3;
+}
+
 
 @media (min-width: 361px){
 
