@@ -65,7 +65,9 @@
           </div>
           <div>
             <% if (currentUser && currentUser.id_profile === 2) { %>
-            <button class="Agregar"><a href="/products/<%= editProduct.id %>/edit">EDITAR</a></button>
+              <form class="Agregar" action="/products/<%= editProduct.id %>/edit" method="get">
+                <button class="Agregar" type="submit">EDITAR</button>
+              </form>
             <% } %>
           </div>
       </div>
