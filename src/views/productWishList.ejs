@@ -6,6 +6,7 @@
 <body>
     <%- include('partials/header'); %>
     <main class="main-carrito-whislist">
+        <% if(productos.length!=0) { %>
         <section class="tarjetas-productos">
             <% productos.forEach(function(p){ %>
                 <%- include('partials/productCardWhislist', {producto: p}); %>
@@ -13,10 +14,14 @@
         </section>
         <section class="whislist-agregar-section">
             <div class="contenedor-agregar-todo">
-                <input type="button" class="agregar-todo" value="Agregar Todo">
+                <input type="button" class="agregar-todo" onclick="agregarTodoAlCarrito()" value="Agregar Todo">
                 <i class="fa-solid fa-cart-shopping icon"></i>
             </div>
         </section>
+        <% } else { %>
+            <div class="vacio"><p>Whislist Vacio</p></div>
+            <img class="carro-vacio" src="/images/">
+        <% }; %>
     </main>
     <%- include('partials/footer'); %>
    

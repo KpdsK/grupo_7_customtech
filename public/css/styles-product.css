@@ -140,10 +140,7 @@
 .sub-main:hover .descripciones{
     display: block;
 }
-.sub-main:hover .fa-truck{
-    box-shadow: 0px 0px 10px #39b54a;
-    transform: rotateX(360deg);
-}
+
 .fa-heart {
     margin-left: 8px;
 }

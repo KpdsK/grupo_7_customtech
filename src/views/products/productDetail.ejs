@@ -36,7 +36,7 @@
         <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
       </div>
        <div class="icono-corazon">
-        <a href="productWhisList"> <i class="fas fa-regular fa-heart"></i></a>
+        <i class="fas fa-regular fa-heart" onclick="agregarProductoAWishList(<%= editProduct.id %>)"></i>
        </div>
 
   </div>
@@ -72,12 +72,6 @@
           </div>
       </div>
     </div>
-    
-
-   
-  
-
-
 
 <h4 class="product-recomended-title"> Productos recomendados</h4>
     
