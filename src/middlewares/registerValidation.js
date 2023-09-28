@@ -11,7 +11,7 @@ module.exports = [
     }
     req.body={"user":existingUser,...req.body}
   }),
-  body('contrasenia').exists().isStrongPassword({ minLength: 8, minUppercase: 1, minLowercase: 1, minSymbols: 1, minNumbers: 1 }).withMessage('La contraseña debe contener letras en Mayuscula y minuscula, al menos un numero y un caracter especial'),
+  body('contrasenia').exists().isStrongPassword({ minLength: 8, minUppercase: 1, minLowercase: 1, minSymbols: 1, minNumbers: 1 }).withMessage('Contraseña no válida'),
   body('fotoPerfil').custom(async (_, { req }) => {
     if (!(['.jpg','.jpeg','.png','.gif'].includes((path.extname(req.file.path)).toLowerCase()))) {
       throw new Error('Formato imagen no valido (solo JPG, JPEG, PNG, GIF)')

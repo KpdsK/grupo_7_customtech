@@ -1,11 +1,13 @@
 header {
     display: flex;
+    flex-wrap: wrap;
     width: 100vw;
     background-color: #4F04A3;
     height: 100px;
     position: fixed;
     z-index: 3;
     top: 0;
+    margin: auto;
 }
 
 .header-container {
@@ -47,7 +49,7 @@ header {
 }
 
 .burger-menu i {
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #fff;
     border-radius: 5px;
     font-size: 15px;
@@ -244,7 +246,8 @@ header {
 @media (min-width: 361px) {
     
     header {
-        height: 120px;
+        height: auto;
+        justify-content: center;
     }
     
     
@@ -266,7 +269,7 @@ header {
     }
 
     .header-image-container h2 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .burger-menu {
@@ -276,6 +279,7 @@ header {
     .header-nav-container {
         display: flex;
         align-items: center;
+        margin: auto;
     }
 
     .search {
@@ -312,6 +316,10 @@ header {
         background-color: #fff;
 
     }
+
+    .modal-header {
+        top: 120px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -340,5 +348,9 @@ header {
     .header-nav-container i:hover {
         background-color: #4F04A3;
         color: #fff;
+    }
+
+    .modal-header {
+        top: 100px;
     }
 }

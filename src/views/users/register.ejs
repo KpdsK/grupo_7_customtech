@@ -35,13 +35,14 @@
                 <div>
                     <input id="register-passw" class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
                 </div>
-                <ul>
-                    <li class="passw-debe-tener">El contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
-                </ul>
+
                 <% if(locals.errors && errors.contrasenia) { %>
                     <p class="error-register"> <%= errors.contrasenia.msg %> </p>
                 <% } %>
-
+                
+                <ul>
+                    <li class="passw-debe-tener">La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
+                </ul>
 
                 <div class="fotoPerfil">
                     <label class="fotoperfil" for="fotoPerfil">Agregar imagen</label>

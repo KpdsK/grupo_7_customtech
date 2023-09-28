@@ -1,6 +1,4 @@
 
-window.onload  =() => {
-
   const headerLogin = document.querySelector('.image-header-login');
   const modalHeader = document.querySelector('.modal-header')
   const hidden = document.querySelector('.menu-hidden');
@@ -9,6 +7,7 @@ window.onload  =() => {
   const modal = document.querySelector('.login-modal')
 
 
+  
   burger.addEventListener('click' , () => {
     hidden.classList.toggle('show')
 
@@ -17,12 +16,8 @@ window.onload  =() => {
     modalHeader.classList.toggle('mirar')
   })
 
-  login.addEventListener('click', () => {
-    modal.classList.toggle('mirar');
-  })
-  
-
-
-
-
-}
+  if(login != null) {
+    login.addEventListener('click', () => {
+      modal.classList.toggle('mirar');
+    })
+  } 
