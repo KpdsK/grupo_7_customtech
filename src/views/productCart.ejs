@@ -6,6 +6,7 @@
     <body>
         <%- include('partials/header'); %>
             <main class="main-carrito-whislist">
+                <% if(productos.length!=0) { %>
                 <section class="tarjetas-productos">
                     <% let total=0 %>
                     <% productos.forEach(function(p){ %>
@@ -31,6 +32,9 @@
                         </div>
                     </div>
                 </section>
+                <% } else { %>
+                    <div><p>Carrito Vacio</p></div>
+                <% }; %>
             </main>
             <%- include('partials/footer'); %>
 

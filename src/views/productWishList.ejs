@@ -6,6 +6,7 @@
 <body>
     <%- include('partials/header'); %>
     <main class="main-carrito-whislist">
+        <% if(productos.length!=0) { %>
         <section class="tarjetas-productos">
             <% productos.forEach(function(p){ %>
                 <%- include('partials/productCardWhislist', {producto: p}); %>
@@ -17,6 +18,9 @@
                 <i class="fa-solid fa-cart-shopping icon"></i>
             </div>
         </section>
+        <% } else { %>
+            <div><p>Whislist Vacio</p></div>
+        <% }; %>
     </main>
     <%- include('partials/footer'); %>
    
