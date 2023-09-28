@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs')
 
 const { validationResult } = require("express-validator");
 
-// const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../database/users.json')));
 
 const userController = {
     home: async (req, res) => {
@@ -109,13 +108,72 @@ const userController = {
 
     productCart: async (req, res) => {
 
-        const productsData = await db.Product.findAll()
-        return res.render('productCart', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased) });
-
+        const productsData = await db.User.findAll({
+            where: { id: req.session.userLog.id },
+            attributes: ["name"],
+            include: {
+                model: db.Product,
+                as: 'product_cart',
+                through: {
+                    association: db.Product.ProductCart,
+                    attributes: ["amount"]
+                },
+                where: { erased: false },
+                attributes: ["id","price", "name", "description", "image"]
+            }
+        }
+        );
+        // let prod = productsData.pop().product_cart;
+        let prod = productsData.length!=0 ? productsData.pop().product_cart : [];
+        return res.render('productCart', { cssStyle: "carrito-whislist", productos: prod });
+    },
+    deleteProductCart: async (req, res) => {
+        const productsData = await db.ProductCart.destroy({
+            where: { id_user: req.session.userLog.id, id_product: req.body.id_product }}
+        );
+        return res.status(200).json('{"resultado":"ok"}');
+    },
+    addProductCart: async (req, res) => {
+        const productsData = await db.ProductCart.create({ id_user: req.session.userLog.id,
+            id_product: req.body.id_product, amount: req.body.amount });
+        return res.status(200).json('{"resultado":"ok"}');
+    },
+    updateProductCart: async (req, res) => {
+        const productsData = await db.ProductCart.update({
+                amount: req.body.amount,
+            },{
+            where: { id_user: req.session.userLog.id, id_product: req.body.id_product }}
+        );
+        return res.status(200).json('{"resultado":"ok"}');
     },
     wishList: async (req, res) => {
-        const productsData = await db.Product.findAll()
-        return res.render('productWishList', { cssStyle: "carrito-whislist", productos: productsData.filter((row) => !row.erased) });
+        const productsData = await db.User.findAll({
+            where: { id: req.session.userLog.id },
+            attributes: ["name"],
+            include: {
+                model: db.Product,
+                as: 'wish_list',
+                through: {
+                    association: db.Product.WishList
+                },
+                where: { erased: false },
+                attributes: ["id","price", "name", "description", "image"]
+            }
+        }
+        );
+        let prod = productsData.length!=0 ? productsData.pop().wish_list : [];
+        return res.render('productWishList', { cssStyle: "carrito-whislist", productos: prod });
+    },
+    deleteWishList: async (req, res) => {
+        const productsData = await db.WishList.destroy({
+            where: { id_user: req.session.userLog.id, id_product: req.body.id_product }}
+        );
+        return res.status(200).json('{"resultado":"ok"}');
+    },
+    addToWishList: async (req, res) => {
+        const productsData = await db.WishList.create({ id_user: req.session.userLog.id,
+            id_product: req.body.id_product });
+        return res.status(200).json('{"resultado":"ok"}');
     },
 
 };

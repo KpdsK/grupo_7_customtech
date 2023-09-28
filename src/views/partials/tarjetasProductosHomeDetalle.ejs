@@ -1,5 +1,5 @@
 <a class="sub-main" href="/products/<%= producto.id %>">
-    <p class="fa-regular fa-heart"></p>
+    <i class="fa-regular fa-heart" onclick="agregarProductoAWishList(<%= producto.id %>)" ></i>
     <img class=productos src="/images/<%= producto.image %>" alt="Imagen principal">
     <div class="sub-main-descripcion">
     <p class="descripciones"><strong><%= producto.name %></strong></p>

@@ -41,11 +41,11 @@ window.onload  =() => {
   }
 
   // Cambiar automáticamente las imágenes cada 2 segundos
-  setInterval(function () {
-    plusSlides(1);
-  }, 2000);
+  // setInterval(function () {
+  //   plusSlides(1);
+  // }, 2000);
 
-  // Mostrar la primera imagen al cargar la página
+  // // Mostrar la primera imagen al cargar la página
   showSlides(slideIndex);
   
 

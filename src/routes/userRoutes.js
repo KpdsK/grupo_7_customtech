@@ -28,8 +28,13 @@ const fileUpload = multer({
 userRouter.get('/', userController.home);
 
 userRouter.get('/productCart', logMiddleware, userController.productCart);
+userRouter.delete('/productCart', logMiddleware, userController.deleteProductCart);
+userRouter.put('/productCart', logMiddleware, userController.updateProductCart);
+userRouter.post('/productCart', logMiddleware, userController.addProductCart);
 
 userRouter.get('/productWishList', logMiddleware, userController.wishList);
+userRouter.delete('/productWishList', logMiddleware, userController.deleteWishList);
+userRouter.post('/productWishList', logMiddleware, userController.addToWishList);
 
 userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', loginValidation, userController.proccesLogin)

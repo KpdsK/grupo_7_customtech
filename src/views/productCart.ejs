@@ -10,13 +10,15 @@
                     <% let total=0 %>
                     <% productos.forEach(function(p){ %>
                         <%- include('partials/productCardCart', {producto: p}); %>
-                        <%  total += p.cantidad * p.precio %>
+                        <%  total += p.ProductCart.dataValues.amount * p.price %>
                     <% }); %>
                 </section>
                 <section class="carrito-total-section">
                     <div class="contenedor-total">
                         <div class="carrito-seguir-comprar">
-                            <input type="button" class="seguir-comprando" value="Seguir Comprando">
+                            <form action="/products" method="get">
+                                <input type="submit" class="seguir-comprando" value="Seguir Comprando">
+                            </form>
                         </div>
                         <div class="carrito-total-boton">
                             <div class="carrito-total">
