@@ -171,6 +171,20 @@ img {vertical-align: middle;}
     transition: all 450ms;
 }
 
+.list-product {
+  color: #4F04A3;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.product-recomended-title {
+  color: #4F04A3;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
 
 
 

@@ -24,7 +24,7 @@
 
                 <div>
                     <% if(locals.errors && errors.email) { %>
-                        <p> <%= errors.email.msg %> </p>
+                        <p class="error-login"> <%= errors.email.msg %> </p>
                     <% } %>
                 </div>
 
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <% if(locals.errors && errors.contrasenia) { %>
-                        <p> <%= errors.contrasenia.msg %> </p>
+                        <p class="error-login"> <%= errors.contrasenia.msg %> </p>
                     <% } %>
                 </div>
 

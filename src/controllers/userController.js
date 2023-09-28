@@ -27,6 +27,12 @@ const userController = {
         return res.redirect('/perfil');
     },
 
+
+    logOut: async (req, res) =>  {
+        req.session.destroy();
+        return res.redirect('/')
+    },
+
     perfil: (req, res) => {
         const user = req.session.userLog
         res.render('users/perfil', { user: user, cssStyle: "perfil" })

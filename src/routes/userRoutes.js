@@ -39,6 +39,9 @@ userRouter.post('/productWishList', logMiddleware, userController.addToWishList)
 userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', loginValidation, userController.proccesLogin)
 
+// LogOut
+userRouter.get('/logOut', userController.logOut);
+
 userRouter.get('/perfil', logMiddleware, userController.perfil);
 userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), editUserValidation, userController.updateUserData)
 userRouter.delete('/users/:id/delete', logMiddleware, userController.deleteUser)

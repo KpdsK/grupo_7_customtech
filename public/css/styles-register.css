@@ -168,8 +168,13 @@ canvas {
     border: .5px solid #fff;
 }
 
+.passw-debe-tener {
+    color: gray;
+}
 
-
+.error-register {
+    color: gray;
+}
 
 
 @media (min-width: 361px) {
