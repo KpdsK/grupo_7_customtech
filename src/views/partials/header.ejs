@@ -20,9 +20,9 @@
                             </div>
                         </div>
                         
-                        <% }else { %>
-                            <div class="icon-container login-burger">
-                                <i class="fa-solid fa-user"></i>
+                    <% }else { %>
+                        <div class="icon-container login-burger">
+                            <i class="fa-solid fa-user"></i>
                     <% } %>
                             <div class="login-modal">
                                 <h4><a href="/login">Login</a></h4>
@@ -44,14 +44,13 @@
             </div>
         </div>
     </div>
-
-        <div class="search">
+    <div class="search">
             <form  class="search-menu" action="/products/search" method="post">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
             </form>
-        </div>
-        <nav class="header-nav-container">
+    </div>
+    <nav class="header-nav-container">
             <div class="image-header-login" >
                 <% if(locals.isLoged) { %>
                     <div class="modal-header">
@@ -69,7 +68,7 @@
                 <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
                 <li><a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-        </nav>
+    </nav>
     </div>
     <section class="header-categories">
         <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>

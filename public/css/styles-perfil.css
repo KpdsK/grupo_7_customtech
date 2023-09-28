@@ -1,5 +1,5 @@
 .perfil-container {
-  height: 600px;
+  height: 80vh;
   text-align: center;
   color: #4F04A3;
   margin-top: 150px;
@@ -40,11 +40,28 @@
   border: 1px solid #4F04A3;
   color: #fff;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
-  width: 100px;
+  width: 150px;
 }
 
+.button-create {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:auto;
+  padding: 12px 10px;
+}
+
+.button-submit-create{
+  font-size: 14px;
+  width: 100%;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #4F04A3;
+}
 
 @media (min-width: 361px) {
 
