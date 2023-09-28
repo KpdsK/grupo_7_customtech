@@ -53,11 +53,11 @@
         </div>
         <nav class="header-nav-container">
             <div class="image-header-login" >
-                <div class="modal-header">
-                    <a href="/perfil">Perfil</a>
-                    <a href="/logOut">Cerrar Cesion</a>
-                </div>
-            <% if(locals.isLoged) { %>
+                <% if(locals.isLoged) { %>
+                    <div class="modal-header">
+                        <a href="/perfil">Perfil</a>
+                        <a href="/logOut">Cerrar Cesion</a>
+                    </div>
                     <img src="/images/<%= locals.userLog.image %>" alt="">
                     <h4>Hola, <%= locals.userLog.name %></h4>
                 </div>
