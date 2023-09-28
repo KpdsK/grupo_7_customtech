@@ -140,7 +140,7 @@ const userController = {
         return res.status(200).json('{"resultado":"ok"}');
     },
     addProductCart: async (req, res) => {
-        const productsData = await db.ProductCart.create({ id_user: req.session.userLog.id,
+        const productsData = await db.ProductCart.upsert({ id_user: req.session.userLog.id,
             id_product: req.body.id_product, amount: req.body.amount });
         return res.status(200).json('{"resultado":"ok"}');
     },
@@ -177,7 +177,7 @@ const userController = {
         return res.status(200).json('{"resultado":"ok"}');
     },
     addToWishList: async (req, res) => {
-        const productsData = await db.WishList.create({ id_user: req.session.userLog.id,
+        const productsData = await db.WishList.upsert({ id_user: req.session.userLog.id,
             id_product: req.body.id_product });
         return res.status(200).json('{"resultado":"ok"}');
     },

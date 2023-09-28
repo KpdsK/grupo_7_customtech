@@ -3,10 +3,13 @@ module.exports = (sequelize, dataTypes) => {
     const cols = {
         id_user: {
             type: dataTypes.BIGINT(10).UNSIGNED,
+            primaryKey: true,
             allowNull: false
         },
         id_product: {
-            type: dataTypes.BIGINT(10).UNSIGNED
+            type: dataTypes.BIGINT(10).UNSIGNED,
+            primaryKey: true,
+            allowNull: false
         },
         amount: {
             type: dataTypes.INTEGER.UNSIGNED
