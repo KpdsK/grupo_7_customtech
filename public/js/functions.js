@@ -84,7 +84,7 @@ function agregarProductoAWishList(idProd) {
 }
 
 function fetchToSite(endpoint, method, _datos) {
-    fetch('http://10.0.0.1:3007/'+endpoint, {
+    fetch('http://192.168.100.170:3007/'+endpoint, {
         method: method,
         body: JSON.stringify(_datos),
         headers: { "Content-type": "application/json; charset=UTF-8" }
