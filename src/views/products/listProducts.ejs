@@ -7,7 +7,7 @@
 
 <div class="list-products">
     <% product.forEach((row) => {  %>
-        <article class="sub-main"> 
+        <div class="sub-main"> 
             <a href="/products/<%= row.id %>">
                 <div class="image-list-container">
                     <img class="" src="/images/<%= row.image %>" alt="<%= row.image %>">
@@ -21,7 +21,7 @@
                     <i class="fa-solid fa-cart-shopping icon"></i>
                 </div>
             </a>
-        </article>
+        </div>
         <% }) %>
 </div>
 

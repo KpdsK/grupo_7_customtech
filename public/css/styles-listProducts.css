@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 200px;
     background-color: #fff;
 }
 
@@ -52,8 +52,9 @@
 
 .precio{
     font-size: 18px;
+    font-family: 'Play', sans-serif;
     margin-bottom: 15px;
-    color: #666 ;
+    color: black ;
 }
 
 
@@ -78,12 +79,13 @@ color: #ebebeb;
 @media(min-width: 361px ) {
 
     .list-products {
+        margin-top: 20px;
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
-    .sub-main {
+/*     .sub-main {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -92,6 +94,21 @@ color: #ebebeb;
         flex-wrap: wrap;
         height: 400px;
         margin: 5px;
+    } */
+    .sub-main {
+        width: 45%;
+        flex-wrap: wrap;
+        margin: 5px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .sub-main:hover{
+        box-shadow: 0px 0px 10px #4F04A3;
+    }
+
+    .sub-main:hover .descripciones{
+        display: block;
     }
 
     .info-list {
