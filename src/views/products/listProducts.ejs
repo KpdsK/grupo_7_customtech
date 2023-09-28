@@ -14,8 +14,11 @@
                 </div>
                 <div class="info-list">
                     <h2 class="nombre"><%= row.name %></h2>
-                    <p class="descripcion"><%= row.description %></p> 
                     <p class="precio">$<%= row.price %></p>
+                </div>
+                <div class="contenedor-botonCarrito">
+                    <input type="button" class="agregar-carrito" onclick="agregarProductoAProductCart(<%= product.id %>)" value="Agregar al carrito">
+                    <i class="fa-solid fa-cart-shopping icon"></i>
                 </div>
             </a>
         </article>
