@@ -155,20 +155,14 @@ img {vertical-align: middle;}
     text-align: center;
     width: 100%;
 }
-.heart {
-    display: block;
-    font-size: 16px;
-    color: #39b54a;
-    border: solid 1px #39b54a;
-    padding: 5px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: #FFF;
-    position: absolute;
-    right: 20px;
-    top: -53px;
-    transition: all 450ms;
+
+.fa-heart{
+  border-radius: 18px;
+}
+
+.corazon-wish:hover {
+  box-shadow: 0 0 8px rgba(120, 3, 173, 0.5); 
+  transition: box-shadow 0.3s ease; 
 }
 
 .list-product {
