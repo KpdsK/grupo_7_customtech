@@ -39,6 +39,9 @@ module.exports = (sequelize, dataTypes) => {
         recommended: {
             type: dataTypes.BOOLEAN
         },
+        discount: {
+            type: dataTypes.INTEGER,
+        }
     }
 
     const config = {

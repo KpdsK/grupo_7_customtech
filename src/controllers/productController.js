@@ -93,6 +93,7 @@ const productController = {
         await db.Product.findAll(
             { where: { id: req.params.id, erased: false }, raw: true })
             .then(function (product) {
+                console.log(product)
                 return res.render('products/productDetail', { currentUser: currentUser, cssStyle: "product", editProduct: product[0], products: productData.slice(0, 4) });
             })
     },
