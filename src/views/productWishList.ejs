@@ -14,7 +14,7 @@
         </section>
         <section class="whislist-agregar-section">
             <div class="contenedor-agregar-todo">
-                <input type="button" class="agregar-todo" onclick="agregarTodoAlCarrito()" value="Agregar Todo">
+                <input type="button" class="agregar-todo" onclick="agregarTodoAlCarrito(<%= locals.userLog.id %>, <%= locals.userLog.id %>)" value="Agregar Todo">
                 <i class="fa-solid fa-cart-shopping icon"></i>
             </div>
         </section>

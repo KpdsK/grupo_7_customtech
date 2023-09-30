@@ -1,7 +1,7 @@
 <article class="tarjeta-producto <%= producto.id %>">
     <i class="fa-sharp fa-solid fa-heart corazon-whislist"></i>
-    <i class="fa-solid fa-cart-shopping carrito-whislist" onclick="agregarProductoACarritoDesdeWishList(<%= producto.id %>)"></i>
-    <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist(<%= producto.id %>)" aria-hidden="true"></i>
+    <i class="fa-solid fa-cart-shopping carrito-whislist" onclick="agregarProductoACarritoDesdeWishList(<%= producto.id %>, <%= locals.userLog.id %>)"></i>
+    <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist(<%= producto.id %>, <%= locals.userLog.id %>)" aria-hidden="true"></i>
     <input type="hidden" name="idProducto" value="<%= producto.id %>">
     <div class="tarjeta-producto-cabecera">
         <div class="tarjeta-producto-cabecera-imagen">

@@ -113,7 +113,6 @@ const userController = {
     },
 
     productCart: async (req, res) => {
-
         const productsData = await db.User.findAll({
             where: { id: req.session.userLog.id },
             attributes: ["name"],

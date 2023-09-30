@@ -117,8 +117,6 @@ const productController = {
     },
 
     searchProducts: async (req, res) => {
-        console.log(req)
-        console.log(req.body)
         await db.Product.findAll(
             { where: { erased: false, name: { [Op.like]: "%" + req.body.txtSearch + "%" } } })
             .then(function (productList) {

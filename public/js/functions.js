@@ -1,4 +1,4 @@
-function sumar(inputId, id, precio) {
+function sumar(inputId, id, precio, idUser) {
     const input = document.getElementById(inputId + id);
     var value = input.value;
     const label = document.getElementsByClassName("subtotal-" + id)[0];
@@ -6,21 +6,40 @@ function sumar(inputId, id, precio) {
     input.value = value;
     label.innerHTML = "$" + value * precio;
     calcularTotal()
-    modificarCantidadProductoEnCarrito(input.value, id)
+    modificarCantidadProductoEnCarrito(input.value, id, idUser)
+}
+
+function recargaDatosWishCart(idUsuario) {
+    fetch(`http://localhost:3007/api/users/getDataWishAndCart/${idUsuario}`, {
+        method: 'GET',
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+        .then(response => response.json())
+        .then(obj => {
+            recargarDatosCarrito(obj.data.total_cart,obj.data.cantidad_cart);
+            recargarDatosWish(obj.data.wish_data)
+        }).catch(err => console.log(err));
+}
+
+function recargarDatosCarrito(total_cart, cart_data) {
+    const cartdata = document.getElementById('cartdata');
+    cartdata.innerText = `Carrito cantidad ${cart_data} total ${total_cart}`
+}
+
+function recargarDatosWish(wish_data) {
+    const wishdata = document.getElementById('wishdata');
+    wishdata.innerText = `Wish ${wish_data}`
 }
 
 function calcularTotal() {
-    const subtotales = document.getElementsByClassName("subtotal");
+    const subtotales = [...document.getElementsByClassName("subtotal")];
     const total = document.getElementById('total');
-    let totales = 0;
-    for (let i of subtotales) {
-        totales += parseFloat(i.textContent.replace('$', ''));
-    }
+
+    let totales = subtotales.reduce((tot, ele) => tot + parseFloat(ele.textContent.replace('$', '')), 0)
     total.innerHTML = '$' + totales;
 }
 
-function restar(inputId, id, precio) {
-    console.log(precio);
+function restar(inputId, id, precio, idUser) {
     const input = document.getElementById(inputId + id);
     var value = input.value;
     const label = document.getElementsByClassName("subtotal-" + id)[0];
@@ -30,10 +49,10 @@ function restar(inputId, id, precio) {
     input.value = value;
     label.innerHTML = "$" + value * precio;
     calcularTotal()
-    modificarCantidadProductoEnCarrito(input.value, id)
+    modificarCantidadProductoEnCarrito(input.value, id, idUser)
 }
 
-function quitarProducto(claseElementoAEliminar, sectionToRemove, message) {
+function quitarProducto(claseElementoAEliminar, sectionToRemove, message, idUser) {
     const element = document.getElementsByClassName(claseElementoAEliminar);
     element[0].remove();
     if (document.getElementsByClassName("tarjeta-producto").length === 0) {
@@ -41,70 +60,73 @@ function quitarProducto(claseElementoAEliminar, sectionToRemove, message) {
         document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div><p>${message} Vacio</p></div>`;
         document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";
         document.getElementsByClassName("tarjetas-productos")[0].style.fontSize = "24px"
-    } else if(message=="Carrito") {
-        calcularTotal()
-    }
+    } 
     let _datos = {
         id_product: claseElementoAEliminar,
     }
     if (message=="Carrito") {
-        fetchToSite("productCart", "DELETE", _datos)
+        calcularTotal()
+        fetchToSite("productCart", "DELETE", _datos, idUser)
     } else {
-        fetchToSite("productWishList", "DELETE", _datos)
+        fetchToSite("productWishList", "DELETE", _datos, idUser)
     }
 }
 
-function agregarProductoACarritoDesdeWishList(idProd) {
-    quitarProductoWhislist(idProd);
-    agregarProductoACarrito(idProd)
+function agregarProductoACarritoDesdeWishList(idProd, idUser) {
+    quitarProductoWhislist(idProd, idUser);
+    agregarProductoACarrito(idProd, idUser)
 }
 
-function modificarCantidadProductoEnCarrito(amount, idProd) {
+function modificarCantidadProductoEnCarrito(amount, idProd, idUser) {
     let _datos = {
         id_product: idProd,
         amount: amount
     }
-    console.log(_datos)
-    fetchToSite("productCart", "PUT", _datos)
+    fetchToSite("productCart", "PUT", _datos, idUser)
 }
 
-function agregarProductoACarrito(idProd) {
+function agregarProductoACarrito(idProd, idUser) {
     let _datos = {
         id_product: idProd,
         amount: 1
     }
-    fetchToSite("productCart", "POST", _datos)
+    fetchToSite("productCart", "POST", _datos, idUser);
 }
 
-function agregarProductoAWishList(idProd) {
+function irALogin() {
+    fetch('http://localhost:3007/login', {
+        method: 'GET',
+    })
+}
+
+function agregarProductoAWishList(idProd, idUser) {
     let _datos = {
         id_product: idProd
     }
-    fetchToSite("productWishList", "POST", _datos)
+    fetchToSite("productWishList", "POST", _datos, idUser);
 }
 
-function fetchToSite(endpoint, method, _datos) {
+function fetchToSite(endpoint, method, _datos, id) {
     fetch('http://localhost:3007/'+endpoint, {
         method: method,
         body: JSON.stringify(_datos),
         headers: { "Content-type": "application/json; charset=UTF-8" }
     })
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(json => recargaDatosWishCart(id))
         .catch(err => console.log(err));
 }
 
-function quitarProductoCarrito(claseElementoAEliminar) {
-    quitarProducto(claseElementoAEliminar, "carrito-total-section", "Carrito");
+function quitarProductoCarrito(claseElementoAEliminar, idUser) {
+    quitarProducto(claseElementoAEliminar, "carrito-total-section", "Carrito", idUser);
 }
 
-function quitarProductoWhislist(claseElementoAEliminar) {
-    quitarProducto(claseElementoAEliminar, "whislist-agregar-section", "Whislist");
+function quitarProductoWhislist(claseElementoAEliminar, idUser) {
+    quitarProducto(claseElementoAEliminar, "whislist-agregar-section", "Whislist", idUser);
 }
 
-function agregarTodoAlCarrito() {
-    console.log(document.getElementsByClassName("tarjeta-producto"));
-    [...document.getElementsByClassName("tarjeta-producto")].forEach(element => {agregarProductoACarrito(element.classList[1]);quitarProductoWhislist(element.classList[1])});
+function agregarTodoAlCarrito(idUser) {
+    [...document.getElementsByClassName("tarjeta-producto")].forEach(element => {agregarProductoACarrito(element.classList[1],idUser);quitarProductoWhislist(element.classList[1],idUser)});
     document.getElementsByClassName("whislist-agregar-section")[0].remove();
     document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div><p>Whislist Vacio</p></div>`;
     document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";

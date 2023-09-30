@@ -17,7 +17,7 @@
                     <p class="precio">$<%= row.price %></p>
                 </div>
                 <div class="contenedor-botonCarrito">
-                    <input type="button" class="agregar-carrito" onclick="agregarProductoAProductCart(<%= product.id %>)" value="Agregar al carrito">
+                    <input type="button" class="agregar-carrito" onclick="agregarProductoACarrito(<%= row.id %>, <%= locals.userLog.id %>)" value="Agregar al carrito">
                     <i class="fa-solid fa-cart-shopping icon"></i>
                 </div>
             </a>

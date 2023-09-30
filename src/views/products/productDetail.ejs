@@ -36,7 +36,7 @@
         <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
       </div>
        <div class="icono-corazon">
-        <i class="fas fa-regular fa-heart" onclick="agregarProductoAWishList(<%= editProduct.id %>)"></i>
+        <i class="fas fa-regular fa-heart" onclick=<% if(locals.isLoged) { %>"agregarProductoAWishList(<%= editProduct.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>"></i>
        </div>
 
   </div>
