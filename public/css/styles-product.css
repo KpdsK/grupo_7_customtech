@@ -102,6 +102,14 @@
   color: #4F04A3;
 }
 
+.fa-heart{
+  border-radius: 18px;
+}
+
+.fa-heart:hover {
+  box-shadow: 0 0 12px rgba(120, 3, 173, 0.5); 
+  transition: box-shadow 0.3s ease; 
+}
 
 @media (min-width: 361px){
 
