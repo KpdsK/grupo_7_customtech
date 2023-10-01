@@ -9,8 +9,8 @@ function recargaDatosWishCart() {
 
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
-    // const totalcartdata = document.getElementById('totalcartdata');
-    // cartdata.innerText = `Carrito  ${cart_data} total ${total_cart}`
+    const totalcartdata = document.getElementById('totalcartdata');
+    console.log(totalcartdata);
     cartdata.innerText = `${cart_data}`
     // totalcartdata.innerText = `${total_cart}`
 }
