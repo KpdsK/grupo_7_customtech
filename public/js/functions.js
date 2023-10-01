@@ -9,11 +9,13 @@ function recargaDatosWishCart() {
 
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
+    // const totalcartdata = document.getElementById('totalcartdata');
     // cartdata.innerText = `Carrito  ${cart_data} total ${total_cart}`
-    cartdata.innerText = `${total_cart}`
+    cartdata.innerText = `${cart_data}`
+    // totalcartdata.innerText = `${total_cart}`
 }
 
 function recargarDatosWish(wish_data) {
     const wishdata = document.getElementById('wishdata');
-    wishdata.innerText = ` ${wish_data}`
+    wishdata.innerText = `${wish_data}`
 }

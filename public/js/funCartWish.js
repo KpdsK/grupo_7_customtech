@@ -13,7 +13,7 @@ function ready() {
     }
     let tarjetasProdWish = document.querySelector(".whist");
     if(tarjetasProdWish){crearListaWish(tarjetasProdWish);};
-    let tarjetasProdCart = document.querySelector(".cart");
+    let tarjetasProdCart = document.querySelector(".carrito-cont");
     if(tarjetasProdCart){crearListaCart(tarjetasProdCart);}
 }
 

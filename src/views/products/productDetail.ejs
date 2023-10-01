@@ -47,7 +47,7 @@
       <div class="product-price">
         <h2>$ <%= editProduct.price %></h2>
         <!-- <form class="Agregar" action="/productCart" method="get"> -->
-          <button class="Agregar agregarCarrito" type="submit">Agregar al carrito</button>
+          <button class="Agregar agregarCarrito" onclick=<% if(locals.isLoged) { %>"agregarItemACarritoDesdeBoton(<%= JSON.stringify(editProduct) %>)"<%} else {%> "irALogin() "<%} %> type="button">Agregar al carrito</button>
         <!-- </form> -->
     
         <p><%= editProduct.stock %> STOCK EN LA WEB </p>
