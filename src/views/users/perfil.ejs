@@ -54,14 +54,12 @@
                 </p>
                 <% } %>
               </div>
-              <!-- <div>
-                <button class="button-submit" type="submit">Editar</button>
-              </div> -->
-            </form>
-            <div class="button-container" >
               <div>
                 <button class="button-submit" type="submit">Editar</button>
               </div>
+            </form>
+            <div class="button-container" >
+    
               <form action="/users/<%= user.id%>/delete?_method=DELETE" method="post">
                 <button class="button-submit" type="submit">Eliminar</button>
               </form>

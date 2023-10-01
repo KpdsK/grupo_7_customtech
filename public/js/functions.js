@@ -23,12 +23,13 @@ function recargaDatosWishCart(idUsuario) {
 
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
-    cartdata.innerText = `Carrito cantidad ${cart_data} total ${total_cart}`
+    // cartdata.innerText = `Carrito  ${cart_data} total ${total_cart}`
+    cartdata.innerText = `${total_cart}`
 }
 
 function recargarDatosWish(wish_data) {
     const wishdata = document.getElementById('wishdata');
-    wishdata.innerText = `Wish ${wish_data}`
+    wishdata.innerText = ` ${wish_data}`
 }
 
 function calcularTotal() {

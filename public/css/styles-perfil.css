@@ -1,5 +1,5 @@
 .perfil-container {
-  height: 80vh;
+  height: 700px;
   text-align: center;
   color: #4F04A3;
   margin-top: 150px;
@@ -87,6 +87,11 @@
 
 
 @media (min-width:769px) {
+  .perfil-container {
+    margin-top: 100px;
+    height: 700px;
+  }
+
   .perfil-data {
     width: 750px;
   }
