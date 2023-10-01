@@ -53,44 +53,5 @@ module.exports = {
         }
     },
 
-    getDataWishCart: async (req, res) => {
-        let response = {};
-        try {
-            const products_data = await db.ProductCart.findAll({
-                where: { id_user: req.params.id },
-                attributes: ['id_product', 'amount'],
-                exclude: ['created_at', 'updated_at'], raw: true
-            }).then(cart => cart);
-
-            const cart = await db.Product.findAll({
-                where: { id: { [Op.in]: products_data.map(e => e.id_product) } },
-                attributes: ['id', 'price'],
-                exclude: ['created_at', 'updated_at'],
-                raw: true
-            }).then(cart => cart);
-
-            let arr = (cart.map(item => {
-                let ob = products_data.find((elm) => (elm.id_product === item.id));
-                ob.price = item.price;
-                return ob
-            }));
-
-            let total = arr.reduce((tot, e) => tot + e.amount * e.price, 0);
-            let cantidad_cart = products_data.reduce((tot, e) => tot + e.amount, 0);
-            const cart_data = { cantidad_cart: cantidad_cart, total_cart: total }
-            const wish_data = await db.WishList.count({
-                where: { id_user: req.params.id },
-                exclude: ['created_at', 'updated_at'],
-                raw: true
-            }).then(wish => wish);
-
-            response.data = { ...cart_data, wish_data: wish_data };
-            return res.status(200).json(response);
-
-        } catch (error) {
-            console.log("Hubo un error:", error);
-            response.msg = `Oops! algo salió mal`
-            return res.status(500).json(response);
-        }
-    }
+   
 }

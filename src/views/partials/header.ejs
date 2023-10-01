@@ -3,15 +3,6 @@
         <a class="header-image-container" href="/">
             <img class="header-img" src="/images/favicon.ico" alt="Custom tech">
             <h2>CUSTOMTECH</h2>
-            <% if(locals.isLoged) { %>
-                <div id="datosWishCart" style="color: white;">
-                    <p id="wishdata"></p>
-                    <p id="cartdata"></p>
-                </div> 
-                <script type="text/javascript">
-                    recargaDatosWishCart();
-                </script>
-            <%} %>
         </a>
         <div class="burger-menu">
             <i class="fa-solid fa-bars"></i>
@@ -25,7 +16,7 @@
                                 <h4 class="image-logged-title"><%= locals.userLog.name %></h4>
                             </div>
                             <div class="logOut">
-                                <a href="/logOut"> Cerrar Cesion</a>
+                                <a href="/logOut"> Cerrar Sesion</a>
                             </div>
                         </div>
                         
@@ -67,7 +58,7 @@
                 <% if(locals.isLoged) { %>
                     <div class="modal-header">
                         <a href="/perfil">Perfil</a>
-                        <a href="/logOut">Cerrar Cesion</a>
+                        <a href="/logOut">Cerrar Sesion</a>
                     </div>
                     <img src="/images/<%= locals.userLog.image %>" alt="">
                     <h4>Hola, <%= locals.userLog.name %></h4>
@@ -87,7 +78,7 @@
                         <p class="cartdata" id="cartdata"></p>
                     </div> 
                     <script type="text/javascript">
-                        recargaDatosWishCart(<%= locals.userLog.id %>);
+                        recargaDatosWishCart();
                     </script>
                 <%} %>
 

@@ -28,13 +28,8 @@ const fileUpload = multer({
 userRouter.get('/', userController.home);
 
 userRouter.get('/productCart', logMiddleware, userController.productCart);
-userRouter.delete('/productCart', logMiddleware, userController.deleteProductCart);
-userRouter.put('/productCart', logMiddleware, userController.updateProductCart);
-userRouter.post('/productCart', logMiddleware, userController.addProductCart);
 
 userRouter.get('/productWishList', logMiddleware, userController.wishList);
-userRouter.delete('/productWishList', logMiddleware, userController.deleteWishList);
-userRouter.post('/productWishList', logMiddleware, userController.addToWishList);
 
 userRouter.get('/login', guestMiddleware, userController.login);
 userRouter.post('/users/login', loginValidation, userController.proccesLogin)
@@ -46,6 +41,7 @@ userRouter.get('/perfil', logMiddleware, userController.perfil);
 userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), editUserValidation, userController.updateUserData)
 userRouter.delete('/users/:id/delete', logMiddleware, userController.deleteUser)
 
+userRouter.get('/checkout', logMiddleware, userController.checkout);
 userRouter.get('/register', guestMiddleware, userController.register);
 userRouter.post('/users/register', fileUpload.single('fotoPerfil'), registerValidation, userController.processRegister);
 
