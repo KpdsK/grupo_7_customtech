@@ -5,9 +5,15 @@
   const burger = document.querySelector('.burger-menu');
   const login = document.querySelector('.login-burger');
   const modal = document.querySelector('.login-modal');
-  const cart = document.querySelector('.cart');
-  const cartdata = document.querySelector('#cartdata');
-  console.log(cartdata)
+  // const cart = document.querySelector('.cart');
+  // const cartdata = document.querySelector('#cartdata');
+  const wishData = document.querySelector('.wishdata');
+
+  if(wishData != null) {
+    if(wishData.textContent == '0'){
+        wishData.style.display = 'none'
+    } 
+  }
   
   burger.addEventListener('click' , () => {
     hidden.classList.toggle('show')

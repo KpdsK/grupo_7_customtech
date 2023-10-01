@@ -20,7 +20,7 @@ function ready() {
 function crearListaCart(contenedor) {
     let datosCart = JSON.parse(localStorage.getItem("carrito"));
     if(datosCart.length == 0 ){price
-        contenedor.innerHTML = '<div><p>Carrito Vacio</p></div>';
+        contenedor.innerHTML = '<div class="vacio"><strong>Carrito Vacio</strong></div>';
     } else {
         contenedor.innerHTML = htmlHeadCart() + crearTarjetasCart(datosCart) + htmlFootCart();
     }
@@ -128,7 +128,7 @@ function htmlHeadWish() {
 }
 
 function htmlWishVacia() {
-    let html = '<div class="vacio"><strong>Whislist Vacio</strong></div>';
+    let html = '<div class="vacio"><strong>Whislist Vacio</strong><a href="/products" > Ver Productos </a></div>';
     html += '<section class="tarjetas-productos">';
     return html;
 }
@@ -260,7 +260,8 @@ function quitarDeCarrito(idProd) {
     element[0].remove();
     if (document.getElementsByClassName("tarjeta-producto").length === 0) {
         document.getElementsByClassName("carrito-total-section")[0].remove();
-        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div><p>Carrito Vacio</p></div>`;
+        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div class="vacio"><strong>Carrito Vacio</strong>
+        <a href="/products" > Ver Productos </a></div>`;
         document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";
         document.getElementsByClassName("tarjetas-productos")[0].style.fontSize = "24px"
     }
@@ -328,7 +329,7 @@ function quitarDeWish(idProd) {
     element[0].remove();
     if ((JSON.parse(localStorage.getItem("wish"))).length === 0) {
         document.getElementsByClassName("whislist-agregar-section")[0].remove();
-        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div class="vacio" ><strong>Whislist Vacia</strong></div>`;
+        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div class="vacio" ><strong>Whislist Vacia</strong><a href="/products" > Ver Productos </a></div>`;
         document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";
         document.getElementsByClassName("tarjetas-productos")[0].style.fontSize = "24px"
     }
@@ -349,7 +350,7 @@ function agregarItemDesdeWish(idProd){
 function agregarTodoAlCarrito() {
     [...document.getElementsByClassName("tarjeta-producto")].forEach(element => { agregarItemACarritoDesdeWish(crearProd(element)); quitarDeWish(element.classList[1]) });
     document.getElementsByClassName("whislist-agregar-section")[0].remove();
-    document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div><p>Whislist Vacio</p></div>`;
+    document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div class="vacio><strong>Whislist Vacio</strong> <a href="/products" > Ver Productos </a></div>`;
     document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";
     document.getElementsByClassName("tarjetas-productos")[0].style.fontSize = "24px"
 }
