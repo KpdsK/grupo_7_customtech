@@ -5,40 +5,13 @@
 
     <body>
         <%- include('partials/header'); %>
-            <main class="main-carrito-whislist">
-                <% if(productos.length!=0) { %>
-                <section class="tarjetas-productos">
-                    <% let total=0 %>
-                    <% productos.forEach(function(p){ %>
-                        <%- include('partials/productCardCart', {producto: p}); %>
-                        <%  total += p.ProductCart.dataValues.amount * p.price %>
-                    <% }); %>
-                </section>
-                <section class="carrito-total-section">
-                    <div class="contenedor-total">
-                        <div class="carrito-seguir-comprar">
-                            <form action="/products" method="get">
-                                <input type="submit" class="seguir-comprando" value="Seguir Comprando">
-                            </form>
-                        </div>
-                        <div class="carrito-total-boton">
-                            <div class="carrito-total">
-                                <label>Total</label>
-                                <label id="total">$<%= total %></label>
-                            </div>
-                            <div class="carrito-comprar">
-                                <input type="button" class="comprar" value="Comprar">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <% } else { %>
-                    <div><p>Carrito Vacio</p></div>
-                <% }; %>
-            </main>
+            <main class="main-carrito-whislist cart">
+               
+            </main>    
             <%- include('partials/footer'); %>
 
     </body>
     <script src="/js/header.js" ></script>
+    <script src="/js/funCartWish.js" ></script>
 
 </html>

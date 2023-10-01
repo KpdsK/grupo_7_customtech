@@ -8,7 +8,7 @@
 <div class="list-products">
     <% product.forEach((row) => {  %>
         <div class="sub-main"> 
-            <i class="fa-regular fa-heart corazon-wish" onclick=<% if(locals.isLoged) { %>"agregarProductoAWishList(<%= row.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>"></i>
+            <i class="fa-regular fa-heart corazon-wish" onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(row) %>)" <% } %>></i>
             <a href="/products/<%= row.id %>">
                 <div class="image-list-container">
                     <img class="" src="/images/<%= row.image %>" alt="<%= row.image %>">
@@ -17,8 +17,8 @@
                     <h2 class="nombre"><%= row.name %></h2>
                     <p class="precio">$<%= row.price %></p>
                 </div>
-                <div class="contenedor-botonarrito">
-                    <input type="button" class="agregar-carrito" onclick=<% if(locals.isLoged) { %>"agregarProductoACarrito(<%= row.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>" value="Agregar al carrito">
+                <div class="contenedor-botonCarrito">
+                    <input type="button" class="agregar-carrito" onclick=<% if(locals.isLoged) { %>"agregarItemACarritoDesdeBoton(<%= JSON.stringify(row) %>)<%} else {%> irALogin() <%} %>" value="Agregar al carrito">
                     <i class="fa-solid fa-cart-shopping icon"></i>
                 </div>
             </a>
@@ -28,6 +28,7 @@
 
 </main>
 <script src="/js/header.js" ></script>
+<script src="/js/funCartWish.js" ></script>
 
 <%- include('../partials/footer'); %>
 

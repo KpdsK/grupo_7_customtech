@@ -12,26 +12,13 @@
   burger.addEventListener('click' , () => {
     hidden.classList.toggle('show')
 
+})
+headerLogin.addEventListener('click', () => {
+  modalHeader.classList.toggle('mirar')
+})
+
+if (login != null) {
+  login.addEventListener('click', () => {
+    modal.classList.toggle('mirar');
   })
-  headerLogin.addEventListener('click', () => {
-    modalHeader.classList.toggle('mirar')
-  })
-
-  if(login != null) {
-    login.addEventListener('click', () => {
-      modal.classList.toggle('mirar');
-    })
-  }
-  
-  // if(cart && cartdata  != null) {
-  //   cart.addEventListener('mouseover', () => {
-  //     console.log(cartdata)
-  //     cartdata.classList.add('mirar')
-  //   }) 
-  //   cart.addEventListener('mouseout', () => {
-  //     cartdata.classList.remove('mirar')
-  //   })
-  // }
-
-
-
+}

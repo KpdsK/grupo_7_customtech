@@ -36,7 +36,8 @@
         <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
       </div>
        <div class="icono-corazon">
-        <i class="fas fa-regular fa-heart" onclick=<% if(locals.isLoged) { %>"agregarProductoAWishList(<%= editProduct.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>"></i>
+        <!-- <i class="fas fa-regular fa-heart" onclick=<% if(locals.isLoged) { %>"agregarProductoAWishList(<%= editProduct.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>"></i> -->
+        <i class="fas fa-regular fa-heart" onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(editProduct) %>)" <% } %> ></i>
        </div>
 
   </div>
@@ -45,9 +46,9 @@
     <div class="product-icons">
       <div class="product-price">
         <h2>$ <%= editProduct.price %></h2>
-        <form class="Agregar" action="/productCart" method="get">
-          <button class="Agregar" type="submit">COMPRAR</button>
-        </form>
+        <!-- <form class="Agregar" action="/productCart" method="get"> -->
+          <button class="Agregar agregarCarrito" type="submit">Agregar al carrito</button>
+        <!-- </form> -->
     
         <p><%= editProduct.stock %> STOCK EN LA WEB </p>
         <p><i class="fas fa-solid fa-check"></i>STOCK EN EL LOCAL</p>
@@ -85,6 +86,7 @@
 
   <%- include('../partials/footer'); %>
   <script src="/js/header.js" ></script>
+  <script src="/js/funCartWish.js" ></script>
 
 </body>
 
