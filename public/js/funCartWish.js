@@ -128,7 +128,7 @@ function htmlHeadWish() {
 }
 
 function htmlWishVacia() {
-    let html = '<div class="vacio"><p>Whislist Vacio</p></div><img class="carro-vacio" src="/images/">';
+    let html = '<div class="vacio"><strong>Whislist Vacio</strong></div>';
     html += '<section class="tarjetas-productos">';
     return html;
 }
@@ -328,7 +328,7 @@ function quitarDeWish(idProd) {
     element[0].remove();
     if ((JSON.parse(localStorage.getItem("wish"))).length === 0) {
         document.getElementsByClassName("whislist-agregar-section")[0].remove();
-        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div><p>Whislist Vacia</p></div>`;
+        document.getElementsByClassName("tarjetas-productos")[0].innerHTML = `<div class="vacio" ><strong>Whislist Vacia</strong></div>`;
         document.getElementsByClassName("tarjetas-productos")[0].style.flexFlow = "row";
         document.getElementsByClassName("tarjetas-productos")[0].style.fontSize = "24px"
     }

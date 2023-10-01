@@ -288,6 +288,15 @@ footer {
     color: #fff;
 }
 
+.vacio {
+    color: #4F04A3;
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
 @media (min-width: 360px) {
     .tarjeta-producto {
         /* position: relative;

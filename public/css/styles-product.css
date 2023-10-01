@@ -18,14 +18,23 @@
   justify-content: space-around;
 }
 
-.icono-corazon i {
+.corazon {
+  color: #4F04A3;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: all 0.4s;
+}
+
+.cocoro {
+  padding: 10px;
+  border-radius: 50%;
   color: #fff;
   background-color: #4F04A3;
-  border: 1px solid #4F04A3;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 5px;
-  /* width: 25%; */
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.4s;
+  border: 1px solid;
 }
 
 .detail-image-container {
@@ -39,7 +48,6 @@
 }
 
 
-
 .product-icons  {
   background-color:  #eee;
   border: 1px solid #eee;
@@ -51,16 +59,18 @@
 }
 
 .product-icons button { 
-  width: 100px;
+  width: 150px;
   height: 25px;
   color: #ffffff;
   background-color: #4F04A3;
   border-radius: 5px;
   border: 1px solid #4F04A3;
   margin: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
 }
 
-
+ 
 
 .product-detail-description  {
   padding: 10px;   
@@ -104,23 +114,32 @@
   color: #4F04A3;
 }
 
-.fa-heart{
-  border-radius: 18px;
-}
 
-.fa-heart:hover {
-  box-shadow: 0 0 12px rgba(120, 3, 173, 0.5); 
-  transition: box-shadow 0.3s ease; 
-}
 
 @media (min-width: 361px){
 
- 
+  .cocoro:hover {
+    border: 1px solid #4F04A3;
+    background-color: #fff;
+    color: #4F04A3;
+  }
+
+  .corazon:hover {
+    background-color: #4F04A3;
+    color: #fff;
+    padding: 10px;
+  }
 
   .product-icons {
     display: flex;
     justify-content: space-between;
     width: 80%;
+  }
+
+  .product-icons button:hover {
+    background-color: #fff;
+    color: #4F04A3;
+    border: 1px solid #4F04A3;
   }
 
   .product-price {
@@ -151,9 +170,6 @@
     display: block;
 }
 
-.fa-heart {
-    margin-left: 8px;
-}
 
 }
 

@@ -76,7 +76,7 @@ header {
     right: 100vw;
     top: 100px;
     background-color: #4F04A3;
-    height: 40vh;
+    height: 350px;
     width: 100%;
 }
 
@@ -357,7 +357,8 @@ header {
     /* .cartdata {
 
     } */
-    
+
+  
     .header-image-container {
         width: 30vw;
     }
@@ -384,7 +385,7 @@ header {
     }
 
     .modal-header {
-        top: 100px;
+        top: 70px;
     }
 
     /* #wishdata {
