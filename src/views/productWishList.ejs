@@ -5,28 +5,15 @@
 
 <body>
     <%- include('partials/header'); %>
-    <main class="main-carrito-whislist">
-        <% if(productos.length!=0) { %>
-        <section class="tarjetas-productos">
-            <% productos.forEach(function(p){ %>
-                <%- include('partials/productCardWhislist', {producto: p}); %>
-            <% }); %>
-        </section>
-        <section class="whislist-agregar-section">
-            <div class="contenedor-agregar-todo">
-                <input type="button" class="agregar-todo" onclick="agregarTodoAlCarrito(<%= locals.userLog.id %>, <%= locals.userLog.id %>)" value="Agregar Todo">
-                <i class="fa-solid fa-cart-shopping icon"></i>
-            </div>
-        </section>
-        <% } else { %>
-            <div class="vacio"><p>Whislist Vacio</p></div>
-            <img class="carro-vacio" src="/images/">
-        <% }; %>
+    <main class="main-carrito-whislist whist">
     </main>
     <%- include('partials/footer'); %>
    
 </body>
 <script src="/js/header.js" ></script>
+<script src="/js/funCartWish.js" ></script>
+
+
 
 
 </html>
