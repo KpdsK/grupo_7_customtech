@@ -3,12 +3,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 150px;
-    /* background-image: url("../images/wallpaper3.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;
+    margin-top: 100px;
+    height: 65vh;
 }
 
 .bloqueLogin {
@@ -66,16 +62,17 @@ form div {
 
 .login-recordar {
     display: flex;
-    margin-bottom: 6vh;
+    flex-direction: column;
+    margin-bottom: 10px;
     column-gap: 3vw;
     align-items: center;
 }
 
 .login-recordar legend {
-    font-size: 3vw;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 8vh;
     color: #4F04A3;
+    padding: 5px;
   }
 
 
@@ -126,14 +123,13 @@ form div {
 
 
 .botonSubmit {
-    /*background-color: #c21556;*/
     background-color: #4F04A3;
-    color: aliceblue;
+    border: 1px solid #4F04A3;
+    color: #fff;
     padding: 3%;
-    border: 0;
-    width: 50vw;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 5vw;
+    padding: 5px 10px;
 }
 
 .bloqueSignup {
@@ -155,10 +151,9 @@ form div {
     /*background-color: #c21556;*/
     background-color: #4F04A3;
     color: aliceblue;
-    padding: 3%;
+    padding: 5px 10px;
     border: 0;
-    width: 50vw;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 5vw;
 }
 
@@ -246,9 +241,14 @@ input:checked+.slider:before {
 
 @media (min-width: 361px) {
 
-    .login-recordar legend {
+    .login {
+        margin-top: 150px;
+        margin-bottom: 20px;
+    }
+
+    /* .login-recordar legend {
         font-size: 2.2vw;
-      }
+      } */
 
     .icon-register i {
         font-size: 100px;
@@ -318,9 +318,13 @@ input:checked+.slider:before {
 
 @media (min-width: 769px){
 
-   .login-recordar legend {
-        font-size: 1.5vw;
+    .login {
+        margin-top: 110px;
     }
+
+   /* .login-recordar legend {
+        font-size: 1.5vw;
+    } */
 
 }
 

@@ -17,7 +17,7 @@
                     <h2 class="nombre"><%= row.name %></h2>
                     <p class="precio">$<%= row.price %></p>
                 </div>
-                <div class="contenedor-botonCarrito">
+                <div class="contenedor-botonarrito">
                     <input type="button" class="agregar-carrito" onclick=<% if(locals.isLoged) { %>"agregarProductoACarrito(<%= row.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>" value="Agregar al carrito">
                     <i class="fa-solid fa-cart-shopping icon"></i>
                 </div>
