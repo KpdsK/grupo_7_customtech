@@ -19,8 +19,8 @@ function ready() {
 
 function crearListaCart(contenedor) {
     let datosCart = JSON.parse(localStorage.getItem("carrito"));
-    if(datosCart.length == 0 ){price
-        contenedor.innerHTML = '<div class="vacio"><strong>Carrito Vacio</strong></div>';
+    if(datosCart.length == 0 ){
+        contenedor.innerHTML = '<div class="vacio"><strong>Carrito Vacio</strong><a href="/products" > Ver Productos </a></div>';
     } else {
         contenedor.innerHTML = htmlHeadCart() + crearTarjetasCart(datosCart) + htmlFootCart();
     }

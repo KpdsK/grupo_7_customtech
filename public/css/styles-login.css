@@ -130,6 +130,7 @@ form div {
     border-radius: 5px;
     font-size: 5vw;
     padding: 5px 10px;
+    transition: all 0.4s;
 }
 
 .bloqueSignup {
@@ -155,6 +156,7 @@ form div {
     border: 0;
     border-radius: 5px;
     font-size: 5vw;
+    transition: all 0.4s;
 }
 
 .cuadrOr{
@@ -240,6 +242,17 @@ input:checked+.slider:before {
 }
 
 @media (min-width: 361px) {
+
+    .botonSubmit:hover {
+        background-color: #fff;
+        color: #4F04A3;
+
+    }
+
+    .botonSignup:hover {
+        background-color: #fff;
+        color: #4F04A3;
+    }
 
     .login {
         margin-top: 150px;

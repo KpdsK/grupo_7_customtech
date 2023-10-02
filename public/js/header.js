@@ -8,12 +8,15 @@
   // const cart = document.querySelector('.cart');
   // const cartdata = document.querySelector('#cartdata');
   const wishData = document.querySelector('.wishdata');
-
-  if(wishData != null) {
-    if(wishData.textContent == '0'){
-        wishData.style.display = 'none'
-    } 
-  }
+  // if(wishData != null) {
+  //   if(wishData.textContent.trim() == '0' && wishData.textContent == null){
+  //       console.log(wishdata.textContent) 
+  //       wishData.style.display = 'none'
+  //   } else {
+  //       wishData.style.display = 'block'
+  //   }
+  // }
+  
   
   burger.addEventListener('click' , () => {
     hidden.classList.toggle('show')

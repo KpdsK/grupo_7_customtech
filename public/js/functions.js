@@ -17,5 +17,13 @@ function recargarDatosCarrito(total_cart, cart_data) {
 
 function recargarDatosWish(wish_data) {
     const wishdata = document.getElementById('wishdata');
+    // if(wishdata != null) {
+    //     if(wishdata.textContent.trim() == '0' && wishData.textContent == null){
+    //         console.log(wishdata.textContent) 
+    //         wishdata.style.display = 'none'
+    //     } else {
+    //         wishdata.style.display = 'block'
+    //     }
+    //   }
     wishdata.innerText = `${wish_data}`
 }

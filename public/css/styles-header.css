@@ -78,6 +78,7 @@ header {
     background-color: #4F04A3;
     height: 350px;
     width: 100%;
+    transition: all 0.4s;
 }
 
 .show {
@@ -159,6 +160,10 @@ header {
     display: none;
 }
 
+.header-nav-container li {
+    margin: 0 10px ;
+}
+
 .header-categories {
     display: none;
 }
@@ -199,6 +204,7 @@ header {
 .image-header-login {
     display: flex;
     align-items: center;
+
 }
 
 .image-header-login img {
@@ -226,6 +232,7 @@ header {
     height: 120px;
     border :1px solid #4F04A3 ;
     border-radius: 5px;
+    transition: all 0.4s;
 }
 
 
@@ -237,13 +244,26 @@ header {
     color: #fff;
     text-align: center;
     margin: 10px;
+    transition: all 0.4s;
+    border: 1px solid #4F04A3;
 }
 
 .mirar {
     display: flex;
 }
 
+#datosWishCart {
+    display: flex;
+    align-items: center;
+}
+
+
 @media (min-width: 361px) {
+
+    .modal-header a:hover {
+        background-color: #fff;
+        color: #4F04A3;
+    }
     
     header {
         height: auto;
@@ -319,10 +339,11 @@ header {
     }
 
     .modal-header {
-        top: 120px;
+        top: 130px;
     }
 
-    #wishdata {
+   
+    .wishdata {
         border: 1px solid #fff;
         color: #fff;
         background-color: #4F04A3;
@@ -336,18 +357,19 @@ header {
     }
 
     .cartdata {
-        width: 80px;
-        height: 50px;
-        position: absolute;
-        right: 60px;
-        top: 130px;
-        color: #4F04A3;
-        border: 1px solid #4F04A3;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px ;
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: #4F04A3;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        right: 50px;
+        top: -15px;
     }
+
+   
    /* .mirar {
     display: flex;
    } */
@@ -386,9 +408,17 @@ header {
     }
 
     .modal-header {
-        top: 70px;
+        top: 100px;
     }
 
+    .cartdata{
+        right: 45px;
+    }
+
+
+    .wishdata {
+        right: 90px;
+    }
     /* #wishdata {
         right: 90px;
     } */
