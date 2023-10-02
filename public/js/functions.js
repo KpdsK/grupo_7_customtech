@@ -10,7 +10,7 @@ function recargaDatosWishCart() {
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
     const totalcartdata = document.getElementById('totalcartdata');
-    console.log(totalcartdata);
+    // console.log(totalcartdata);
     cartdata.innerText = `${cart_data}`
     // totalcartdata.innerText = `${total_cart}`
 }
@@ -27,3 +27,7 @@ function recargarDatosWish(wish_data) {
     //   }
     wishdata.innerText = `${wish_data}`
 }
+
+function irALogin() {
+    location.replace("http://localhost:3007/login")
+  }
