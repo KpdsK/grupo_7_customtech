@@ -94,10 +94,11 @@ form div {
     background-color: #4F04A3;
     color: aliceblue;
     padding: 3%;
-    border: 0;
+    border: 1px solid #4F04A3;
     width: 50vw;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 5vw;
+    transition: all 0.4s;
 }
 
 .bloqueLogin {
@@ -120,10 +121,11 @@ form div {
     background-color: #4F04A3;
     color: aliceblue;
     padding: 3%;
-    border: 0;
+    border: 1px solid #4F04A3;
     width: 50vw;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 5vw;
+    transition: all 0.4s;
 }
 
 .input-file {
@@ -170,6 +172,7 @@ canvas {
 
 .passw-debe-tener {
     color: gray;
+    list-style-type: none;
 }
 
 .error-register {
@@ -178,6 +181,17 @@ canvas {
 
 
 @media (min-width: 361px) {
+
+    .botonSubmit:hover {
+        background-color: #fff;
+        color: #4F04A3;
+
+    }
+
+    .botonLogin:hover {
+        background-color: #fff;
+        color: #4F04A3;
+    }
 
     .icon-register i {
         font-size: 100px;

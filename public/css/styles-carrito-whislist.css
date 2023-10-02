@@ -10,6 +10,7 @@ body {
     margin: 120px 0px 40px 0px;
 }
 
+
 .tarjetas-productos {
     display: flex;
     justify-content: space-around;
@@ -288,7 +289,37 @@ footer {
     color: #fff;
 }
 
-@media (min-width: 360px) {
+.vacio {
+    color: #4F04A3;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+}
+
+.vacio a {
+    border: 1px solid #4F04A3;
+    color: #fff;
+    background-color: #4F04A3;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    transition: all 0.4s;
+}
+
+
+
+@media (min-width: 361px) {
+
+    .vacio a:hover {
+        background-color: #fff;
+        color: #4F04A3;
+    }
+
     .tarjeta-producto {
         /* position: relative;
         flex-direction: row; */

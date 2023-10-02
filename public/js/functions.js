@@ -9,13 +9,21 @@ function recargaDatosWishCart() {
 
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
-    // const totalcartdata = document.getElementById('totalcartdata');
-    // cartdata.innerText = `Carrito  ${cart_data} total ${total_cart}`
+    const totalcartdata = document.getElementById('totalcartdata');
+    console.log(totalcartdata);
     cartdata.innerText = `${cart_data}`
     // totalcartdata.innerText = `${total_cart}`
 }
 
 function recargarDatosWish(wish_data) {
     const wishdata = document.getElementById('wishdata');
+    // if(wishdata != null) {
+    //     if(wishdata.textContent.trim() == '0' && wishData.textContent == null){
+    //         console.log(wishdata.textContent) 
+    //         wishdata.style.display = 'none'
+    //     } else {
+    //         wishdata.style.display = 'block'
+    //     }
+    //   }
     wishdata.innerText = `${wish_data}`
 }

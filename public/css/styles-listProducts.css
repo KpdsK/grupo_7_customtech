@@ -19,14 +19,18 @@
 
 }
 
+
 .fa-heart{
-    border-radius: 18px;
-  }
+    color: #4F04A3;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    transition: all 0.4s;
+    margin: 10px;
+}
   
-.corazon-wish:hover {
-    box-shadow: 0 0 8px rgba(120, 3, 173, 0.5); 
-    transition: box-shadow 0.3s ease; 
-  }
+
   
 
 .image-list-container {
@@ -72,24 +76,27 @@
     background-color: #4F04A3;
     width: 200px;
     margin: 10px auto;
-    padding: 5px 10px;
+    padding:10px;
     border-radius: 5px;
     text-align: center;  
     justify-content: center; 
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 .agregar-carrito {
-    background-color: #4F04A3;
+    display: flex;
+    font-size: 12px;
+    background-color: inherit;
+    align-items: center;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
-.contenedor-boton-carrito i{
-    color: #fff;
-    margin: 5px;
 
+.agregar-carrito i {
+    padding-left: 5px;
 }
 
 
@@ -102,7 +109,7 @@
     }
 
     .list-products {
-        margin-top: 20px;
+        margin-top: 120px;
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -153,9 +160,23 @@
     }
 
 
-    .fa-heart {
-        margin-left: 8px;
+    .fa-heart:hover {
+        background-color: #4F04A3;
+        color: #fff;
+        padding: 10px;
     }
+
+   
+    .contenedor-boton-carrito:hover {
+        background-color: #fff;
+        color: #4F04A3;
+        border: 1px solid #4F04A3;
+    }
+
+    .agregar-carrito:hover {
+        color: #4F04A3;
+    }
+  
 
 }
 
