@@ -128,6 +128,10 @@
 
 @media(min-width: 361px ) {
 
+    .vacio a:hover {
+        background-color: #fff;
+        color: #4F04A3;
+    }
 
     .contenedor-boton-carrito {
         width: 150px;
