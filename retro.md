@@ -215,23 +215,21 @@
 
 #### Hacer más
 * Flexibilizar las reuniones tendiendo a un trabajo inteligente, teniendo presente el tiempo capitalizado y los items realizados o pendientes.
-* Compromometernos con el grupo comunicando los problemas e inconvenientes que nos ocurran para mantener al tanto a los demás integrantes.
 
 #### Continuar haciendo
 * Utilizar asiduamente y de manera correcta los medios adecuados para una mejor organizacion (TRELLO).
-* Trabajar colaborativamente entre los compañeros.
+* Trabajar colaborativamente entre los compañeros, tomandonos a todos y cada uno como iguales sin escalafones jerárquicos y tomando decisiones de manera concensual. 
 * Claridad en las pautas, por consenso grupal, para una mejor fluidez y productividad a la hora de realizar las tareas para el corriente sprint y el proyecto en su totalidad.
+* Tener presente las opiniones, fortalezas y debilidades de cada uno de los integrantes del grupo.
 * Realizar reuniones con el enfoque en un aprendizaje y trabajo colaborativo intentando nivelar conocimientos.
 * Especificar previamente la temática y objetivos de las reuniones a realizarse y, al finalizar la mism, detallar los puntos e items a seguir para una buena optimizacion de tales encuentros.
+* Compromometernos con el grupo comunicando los problemas e inconvenientes que nos ocurran para mantener al tanto a los demás integrantes.
 
 #### Hacer menos
 * Reuniones sin una buena planificacion o con una extencion prolongada en caso de poder acotar la misma o dividirla en diferentes dias u horarios.
 
 #### Dejar de hacer
-* No exteriorizar inquietudes o dudas sobre el trabajo a realizar.
-* Ningun integrante deberá tomarse atribuciones o roles no correspondidos ni designados por consenso dentro del grupo.
 * Aislarse y no solicitar ayuda o comunicar inconvenientes que puedan impactar negativamente tanto en el grupo como en el proyecto.
-* No tener presente las opiniones, fortalezas y debilidades de cada uno de los integrantes del grupo.
 * Asignarse o hacerse disponible para trabajos de los cuales se sabe con antelacion que la probabilidad de concreción de manera individual es muy baja o nula
 
 ---
@@ -242,3 +240,35 @@
 
 ---
 
+
+
+# CUSTOMTECH
+##     Digital House - Curso Full Stack Developer 
+###    Proyecto Integrador : e-commerce 
+###    Octavo Sprint: Retrospectiva 7
+
+---
+
+####    Habiendo realizado las retrospectivas anteriores con la dinámica "estrella de mar", que busca resaltar aquello que hay que reforzar, resolvimos presentar en esta última retrospectiva lo que nos ha dejado todo el camino recorrido habiéndonos afianzado, fortalecido y consolidado como grupo; sabiendo que habrá muchas cosas que limar, comenzar a hacer, dejar de hacer, hacer mas y hacer menos, pero siempre estando resueltos a:
+
+
+#### Continuar haciendo
+* Utilizar asiduamente y de manera correcta los medios adecuados para una mejor organizacion (TRELLO).
+* Trabajar colaborativamente entre los compañeros, tomandonos a todos y cada uno como iguales sin escalafones jerárquicos y tomando decisiones de manera concensual. 
+* Tener presente las opiniones, fortalezas y debilidades de cada uno de los integrantes del grupo.
+* Compromometernos con el grupo solicitando ayuda y comunicando los problemas e inconvenientes que nos ocurran para mantener al tanto a los demás integrantes, sabiendo que puedan impactar negativamente tanto en el grupo como en el proyecto.
+* Claridad en las pautas, por consenso grupal, para una mejor fluidez y productividad a la hora de realizar las tareas para el corriente sprint y el proyecto en su totalidad.
+* Soltarse en cuanto a ides y conocimientos previamente adquiridos que aporten al proyecto grupal y del cual todos los integrantes podamos aprender tendiendo a una retroalimentcion como futuros colegas.
+* Flexibilizar las reuniones tendiendo a un trabajo inteligente, teniendo presente el tiempo capitalizado y los items realizados o pendientes.
+* Especificar previamente la temática y objetivos de las reuniones a realizarse y, al finalizar la mism, detallar los puntos e items a seguir para una buena optimizacion de tales encuentros.
+* Exteriorizar inquietudes o dudas sobre el trabajo a realizar.
+* Realizar reuniones con el enfoque en un aprendizaje y trabajo colaborativo intentando nivelar conocimientos.
+
+
+---
+
+
+---
+
+
+---
