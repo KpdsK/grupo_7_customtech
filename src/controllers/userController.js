@@ -119,23 +119,24 @@ const userController = {
         return res.render('productWishList', { cssStyle: "carrito-whislist" });
     },
     checkout: async (req, res) => {
-        const productsData = await db.User.findAll({
-            where: { id: req.session.userLog.id },
-            attributes: ["name"],
-            include: {
-                model: db.Product,
-                as: 'product_cart',
-                through: {
-                    association: db.Product.ProductCart,
-                    attributes: ["amount"]
-                },
-                where: { erased: false },
-                attributes: ["id","price", "name", "image"]
-            }
-        }
-        );
-        let prod = productsData.length!=0 ? productsData.pop().product_cart : [];
-        return res.render('checkout', { cssStyle: "checkout", productos: prod});
+        // const productsData = await db.User.findAll({
+        //     where: { id: req.session.userLog.id },
+        //     attributes: ["name"],
+        //     include: {
+        //         model: db.Product,
+        //         as: 'product_cart',
+        //         through: {
+        //             association: db.Product.ProductCart,
+        //             attributes: ["amount"]
+        //         },
+        //         where: { erased: false },
+        //         attributes: ["id","price", "name", "image"]
+        //     }
+        // }
+        // );
+        // let prod = productsData.length!=0 ? productsData.pop().product_cart : [];
+        // return res.render('checkout', { cssStyle: "checkout", productos: prod});
+        return res.render('checkout', { cssStyle: "checkout"});
     },
 
 };

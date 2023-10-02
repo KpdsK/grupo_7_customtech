@@ -5,21 +5,23 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
-    if (JSON.parse(localStorage.getItem("carrito"))==null) {
+    if (JSON.parse(localStorage.getItem("carrito")) == null) {
         localStorage.setItem("carrito", JSON.stringify([]))
     }
     if (JSON.parse(localStorage.getItem("wish")) == null) {
         localStorage.setItem("wish", JSON.stringify([]))
     }
     let tarjetasProdWish = document.querySelector(".whist");
-    if(tarjetasProdWish){crearListaWish(tarjetasProdWish);};
+    if (tarjetasProdWish) { crearListaWish(tarjetasProdWish); };
     let tarjetasProdCart = document.querySelector(".carrito-cont");
-    if(tarjetasProdCart){crearListaCart(tarjetasProdCart);}
+    if (tarjetasProdCart) { crearListaCart(tarjetasProdCart); };
+    let checkout = document.querySelector("#left-col-cont");
+    if (checkout) { irACheckout(checkout); };
 }
 
 function crearListaCart(contenedor) {
     let datosCart = JSON.parse(localStorage.getItem("carrito"));
-    if(datosCart.length == 0 ){
+    if (datosCart.length == 0) {
         contenedor.innerHTML = '<div class="vacio"><strong>Carrito Vacio</strong><a href="/products" > Ver Productos </a></div>';
     } else {
         contenedor.innerHTML = htmlHeadCart() + crearTarjetasCart(datosCart) + htmlFootCart();
@@ -27,7 +29,7 @@ function crearListaCart(contenedor) {
 }
 
 function crearTarjetasCart(productos) {
-    let res = productos.reduce( (html, p) => html + armarTarjetaCart(p), '');
+    let res = productos.reduce((html, p) => html + armarTarjetaCart(p), '');
     return res
 }
 
@@ -38,7 +40,7 @@ function htmlHeadCart() {
 
 function htmlFootCart() {
     let datosCart = JSON.parse(localStorage.getItem("carrito"));
-    let total = datosCart.reduce( (t, p) => t + p.cantidad * p.precio,0);
+    let total = datosCart.reduce((t, p) => t + p.cantidad * p.precio, 0);
     let html = `</section>
     <section class="carrito-total-section">
         <div class="contenedor-total">
@@ -53,7 +55,7 @@ function htmlFootCart() {
                     <label id="total">$${total}</label>
                 </div>
                 <div class="carrito-comprar">
-                    <form action="/checkout" method="get">
+                    <form action="/checkout" method="post">
                         <input type="submit" class="comprar" value="Comprar">
                     </form>
                 </div>
@@ -61,6 +63,25 @@ function htmlFootCart() {
         </div>
     </section>`;
     return html;
+}
+
+function irACheckout(contenedor) {
+    let datosCompra = JSON.parse(localStorage.getItem("carrito"));
+    if(datosCompra.length!=0) {
+        let total=0;
+        let itemsHtml = '';
+        datosCompra.forEach(function(p){
+        itemsHtml += `<div class="item"><div class="img-col"><img src="/images/${p.imagen}" alt="" />
+                    </div>
+                        <div class="meta-col">
+                            <h3> ${p.nombre}</h3>
+                            <p class="price">${p.precio * p.cantidad}</p>
+                        </div>
+                    </div>`;
+        total += p.cantidad * p.precio;
+        });
+        contenedor.innerHTML += itemsHtml+`<p id="total">Total</p><h4 id="total-price"><span>$</span> ${total}</h4>`
+    };
 }
 
 function armarTarjetaCart(prod) {
@@ -110,7 +131,7 @@ function armarTarjetaCart(prod) {
 
 function crearListaWish(contenedor) {
     let datosWish = JSON.parse(localStorage.getItem("wish"));
-    if(datosWish.length == 0 ){
+    if (datosWish.length == 0) {
         contenedor.innerHTML = htmlWishVacia();
     } else {
         contenedor.innerHTML = htmlHeadWish() + crearTarjetaswish(datosWish) + htmlFootWish();
@@ -118,7 +139,7 @@ function crearListaWish(contenedor) {
 }
 
 function crearTarjetaswish(productos) {
-    let res = productos.reduce( (html, p) => html + armarTarjetaWish(p), '');
+    let res = productos.reduce((html, p) => html + armarTarjetaWish(p), '');
     return res
 }
 
@@ -170,7 +191,7 @@ function armarTarjetaWish(prod) {
 
 function quitarElementoDeLocalStorage(idProd, cont) {
     let contenedor = (JSON.parse(localStorage.getItem(cont)));
-    contenedor.forEach((e,i) => {if(e.id == idProd){ contenedor.splice(i,1)}});
+    contenedor.forEach((e, i) => { if (e.id == idProd) { contenedor.splice(i, 1) } });
     localStorage.setItem(cont, JSON.stringify(contenedor))
     recargaDatosWishCart()
 }
@@ -179,7 +200,7 @@ function modificarCantidadProdEnCarrito(idProd, cant) {
     let productosCart = (JSON.parse(localStorage.getItem("carrito")));
     let prodExiste = productosCart.find(p => p.id == idProd);
     if (prodExiste) {
-        prodExiste.cantidad = cant;
+        prodExiste.cantidad = parseInt(cant);
         prodExiste.subtotal = prodExiste.precio * prodExiste.cantidad
         localStorage.setItem("carrito", JSON.stringify(productosCart))
     }
@@ -201,33 +222,33 @@ function agregarACart(prod, cont) {
         id: prod.id,
         nombre: prod.name,
         descripcion: prod.description,
-        precio: (typeof prod.price =="string") ? parseFloat(prod.price.replace('$', '')) : prod.price,
-        imagen: (prod.image) ? prod.image.replace("/images", ""):prod.imagen.replace("/images", ""),
+        precio: (typeof prod.price == "string") ? parseFloat(prod.price.replace('$', '')) : prod.price,
+        imagen: (prod.image) ? prod.image.replace("/images", "") : prod.imagen.replace("/images", ""),
         cantidad: 1,
         subtotal: prod.price
     }
     cont.push(productoAgregado)
     localStorage.setItem("carrito", JSON.stringify(cont))
-    console.log("agregarACart ",productoAgregado);
+    console.log("agregarACart ", productoAgregado);
 }
 
 //Boton Agregar a carrito
 function agregarItemACarritoDesdeWish(prod) {
-    console.log("agregarItemACarritoDesdeWish ",prod)
+    console.log("agregarItemACarritoDesdeWish ", prod)
     var productosCart = (JSON.parse(localStorage.getItem("carrito")));
     var prodExiste = productosCart.find(p => p.id == prod.id);
     if (prodExiste) {
-        console.log("agregarItemACarritoDesdeWish EXISTE ",prodExiste)
+        console.log("agregarItemACarritoDesdeWish EXISTE ", prodExiste)
         prodExiste.cantidad += 1;
         prodExiste.subtotal = prod.precio * prodExiste.cantidad
         localStorage.setItem("carrito", JSON.stringify(productosCart))
     } else {
-        console.log("agregarItemACarritoDesdeWish NO EXISTE ",prod);
+        console.log("agregarItemACarritoDesdeWish NO EXISTE ", prod);
         let productoAgregado = {
             id: prod.id,
             name: prod.nombre,
             description: prod.descripcion,
-            price: (typeof prod.precio =="string") ? parseFloat(prod.precio.replace('$', '')) : prod.precio,
+            price: (typeof prod.precio == "string") ? parseFloat(prod.precio.replace('$', '')) : prod.precio,
             imagen: prod.imagen.replace("/images", ""),
             cantidad: 1,
             subtotal: prod.precio
@@ -239,16 +260,16 @@ function agregarItemACarritoDesdeWish(prod) {
 
 //Boton Agregar a carrito
 function agregarItemACarritoDesdeBoton(prod) {
-    console.log("agregarItemACarritoDesdeBoton ",prod)
+    console.log("agregarItemACarritoDesdeBoton ", prod)
     var productosCart = (JSON.parse(localStorage.getItem("carrito")));
     var prodExiste = productosCart.find(p => p.id == prod.id);
     if (prodExiste) {
-        console.log("agregarItemACarritoDesdeBoton EXISTE ",prodExiste)
+        console.log("agregarItemACarritoDesdeBoton EXISTE ", prodExiste)
         prodExiste.cantidad += 1;
         prodExiste.subtotal = prod.price * prodExiste.cantidad
         localStorage.setItem("carrito", JSON.stringify(productosCart))
     } else {
-        console.log("agregarItemACarritoDesdeBoton NO EXISTE ",prod);
+        console.log("agregarItemACarritoDesdeBoton NO EXISTE ", prod);
         agregarACart(prod, productosCart)
     }
     recargaDatosWishCart()
@@ -316,10 +337,10 @@ function agregarAWish(prod, cont) {
 }
 //Icono Corazon
 function agregarItemAWishDesdeIcono(prod) {
-    console.log("agregarItemWish ",prod)
+    console.log("agregarItemWish ", prod)
     let productosWish = (JSON.parse(localStorage.getItem("wish")));
     let prodExiste = productosWish.find(p => p.id == prod.id);
-    if (!prodExiste) {agregarAWish(prod, productosWish)}
+    if (!prodExiste) { agregarAWish(prod, productosWish) }
 }
 
 //Icono tacho basura WishList
@@ -336,14 +357,15 @@ function quitarDeWish(idProd) {
     recargaDatosWishCart()
 }
 
-function agregarItemDesdeWish(idProd){
+function agregarItemDesdeWish(idProd) {
     let productosWish = (JSON.parse(localStorage.getItem("wish")));
     let prodExiste = productosWish.find(p => p.id == idProd);
-    if(prodExiste) {
+    if (prodExiste) {
         prodExiste.cantidad = 1;
-        console.log("agregarItemDesdeWish ",prodExiste);
+        console.log("agregarItemDesdeWish ", prodExiste);
         agregarItemACarritoDesdeWish(prodExiste);
-        quitarDeWish(idProd)}
+        quitarDeWish(idProd)
+    }
 }
 
 //Boton Agregar todo

@@ -41,7 +41,7 @@ userRouter.get('/perfil', logMiddleware, userController.perfil);
 userRouter.post('/users/:id/edit', logMiddleware, fileUpload.single('fotoPerfil'), editUserValidation, userController.updateUserData)
 userRouter.delete('/users/:id/delete', logMiddleware, userController.deleteUser)
 
-userRouter.get('/checkout', logMiddleware, userController.checkout);
+userRouter.post('/checkout', logMiddleware, userController.checkout);
 userRouter.get('/register', guestMiddleware, userController.register);
 userRouter.post('/users/register', fileUpload.single('fotoPerfil'), registerValidation, userController.processRegister);
 
