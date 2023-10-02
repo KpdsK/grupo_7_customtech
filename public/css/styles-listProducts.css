@@ -6,6 +6,31 @@
     background-color: #fff;
 }
 
+.listProdVac {
+    width: 100%;
+    margin: 102px 0px 40px 0px;
+}
+.vacio {
+    color: #4F04A3;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+}
+
+.vacio a {
+    border: 1px solid #4F04A3;
+    color: #fff;
+    background-color: #4F04A3;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    transition: all 0.4s;
+}
 
 .sub-main{
     /* display: block; */

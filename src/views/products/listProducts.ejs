@@ -5,7 +5,8 @@
 
     <%- include('../partials/header'); %>
 
-<div class="list-products">
+    <div class="list-products">
+    <% if(product.length!=0) { %>
     <% product.forEach((row) => {  %>
         <div class="sub-main"> 
             <i class="fa-regular fa-heart" onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(row) %>)" <% } %>></i>
@@ -25,8 +26,14 @@
                 </div>
             </a>
         </div>
-        <% }) %>
-</div>
+    
+        <% })} else { %>
+            <main class="listProdVac">
+            <div class="vacio" ><strong>Busqueda sin resultados</strong><a href="/products" > Ver Productos </a></div>
+            </main>
+        <% }; %>
+    </div>
+
 
 </main>
 <script src="/js/header.js" ></script>
