@@ -17,6 +17,7 @@ module.exports = {
                     name: usuario.name,
                     email: usuario.email,
                     detail: `api/users/${usuario.id}`,
+                    erased: usuario.erased,
                     image: usuario.image
                 }
             })
@@ -51,7 +52,5 @@ module.exports = {
             response.msg = `Oops! algo salió mal al querer buscar al usuario con ID: ${req.params.id}`
             return res.status(500).json(response);
         }
-    },
-
-   
+    }
 }

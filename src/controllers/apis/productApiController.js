@@ -23,6 +23,7 @@ module.exports = {
                     description: product.description,
                     category: product.id_category,
                     detail: `/api/products/${product.id}`,
+                    erased: product.erased,
                     image: product.image
                 }
             })
