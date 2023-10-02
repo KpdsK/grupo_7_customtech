@@ -107,7 +107,7 @@ function armarTarjetaCart(prod) {
                         onclick="restar('contador-cantidad-input-',${prod.id}, ${prod.precio})" value="-">
                         <input name="cantidad" type="text" class="contador-cantidad-input" id="contador-cantidad-input-${prod.id}" value="${prod.cantidad}">
                         <input type="button" class="contador-cantidad-mas" id="contador-cantidad-mas-${prod.id}"
-                        onclick="sumar('contador-cantidad-input-',${prod.id}, ${prod.precio})" value="+">
+                        onclick="sumar('contador-cantidad-input-',${prod.id}, ${prod.precio},${prod.stock})" value="+">
                     </div>
                 </div>
                 <div class="tarjeta-producto-detalle-item">
@@ -225,6 +225,7 @@ function agregarACart(prod, cont) {
         precio: (typeof prod.price == "string") ? parseFloat(prod.price.replace('$', '')) : prod.price,
         imagen: (prod.image) ? prod.image.replace("/images", "") : prod.imagen.replace("/images", ""),
         cantidad: 1,
+        stock: prod.stock,
         subtotal: prod.price
     }
     cont.push(productoAgregado)
@@ -238,10 +239,12 @@ function agregarItemACarritoDesdeWish(prod) {
     var productosCart = (JSON.parse(localStorage.getItem("carrito")));
     var prodExiste = productosCart.find(p => p.id == prod.id);
     if (prodExiste) {
-        console.log("agregarItemACarritoDesdeWish EXISTE ", prodExiste)
-        prodExiste.cantidad += 1;
-        prodExiste.subtotal = prod.precio * prodExiste.cantidad
-        localStorage.setItem("carrito", JSON.stringify(productosCart))
+        if (prodExiste.stock > prodExiste.cantidad) {
+            console.log("agregarItemACarritoDesdeWish EXISTE ", prodExiste)
+            prodExiste.cantidad += 1;
+            prodExiste.subtotal = prod.precio * prodExiste.cantidad
+            localStorage.setItem("carrito", JSON.stringify(productosCart))
+        }
     } else {
         console.log("agregarItemACarritoDesdeWish NO EXISTE ", prod);
         let productoAgregado = {
@@ -251,6 +254,7 @@ function agregarItemACarritoDesdeWish(prod) {
             price: (typeof prod.precio == "string") ? parseFloat(prod.precio.replace('$', '')) : prod.precio,
             imagen: prod.imagen.replace("/images", ""),
             cantidad: 1,
+            stock: prod.stock,
             subtotal: prod.precio
         }
         agregarACart(productoAgregado, productosCart)
@@ -260,16 +264,15 @@ function agregarItemACarritoDesdeWish(prod) {
 
 //Boton Agregar a carrito
 function agregarItemACarritoDesdeBoton(prod) {
-    console.log("agregarItemACarritoDesdeBoton ", prod)
     var productosCart = (JSON.parse(localStorage.getItem("carrito")));
     var prodExiste = productosCart.find(p => p.id == prod.id);
     if (prodExiste) {
-        console.log("agregarItemACarritoDesdeBoton EXISTE ", prodExiste)
-        prodExiste.cantidad += 1;
-        prodExiste.subtotal = prod.price * prodExiste.cantidad
-        localStorage.setItem("carrito", JSON.stringify(productosCart))
+        if (prodExiste.stock > prodExiste.cantidad) {
+            prodExiste.cantidad += 1;
+            prodExiste.subtotal = prod.price * prodExiste.cantidad
+            localStorage.setItem("carrito", JSON.stringify(productosCart))
+        }
     } else {
-        console.log("agregarItemACarritoDesdeBoton NO EXISTE ", prod);
         agregarACart(prod, productosCart)
     }
     recargaDatosWishCart()
@@ -292,16 +295,24 @@ function quitarDeCarrito(idProd) {
 }
 
 //Icono sumar unidad a producto
-function sumar(inputId, id, precio) {
+function sumar(inputId, id, precio, stock) {
     const input = document.getElementById(inputId + id);
     var value = input.value;
     const label = document.getElementsByClassName("subtotal-" + id)[0];
-    value++;
-    input.value = value;
-    label.innerHTML = "$" + value * precio;
-    modificarCantidadProdEnCarrito(id, value);
-    calcularTotal()
-    recargaDatosWishCart()
+    if(value < stock) {
+        value++;
+        input.value = value;
+        label.innerHTML = "$" + value * precio;
+        modificarCantidadProdEnCarrito(id, value);
+        calcularTotal()
+        recargaDatosWishCart()
+    }
+    // value++;
+    // input.value = value;
+    // label.innerHTML = "$" + value * precio;
+    // modificarCantidadProdEnCarrito(id, value);
+    // calcularTotal()
+    // recargaDatosWishCart()
 }
 
 //Icono sumar unidad a producto
@@ -328,6 +339,7 @@ function agregarAWish(prod, cont) {
         nombre: prod.name,
         descripcion: prod.description,
         precio: prod.price,
+        stock: prod.stock,
         imagen: prod.image,
     }
     console.log(productoAgregado)
@@ -378,13 +390,17 @@ function agregarTodoAlCarrito() {
 }
 
 function crearProd(e) {
-    let prod = {
-        id: e.classList[1],
-        nombre: e.querySelector(".tarjeta-producto-titulo-descripcion legend").innerText,
-        descripcion: e.querySelector(".tarjeta-producto-titulo-descripcion p").innerText,
-        precio: e.querySelector("#precio").innerText,
-        imagen: e.querySelector(".tarjeta-producto-cabecera-imagen img").getAttribute("src"),
-        cantidad: 1
-    }
-    return prod
+    let productosWish = (JSON.parse(localStorage.getItem("wish")));
+    let prodExiste = productosWish.find(p => p.id == e.classList[1]);
+    prodExiste.cantidad = 1;
+    // let prod = {
+    //     id: e.classList[1],
+    //     nombre: e.querySelector(".tarjeta-producto-titulo-descripcion legend").innerText,
+    //     descripcion: e.querySelector(".tarjeta-producto-titulo-descripcion p").innerText,
+    //     precio: e.querySelector("#precio").innerText,
+    //     imagen: e.querySelector(".tarjeta-producto-cabecera-imagen img").getAttribute("src"),
+
+    //     cantidad: 1
+    // }
+    return prodExiste
 }
