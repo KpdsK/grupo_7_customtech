@@ -200,3 +200,45 @@
 
 ---
 
+# CUSTOMTECH
+##     Digital House - Curso Full Stack Developer 
+###    Proyecto Integrador : e-commerce 
+###    Séptimo Sprint: Retrospectiva 5
+
+---
+
+####    Habiendo realizado la retrospectiva con la dinamica estrella de mar, que busca resaltar aquello que hay que reforzar, resolvimos:
+
+#### Comenzar a hacer
+* Soltarse en cuanto a ides y conocimientos previamente adquiridos que aporten al proyecto grupal y del cual todos los integrantes podamos aprender tendiendo a una retroalimentcion como futuros colegas.
+
+
+#### Hacer más
+* Flexibilizar las reuniones tendiendo a un trabajo inteligente, teniendo presente el tiempo capitalizado y los items realizados o pendientes.
+* Compromometernos con el grupo comunicando los problemas e inconvenientes que nos ocurran para mantener al tanto a los demás integrantes.
+
+#### Continuar haciendo
+* Utilizar asiduamente y de manera correcta los medios adecuados para una mejor organizacion (TRELLO).
+* Trabajar colaborativamente entre los compañeros.
+* Claridad en las pautas, por consenso grupal, para una mejor fluidez y productividad a la hora de realizar las tareas para el corriente sprint y el proyecto en su totalidad.
+* Realizar reuniones con el enfoque en un aprendizaje y trabajo colaborativo intentando nivelar conocimientos.
+* Especificar previamente la temática y objetivos de las reuniones a realizarse y, al finalizar la mism, detallar los puntos e items a seguir para una buena optimizacion de tales encuentros.
+
+#### Hacer menos
+* Reuniones sin una buena planificacion o con una extencion prolongada en caso de poder acotar la misma o dividirla en diferentes dias u horarios.
+
+#### Dejar de hacer
+* No exteriorizar inquietudes o dudas sobre el trabajo a realizar.
+* Ningun integrante deberá tomarse atribuciones o roles no correspondidos ni designados por consenso dentro del grupo.
+* Aislarse y no solicitar ayuda o comunicar inconvenientes que puedan impactar negativamente tanto en el grupo como en el proyecto.
+* No tener presente las opiniones, fortalezas y debilidades de cada uno de los integrantes del grupo.
+* Asignarse o hacerse disponible para trabajos de los cuales se sabe con antelacion que la probabilidad de concreción de manera individual es muy baja o nula
+
+---
+
+
+---
+
+
+---
+
