@@ -10,21 +10,22 @@ function recargaDatosWishCart() {
 function recargarDatosCarrito(total_cart, cart_data) {
     const cartdata = document.getElementById('cartdata');
     const totalcartdata = document.getElementById('totalcartdata');
-    // console.log(totalcartdata);
+    if(cart_data > 0) {
+        cartdata.style.visibility = 'visible'
+    } else {
+        cartdata.style.visibility = 'hidden'
+    }
     cartdata.innerText = `${cart_data}`
     // totalcartdata.innerText = `${total_cart}`
 }
 
 function recargarDatosWish(wish_data) {
     const wishdata = document.getElementById('wishdata');
-    // if(wishdata != null) {
-    //     if(wishdata.textContent.trim() == '0' && wishData.textContent == null){
-    //         console.log(wishdata.textContent) 
-    //         wishdata.style.display = 'none'
-    //     } else {
-    //         wishdata.style.display = 'block'
-    //     }
-    //   }
+    if(wish_data > 0) {
+        wishdata.style.visibility = 'visible'
+    } else {
+        wishdata.style.visibility = 'hidden'
+    }
     wishdata.innerText = `${wish_data}`
 }
 
